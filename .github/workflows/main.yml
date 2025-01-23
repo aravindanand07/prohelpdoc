@@ -44,6 +44,12 @@ jobs:
           url: "https://downloads.vcollab.com/aravinth/test/HTML Help Workshop.7z"
           target: HelpDocument\
 
+      - name: extract-7z-action
+        uses: DuckSoft/extract-7z-action@v1.0
+        with:
+            pathSource: 'HelpDocument\HTML Help Workshop.7z'
+            pathTarget: HelpDocument
+
       - name: List files in presenterx directory
         run: |
              cd HelpDocument
