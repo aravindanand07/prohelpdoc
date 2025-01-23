@@ -1,0 +1,29 @@
+name: Help_Documentation.
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+    paths:
+     - .github/workflows/main.yml
+     
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2.3.4
+
+      - name: Create directory structure
+        run: |
+              mkdir prox
+
+      - name: Set up HTML Help Workshop
+        run: |
+             choco install htmlhelp-workshop
+       
