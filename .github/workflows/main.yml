@@ -75,6 +75,10 @@ jobs:
              cd build
              dir htmlhelp
              
+      - name: run hhd
+        run: |
+             "D:\a\prohelpdoc\prohelpdoc\HelpDocument\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+             
       
 
 
