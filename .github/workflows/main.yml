@@ -18,7 +18,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
-          
+
+      - name: Create directory
+        run: |
+             mkdir HelpDocument
+             
       - uses: suisei-cn/actions-download-file@v1.0.1
         id: download_file  # Remember to give an ID if you need the output filename
         name: Download the file from url
@@ -41,6 +45,25 @@ jobs:
         run: |
              cd HelpDocument
              dir
+
+      - uses: actions/setup-python@v2
+        with:
+         python-version: '3.6' 
+              
+      - name: Install Sphinx
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U sphinx
+          pip install -U sphinx sphinxcontrib-video sphinx_rtd_theme myst-parser
+
+      - name: Run make.bat from prox build documentation
+        run: |
+          .\make.bat htmlhelp
+          
+      - name: List files in presenterx directory
+        run: |
+             cd build\htmlhelp
+             dir    
 
           
 
