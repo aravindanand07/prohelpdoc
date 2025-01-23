@@ -41,7 +41,7 @@ jobs:
             pathSource: HelpDocument\HTML_Help_Workshop.7z
             pathTarget: HelpDocument
 
-      - name: List files in presenterx directory
+      - name: List files
         run: |
              cd HelpDocument
              dir
@@ -60,11 +60,15 @@ jobs:
         run: |
           .\make.bat htmlhelp
           
-      - name: List files in presenterx directory
+      - name: List files
         run: |
              cd build
-             dir    
+             dir
 
+      - name: List files
+        run: |
+             cd build
+             dir htmlhelp
           
 
 
