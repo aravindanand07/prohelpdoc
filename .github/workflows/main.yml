@@ -77,7 +77,8 @@ jobs:
              
       - name: run hhd
         run: |
-              & "D:\a\prohelpdoc\prohelpdoc\HelpDocument\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+             cmd /c ""D:\a\prohelpdoc\prohelpdoc\HelpDocument\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp""
+
 
              
       
