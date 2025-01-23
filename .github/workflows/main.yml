@@ -19,10 +19,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
 
-      - name: Install the older Chocolatey version and retry
+      - name: Install HTML Help Workshop from local file
         run: |
-            choco upgrade chocolatey --version=2.3.0
-            choco install htmlhelp-workshop -y
+             Start-Process -FilePath "htmlhelp.exe" -ArgumentList "/silent", "/norestart" -NoNewWindow -Wait
+
+
 
 
        
