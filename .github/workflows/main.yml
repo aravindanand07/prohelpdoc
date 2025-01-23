@@ -18,30 +18,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
-
-      - uses: actions/setup-python@v2
-        with:
-         python-version: '3.6'
-
-      - name: Create directory structure
-        run: |
-              mkdir HelpDocument 
-              
-      - name: Install Sphinx
-        run: |
-          python -m pip install --upgrade pip
-          pip install -U sphinx
-          pip install -U sphinx sphinxcontrib-video sphinx_rtd_theme myst-parser
-
-      - name: Run make.bat from prox build documentation
-        run: |
-          .\make.bat html
           
       - uses: suisei-cn/actions-download-file@v1.0.1
         id: download_file  # Remember to give an ID if you need the output filename
         name: Download the file from url
         with:
-          url: "https://downloads.vcollab.com/aravinth/test/HTML Help Workshop.7z"
+          url: "https://downloads.vcollab.com/aravinth/test/HTML_Help_Workshop.7z"
           target: HelpDocument\
 
       - name: List files in presenterx directory
@@ -52,7 +34,7 @@ jobs:
       - name: extract-7z-action
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-            pathSource: HelpDocument\HTML%20Help%20Workshop.7z
+            pathSource: HelpDocument\HTML_Help_Workshop.7z
             pathTarget: HelpDocument     
 
           
