@@ -52,7 +52,7 @@ jobs:
       - name: extract-7z-action
         uses: DuckSoft/extract-7z-action@v1.0
         with:
-            pathSource: HelpDocument\HTML Help Workshop.7z
+            pathSource: HelpDocument\HTML%20Help%20Workshop.7z
             pathTarget: HelpDocument     
 
           
