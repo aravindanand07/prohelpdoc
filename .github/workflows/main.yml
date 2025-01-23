@@ -35,7 +35,12 @@ jobs:
         uses: DuckSoft/extract-7z-action@v1.0
         with:
             pathSource: HelpDocument\HTML_Help_Workshop.7z
-            pathTarget: HelpDocument     
+            pathTarget: HelpDocument
+
+      - name: List files in presenterx directory
+        run: |
+             cd HelpDocument
+             dir
 
           
 
