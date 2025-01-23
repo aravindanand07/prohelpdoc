@@ -46,6 +46,11 @@ jobs:
              cd HelpDocument
              dir
 
+      - name: List files
+        run: |
+             cd "HelpDocument\HTML Help Workshop"
+             dir
+             
       - uses: actions/setup-python@v2
         with:
          python-version: '3.6' 
@@ -69,7 +74,8 @@ jobs:
         run: |
              cd build
              dir htmlhelp
-          
+             
+      
 
 
        
