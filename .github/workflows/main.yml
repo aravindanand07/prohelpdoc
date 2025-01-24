@@ -56,7 +56,7 @@ jobs:
         run: |
              cd build\htmlhelp
              dir
-             "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "VCollabPro.hhp"
+             & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" VCollabPro.hhp
     #         shell: pwsh
 
 
