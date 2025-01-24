@@ -22,35 +22,7 @@ jobs:
       - name: Create directory
         run: |
              mkdir HelpDocument
-             
-      - uses: suisei-cn/actions-download-file@v1.0.1
-        id: download_file  # Remember to give an ID if you need the output filename
-        name: Download the file from url
-        with:
-          url: "https://downloads.vcollab.com/aravinth/test/HTML_Help_Workshop.7z"
-          target: HelpDocument\
-
-      - name: List files in presenterx directory
-        run: |
-             cd HelpDocument
-             dir
-             
-      - name: extract-7z-action
-        uses: DuckSoft/extract-7z-action@v1.0
-        with:
-            pathSource: HelpDocument\HTML_Help_Workshop.7z
-            pathTarget: HelpDocument
-
-      - name: List files
-        run: |
-             cd HelpDocument
-             dir
-
-      - name: List files
-        run: |
-             cd "HelpDocument\HTML Help Workshop"
-             dir
-             
+                    
       - uses: actions/setup-python@v2
         with:
          python-version: '3.6' 
@@ -80,11 +52,7 @@ jobs:
               choco install html-help-workshop -y
       - name: Convert .hhp to .chm
         run: |
-             "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" build\htmlhelp\VCollabPro.hhp
-             
-              
-
-
+             "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
 
              
       
