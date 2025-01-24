@@ -19,65 +19,58 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
 
-      - name: Create directory
-        run: |
-             mkdir HelpDocument
-                    
-      - uses: actions/setup-python@v2
+      - name: Create directory (if needed)
+        run: mkdir HelpDocument || echo "Directory already exists"
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with:
-         python-version: '3.6' 
-              
-     # - name: Install Sphinx
-     #   run: |
-     #     python -m pip install --upgrade pip
-     #     pip install -U sphinx
-     #     pip install -U sphinx sphinxcontrib-video sphinx_rtd_theme myst-parser sphinx_bootstrap_theme
-
-      #- name: Run make.bat from prox build documentation
-      #  run: |
-      #    .\make.bat htmlhelp
-          
-      #- name: List files
-      #  run: |
-      #       cd build
-      #       dir
-
-      #- name: List files
-      #  run: |
-      #       cd build
-      #       dir htmlhelp
-             
-             
-      - name: install hhw
+          python-version: '3.6'
+      
+      - name: Install dependencies
         run: |
-              choco install html-help-workshop -y
+          python -m pip install --upgrade pip
+          pip install -U sphinx sphinxcontrib-video sphinx_rtd_theme myst-parser sphinx_bootstrap_theme
+
+      - name: Run make.bat to build documentation
+        run: |
+          .\make.bat htmlhelp
+        shell: cmd
+
+      - name: Verify build directory
+        run: |
+          cd build
+          dir
+        shell: cmd
+
+      - name: Verify HTML help files
+        run: |
+          cd build\htmlhelp
+          dir
+        shell: cmd
+
+      - name: Install HTML Help Workshop
+        run: |
+          choco install html-help-workshop -y
 
       - name: Compile CHM Help File
         run: |
-             cd build\htmlhelp
-             dir
-             if (Test-Path "VCollabPro.hhp") {
-             & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "VCollabPro.hhp"
-             } else {
-             Write-Host "File not found!"
-             exit 1
-             }
-    #         shell: pwsh
+              cd build\htmlhelp
+              dir
+              if (Test-Path "VCollabPro.hhp") {
+              & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "VCollabPro.hhp"
+              } else {
+              Write-Host "File VCollabPro.hhp not found!"
+              exit 1
+              }
+        shell: pwsh
 
+      - name: Upload CHM as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Help_Documentation
+          path: build/htmlhelp/VCollabPro.chm
 
-     
-     # - name: Verify file exists and convert
-     #   run: |
-     #         if (Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
-     #          & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
-     #          } else {
-     #          Write-Host "File not found!"
-     #          exit 1
-     #         }
-
-
-             
-      
-
-
-       
+      - name: Cleanup Workflow
+        run: Remove-Item -Path build -Recurse -Force
+        shell: pwsh  
