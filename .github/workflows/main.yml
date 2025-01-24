@@ -77,9 +77,10 @@ jobs:
              
       - name: run hhd
         run: |
-             $hhc_path = "D:\a\prohelpdoc\prohelpdoc\HelpDocument\HTML Help Workshop\hhc.exe"
-             $hhp_path = "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+             $hhc_path = ".\HelpDocument\HTML Help Workshop\hhc.exe"
+             $hhp_path = ".\build\htmlhelp\VCollabPro.hhp"
              & $hhc_path $hhp_path 2>&1
+
 
 
              
