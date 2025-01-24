@@ -52,10 +52,12 @@ jobs:
         run: |
               choco install html-help-workshop -y
 
-      - name: List files
+      - name: Compile CHM Help File
         run: |
-              cd build\htmlhelp
-              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" VCollabPro.hhp
+             cd build\htmlhelp
+             & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "VCollabPro.hhp"
+             shell: pwsh
+
 
      
      # - name: Verify file exists and convert
