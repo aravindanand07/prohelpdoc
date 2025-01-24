@@ -19,21 +19,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
         
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.6'
-
-      - name: Install pychm Python package
+      - name: Install dependencies
         run: |
+          choco install chmlib --force
           python -m pip install --upgrade pip
+          python -m pip install wheel setuptools
           python -m pip install pychm
         shell: cmd
 
       - name: Convert HHP to CHM using Python
-        run: |
-          cd D:\a\prohelpdoc\prohelpdoc\build\htmlhelp
-          python D:\a\prohelpdoc\prohelpdoc\convert_to_chm.py
+        run: python convert_to_chm.py
         shell: cmd
 
       - name: Upload CHM file
