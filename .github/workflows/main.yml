@@ -50,10 +50,16 @@ jobs:
       - name: install hhw
         run: |
               choco install html-help-workshop -y
-      - name: Convert .hhp to .chm
-        shell: cmd
+              
+      - name: Verify file exists and convert
         run: |
-             "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" VCollabPro.hhp
+              if (Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
+               & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+               } else {
+               Write-Host "File not found!"
+               exit 1
+              }
+
 
              
       
