@@ -78,7 +78,9 @@ jobs:
       - name: install hhw
         run: |
               choco install html-help-workshop -y
-              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\build\htmlhelp\VCollabPro.hhp"
+      - name: Convert .hhp to .chm
+        run: |
+             "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" build\htmlhelp\VCollabPro.hhp
              
               
 
