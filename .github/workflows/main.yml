@@ -54,9 +54,8 @@ jobs:
 
       - name: List files
         run: |
-              cd build
-              cd htmlhelp
-              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+              cd build\htmlhelp
+              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" VCollabPro.hhp
 
      
      # - name: Verify file exists and convert
