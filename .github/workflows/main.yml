@@ -47,18 +47,26 @@ jobs:
              cd build
              dir htmlhelp
              
+             
       - name: install hhw
         run: |
               choco install html-help-workshop -y
-              
-      - name: Verify file exists and convert
+
+      - name: List files
         run: |
-              if (Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
-               & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
-               } else {
-               Write-Host "File not found!"
-               exit 1
-              }
+              cd D:\a\prohelpdoc\prohelpdoc\build\htmlhelp
+              dir D:\a\prohelpdoc\prohelpdoc\build\htmlhelp
+              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp
+
+     
+     # - name: Verify file exists and convert
+     #   run: |
+     #         if (Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
+     #          & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+     #          } else {
+     #          Write-Host "File not found!"
+     #          exit 1
+     #         }
 
 
              
