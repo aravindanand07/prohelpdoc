@@ -77,9 +77,7 @@ jobs:
              
       - name: run hhd
         run: |
-             $hhc_path = ".\HelpDocument\HTML Help Workshop\hhc.exe"
-             $hhp_path = ".\build\htmlhelp\VCollabPro.hhp"
-             & $hhc_path $hhp_path 2>&1
+              choco install html-help-workshop -y
 
 
 
