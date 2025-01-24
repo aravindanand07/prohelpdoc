@@ -33,19 +33,19 @@ jobs:
           pip install -U sphinx
           pip install -U sphinx sphinxcontrib-video sphinx_rtd_theme myst-parser sphinx_bootstrap_theme
 
-      - name: Run make.bat from prox build documentation
-        run: |
-          .\make.bat htmlhelp
+      #- name: Run make.bat from prox build documentation
+      #  run: |
+      #    .\make.bat htmlhelp
           
-      - name: List files
-        run: |
-             cd build
-             dir
+      #- name: List files
+      #  run: |
+      #       cd build
+      #       dir
 
-      - name: List files
-        run: |
-             cd build
-             dir htmlhelp
+      #- name: List files
+      #  run: |
+      #       cd build
+      #       dir htmlhelp
              
              
       - name: install hhw
@@ -56,7 +56,7 @@ jobs:
         run: |
               cd build
               cd htmlhelp
-              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" VCollabPro.hhp
+              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
 
      
      # - name: Verify file exists and convert
