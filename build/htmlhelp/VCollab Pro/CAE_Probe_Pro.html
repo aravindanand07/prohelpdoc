@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Probe</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Probe Settings" href="CAE_Probe_Settings_Pro.html" />
+    <link rel="prev" title="Animation Settings" href="CAE_AnimationSettings_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Probe</a><ul>
+<li><a class="reference internal" href="#probe-table-details">Probe Table Details</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="CAE_AnimationSettings_Pro.html" title="Previous Chapter: Animation Settings"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Animation Settings</span>
+    </a>
+  </li>
+  <li>
+    <a href="CAE_Probe_Settings_Pro.html" title="Next Chapter: Probe Settings"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Probe Settings &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="probe">
+<h1>Probe</h1>
+<p>The Probe option helps to query and display CAE result values for specific nodes
+or elements as labels in the VCollab viewer.</p>
+<p><img alt="image1" src="../_images/cae_Probe_Panel.png" /></p>
+<p>There are several kinds of Probes:</p>
+<ul>
+<li><p class="first"><strong>Current Result - Derived :</strong></p>
+<p>Displays value of current derived result at probed ID. Shortcut:enable Probe and click on the model.</p>
+</li>
+<li><p class="first"><strong>Current Result - Full :</strong></p>
+<p>Displays base components of selected result. Shortcut:enable Probe and hit Alt + click on the model.
+X,Y,Z components for vector results like velocity or displacement.</p>
+<p><img alt="image2" src="../_images/cae_Probe_XYZ.png" /></p>
+<p>Translational and Rotational x,y,z for six degrees of freedom result.</p>
+<p><img alt="image3" src="../_images/cae_Probe_Six_Degrees.png" /></p>
+<p>xx, yy, zz, xy, yz, xz components for tensor results like Stress in a
+matrix form.</p>
+<p><img alt="image4" src="../_images/cae_Probe_Matrix.png" /></p>
+</li>
+<li><p class="first"><strong>All Results - Table :</strong></p>
+<p>Displays all result values of the probed ID.</p>
+</li>
+<li><p class="first"><strong>All Instances - Table :</strong></p>
+<p>Displays all instance values of current result for the probed ID.
+Shortcut - enable Probe and hit Ctrl + left click.</p>
+</li>
+<li><p class="first"><strong>All Instances - XYPlot :</strong></p>
+<p>Displays XYPlot curve which describes instances vs CAE result values.</p>
+<p>Shortcut - enable Probe and hit Shift + left click.</p>
+</li>
+<li><p class="first"><strong>Tracer:</strong> Displays path of a node traced in transient animation.</p>
+</li>
+</ul>
+<p><strong>Steps to probe CAE results</strong></p>
+<ul>
+<li><p class="first">Click <strong>CAE | Probe</strong> , which enables mouse mode to probe, Or</p>
+<p>Go to <strong>Probe</strong> icon <img alt="image5" src="../_images/Probe.jpg" /> in the toolbar and click the down arrow
+next to the probe icon.</p>
+<p>A list of probe types is shown.</p>
+<p><img alt="image6" src="../_images/cae_Probe_ListOfProbeType.png" /></p>
+</li>
+<li><p class="first">Select a Probe type.</p>
+</li>
+<li><p class="first">Click on a node to probe its current CAE result.</p>
+</li>
+<li><p class="first">Notice that the CAE value with nodal number is displayed as a label
+in the viewer.</p>
+</li>
+<li><p class="first">Click <strong>Probe</strong> <strong>Settings</strong> and open the Label Settings dialog box.</p>
+<p><img alt="image7" src="../_images/cae_Probe_LabelSettings.png" /></p>
+</li>
+<li><p class="first">Select the required tab and apply the settings to particular
+portions of the probe label.</p>
+<p><strong>Current Result - Derived</strong></p>
+<p><img alt="image8" src="../_images/cae_Probe_CurrentResult-Derived.png" /></p>
+<p><strong>Current Result - Full</strong></p>
+<p><img alt="image9" src="../_images/cae_Probe_CurrentResult-Full.png" /></p>
+<p><strong>All Results - Table</strong></p>
+<p><img alt="image10" src="../_images/cae_Probe_AllResults_Table.png" /></p>
+<p><strong>All Instances-Table</strong></p>
+<p><img alt="image11" src="../_images/cae_Probe_AllInstances-Table.png" /></p>
+<p><strong>All Instances - XYPlot</strong></p>
+<p><img alt="image12" src="../_images/cae_Probe_AllInstance-XYPlot.png" /></p>
+<p><strong>Tracer</strong></p>
+<p><img alt="image13" src="../_images/cae_Probe_Tracer.png" /></p>
+</li>
+</ul>
+<div class="section" id="probe-table-details">
+<h2>Probe Table Details</h2>
+<p>The probe table details are split into three regions.</p>
+<ol class="arabic">
+<li><p class="first"><strong>Header</strong> : This corresponds to the table header. It contains node
+or element ID. In case of merging more than one model, this header
+contains more than one ID and each ID refers to one column in the
+value region.</p>
+</li>
+<li><p class="first"><strong>Row Header:</strong> The row header holds the model name for the column
+data. It is useful when comparing multiple models.</p>
+</li>
+<li><p class="first"><strong>Column Header:</strong> The column header lists all the result names. It
+contains only abbreviations of results. For e.g., D is for
+displacement. Users can refer to the abbreviation table if
+necessary.</p>
+</li>
+<li><p class="first"><strong>Value Region</strong>: These cells hold the values corresponding to column
+and row header.</p>
+<p><img alt="image14" src="../_images/cae_Probe_ProbeTableDetails.png" /></p>
+</li>
+</ol>
+<p><strong>Probe Label Context Menu</strong></p>
+<blockquote>
+<div><p>To open the context menu, <strong>double click</strong> on a label.</p>
+<p><img alt="image15" src="../_images/cae_Probe_ProbeLabelContextMenu.png" /></p>
+<p>The various options available under the Probe label context menu are explained below.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Edit Font</strong></td>
+<td>Change the font and its attributes.</td>
+</tr>
+<tr class="row-even"><td><strong>Display</strong></td>
+<td>Show/hide the selected label headers
+and label legends.</td>
+</tr>
+<tr class="row-odd"><td><strong>Modify</strong></td>
+<td>Modify or edit the table except
+existing result values. It is
+visible for Model header, Result
+header and Value cells. It is not
+applicable for ID header and Part
+header cells.</td>
+</tr>
+<tr class="row-even"><td><strong>Mark Min &amp; Max</strong></td>
+<td>Highlight the table if value is
+maximum or minimum among the
+available tables.</td>
+</tr>
+<tr class="row-odd"><td><strong>Focus Node</strong></td>
+<td>Focus the nodal vertex region based
+on levels.</td>
+</tr>
+<tr class="row-even"><td><strong>Hide Label</strong></td>
+<td>Hide the selected label.</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete Label</strong></td>
+<td>Delete the selected label.</td>
+</tr>
+<tr class="row-even"><td><strong>Show All Labels</strong></td>
+<td>Shows all labels independent of
+attached position visibility</td>
+</tr>
+<tr class="row-odd"><td><strong>Hide All Labels</strong></td>
+<td>Hide all labels.</td>
+</tr>
+<tr class="row-even"><td><strong>Delete All Labels</strong></td>
+<td>Delete all existing labels.</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete All Hidden Labels</strong></td>
+<td>Delete all hidden labels.</td>
+</tr>
+<tr class="row-even"><td><strong>Invert Show Labels</strong></td>
+<td>Invert the labels’ visibility.</td>
+</tr>
+<tr class="row-odd"><td><strong>Fit Labels</strong></td>
+<td>Fit all labels inside the viewer.</td>
+</tr>
+<tr class="row-even"><td><strong>Autofit Labels</strong></td>
+<td>Fit all labels inside the viewer
+during scene rotation, zoom and pan.</td>
+</tr>
+<tr class="row-odd"><td><strong>Arrange Labels</strong></td>
+<td>Arrange all labels and tables in
+multiple rows according to their
+attached positions in the model.</td>
+</tr>
+<tr class="row-even"><td><strong>Auto Arrange Labels</strong></td>
+<td>Arrange all labels automatically
+whenever the user modifies the label
+or table dimensions</td>
+</tr>
+<tr class="row-odd"><td><strong>Set As Default</strong></td>
+<td>Sets the probe table format settings
+and probe type as default In case of
+viewpoint, these settings will be
+overridden by viewpoint label
+settings. (i.e., viewpoint label
+format will be set as default)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Display Submenu</strong></p>
+<blockquote>
+<div><p><img alt="image16" src="../_images/cae_Probe_Display_Submenu.png" /></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>ID</strong></th>
+<th class="head">Show or hide table header.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Part</strong></td>
+<td>Show or hide part name header</td>
+</tr>
+<tr class="row-odd"><td><strong>Row Header</strong></td>
+<td>Show or hide row header.</td>
+</tr>
+<tr class="row-even"><td><strong>Column Header</strong></td>
+<td>Show or hide column header.</td>
+</tr>
+<tr class="row-odd"><td><strong>Rank</strong></td>
+<td>Show or hide Rank cell.</td>
+</tr>
+<tr class="row-even"><td><strong>Ascending Rank</strong></td>
+<td>Rank will be displayed in ascending or
+descending order.</td>
+</tr>
+<tr class="row-odd"><td><strong>Abbreviations</strong></td>
+<td>Show or hide result abbreviations table.</td>
+</tr>
+<tr class="row-even"><td><strong>Transpose</strong></td>
+<td>Transpose the table matrix.</td>
+</tr>
+<tr class="row-odd"><td><strong>Highlight</strong></td>
+<td>Highlight the picked label.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Modify Submenu</strong></p>
+<blockquote>
+<div><p>The <strong>Modify</strong> submenu is different depending on the type of the label
+cell <strong>double clicked</strong>. If the clicked cell is a value cell, then
+<strong>Field Value</strong>… and <strong>Precision</strong>... appear. <strong>Header Name</strong>…
+appears for model and result header cells.</p>
+<p>Value Cell</p>
+<p><img alt="image17" src="../_images/cae_Probe_ValueCell.png" /></p>
+<p>Model/Result Header Cell</p>
+<p><img alt="image18" src="../_images/cae_Probe_Model_ResultHeaderCell.png" /></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Field Value</strong></th>
+<th class="head">Edit values and update it to multiple
+cells across all viewpoints.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Precision</strong></td>
+<td>Change precision and formats.</td>
+</tr>
+<tr class="row-odd"><td><strong>Add Row</strong></td>
+<td>Add a new row at the end.</td>
+</tr>
+<tr class="row-even"><td><strong>Insert Row</strong></td>
+<td>Insert a new row at the mouse cursor
+position.</td>
+</tr>
+<tr class="row-odd"><td><strong>Add Column</strong></td>
+<td>Add a new column at the end.</td>
+</tr>
+<tr class="row-even"><td><strong>Insert Column</strong></td>
+<td>Insert a new column at the mouse cursor
+position.</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete Row</strong></td>
+<td>Delete the specified row.</td>
+</tr>
+<tr class="row-even"><td><strong>Delete Column</strong></td>
+<td>Delete the specified column.</td>
+</tr>
+<tr class="row-odd"><td><strong>Header Name</strong></td>
+<td>Edit the header display name.</td>
+</tr>
+<tr class="row-even"><td><strong>Delete Row Current</strong></td>
+<td>Delete current cell row (based on the
+cursor position).</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete Column Current</strong></td>
+<td>Delete the current column.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Focus Node Submenu</strong></p>
+<p>Double click on a label cell to open the context menu. Click on focus
+node option</p>
+<p><img alt="image19" src="../_images/cae_Probe_FocusNodeSubmenu.png" /></p>
+<p>Focus Node helps to zoom in the nodal vertex region in four levels for
+better visualization:</p>
+<ul class="simple">
+<li><strong>Level 0</strong> focuses on the element associated with the nodal vertex.</li>
+<li><strong>Level 1</strong> focuses on the nodal vertex with 1/10th of part bounding
+radius.</li>
+<li><strong>Level 2</strong> focuses on the nodal vertex with 1/4th of part bounding
+radius.</li>
+<li><strong>Level 3</strong> focuses on the nodal vertex with part bounding radius.</li>
+</ul>
+<p><strong>Steps to scale Geometry or Parts before Probing</strong></p>
+<ul class="simple">
+<li>Click <strong>Edit | Product Explorer</strong>, which displays the product tree.</li>
+<li>Click the group node, not leaf node.</li>
+<li>Right click on the node to open the context menu.</li>
+<li>Select <strong>Transform</strong> option.</li>
+<li>Check the <strong>Scale</strong> option.</li>
+<li>Enter the scale factors for each coordinate axis. The model is scaled
+and is ready for probing.</li>
+</ul>
+<p><strong>Steps to Edit and format Table</strong></p>
+<ul>
+<li><p class="first">Double click on the table header cells to open the context menu</p>
+</li>
+<li><p class="first">Click <strong>Modify | Header Name</strong> to change the header or result name.</p>
+<p><img alt="image20" src="../_images/cae_Probe_Modify_Header_Name.png" /></p>
+</li>
+<li><p class="first">Check <strong>Update Viewpoints</strong> option to update all viewpoint tables.</p>
+</li>
+<li><p class="first">Enter a name and click <strong>OK</strong> to update the table.</p>
+</li>
+<li><p class="first">Right click on a value cell and select <strong>Edit Font</strong> to open the
+<strong>Edit Font Dialog</strong> panel.</p>
+<p><img alt="image21" src="../_images/cae_Probe_EditValueLabelPanel.png" /></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Apply to Tables</strong></th>
+<th class="head">Set either current table or all tables</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Apply to Fields</strong></td>
+<td>Set all fields or current field or
+current column.</td>
+</tr>
+<tr class="row-odd"><td><strong>Font</strong></td>
+<td>Change the font</td>
+</tr>
+<tr class="row-even"><td><strong>Font Size</strong></td>
+<td>Change the font size.</td>
+</tr>
+<tr class="row-odd"><td><strong>Text Color</strong></td>
+<td>Change text color</td>
+</tr>
+<tr class="row-even"><td><strong>Background Color</strong></td>
+<td>Enable/disable background and select a
+color.</td>
+</tr>
+<tr class="row-odd"><td><strong>Align</strong></td>
+<td>Align the label text into left, right
+or center horizontally.</td>
+</tr>
+<tr class="row-even"><td><strong>Scientific &amp; Precision</strong></td>
+<td><dl class="first last docutils">
+<dt>Allows user to modify the numberic format</dt><dd>with scientific, precision.</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>Update All ViewPoints</strong></td>
+<td>Apply and update the modifications to
+viewpoints too.</td>
+</tr>
+<tr class="row-even"><td><strong>Update Merged Models</strong></td>
+<td>Update all merged model probe labels.
+This option will be visibile only in
+merged models case.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Make necessary changes and click OK.</p>
+</li>
+<li><p class="first">Double Click on the value cell to open the context menu and edit the
+value.</p>
+</li>
+<li><p class="first">Click '<strong>Modify | Field Value...'</strong> option which opens the <strong>Edit
+Table Value</strong> panel. This is only applicable for user added cells.</p>
+<p><img alt="image22" src="../_images/cae_Probe_EditTableValue.png" /></p>
+</li>
+<li><p class="first">Edit the value and update the modified value to all update viewpoints
+if needed</p>
+</li>
+<li><p class="first">Select <strong>All Tables</strong> and <strong>All Fields</strong> options to apply the
+modifications to all viewpoints.</p>
+</li>
+<li><p class="first">The modified value can be applied to all fields or the column
+selected or current cell or field.</p>
+</li>
+<li><p class="first">Click <strong>OK</strong> to apply all modifications.</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

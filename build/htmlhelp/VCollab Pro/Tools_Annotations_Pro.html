@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Label/Notes</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Measurements" href="Tools_Measurments_Pro.html" />
+    <link rel="prev" title="Pick" href="Tools_Assembly_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Label/Notes</a><ul>
+<li><a class="reference internal" href="#types-of-labels">Types of Labels:</a></li>
+<li><a class="reference internal" href="#label-settings-panel">Label Settings Panel</a><ul>
+<li><a class="reference internal" href="#methods-of-arranging-labels">Methods of Arranging Labels</a></li>
+<li><a class="reference internal" href="#ranking-probe-labels">Ranking Probe Labels</a></li>
+<li><a class="reference internal" href="#table-annotation">Table Annotation</a></li>
+<li><a class="reference internal" href="#image-annotation">Image Annotation</a></li>
+<li><a class="reference internal" href="#rich-text-labels">Rich Text Labels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Tools_Assembly_Pro.html" title="Previous Chapter: Pick"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pick</span>
+    </a>
+  </li>
+  <li>
+    <a href="Tools_Measurments_Pro.html" title="Next Chapter: Measurements"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Measurements &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="label-notes">
+<h1>Label/Notes</h1>
+<div class="section" id="types-of-labels">
+<h2>Types of Labels:</h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">User Notes</p>
+<ul>
+<li><p class="first">Annotation to Geometry:</p>
+<p>These labels are created by user as an observation which is
+annotated to a particular part or element or node. A line
+connects the label and geometry. Labels are moving according to
+part or view transformation.
+Image Labels have text as well as image data.</p>
+</li>
+<li><p class="first">Annotation to Scene:</p>
+<p>These labels are created by user as an observation which is
+annotated to the current view or scene. Labels are fixed in
+screen either by absolute or relative to the viewport size.
+Absolute position labels will be clipped if viewport is resized
+down.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Model Name Labels</p>
+<p>These labels displays model name if more than one model is merged.</p>
+</li>
+<li><p class="first">Part Property Labels</p>
+<p>These labels displays part properties and user defined part
+attributes. By default it displays Part Name.</p>
+</li>
+<li><p class="first">Probe Labels</p>
+<p>These labels are generated to display result values on user probe
+on Node or element IDs.</p>
+</li>
+<li><p class="first">Measurement Labels</p>
+<p>All measurement values are displayed in labels. These are
+generated using <a class="reference external" href="Measurement.html" target="_blank">Measure</a> module.</p>
+</li>
+<li><p class="first">Image Labels</p>
+<p>Image labels function helps user to add relevant images to the scene or viewpoint and improves the reporting experience.</p>
+</li>
+<li><p class="first">Rich Text Labels</p>
+<p>User can add rich texts, tables, images and links in Rich Text Labels. This can be considered as advanced Image labels.</p>
+</li>
+</ol>
+</div></blockquote>
+<p>Notes are added by users for better understanding of product features
+and parts. VCollab Pro users can add a note or annotation to any part
+using the <strong>Label/Notes</strong> option found under the Tools menu.</p>
+<p><img alt="image1" src="../_images/edit_LabelList_Panel.png" /></p>
+<p>The various options found under Labels/Notes are explained below</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Add Notes...</strong></td>
+<td>Creates a new note</td>
+</tr>
+<tr class="row-even"><td><strong>Move Labels/Notes</strong></td>
+<td>Moves existing note or label in
+viewer from one position to another</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete Labels/Notes</strong></td>
+<td>Deletes the selected labels or notes</td>
+</tr>
+<tr class="row-even"><td><strong>Hide Labels/Notes</strong></td>
+<td>Hides the selected label or notes.</td>
+</tr>
+<tr class="row-odd"><td><strong>Show Visible Labels Only</strong></td>
+<td>Displays visible labels only.
+Applicable to probed labels and
+annotated notes</td>
+</tr>
+<tr class="row-even"><td><strong>Auto Visible Labels</strong></td>
+<td>Shows visible labels only when the
+user interacts. Applicable to probed
+labels and annotated notes</td>
+</tr>
+<tr class="row-odd"><td><strong>Show All Labels</strong></td>
+<td>Shows all labels independent of
+attached position visibility</td>
+</tr>
+<tr class="row-even"><td><strong>Hide All Labels</strong></td>
+<td>Hides all labels</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete All Labels</strong></td>
+<td>Deletes all existing labels</td>
+</tr>
+<tr class="row-even"><td><strong>Delete All Hidden Labels</strong></td>
+<td>Deletes all hidden labels</td>
+</tr>
+<tr class="row-odd"><td><strong>Invert Show Labels</strong></td>
+<td>Inverts labels visibility</td>
+</tr>
+<tr class="row-even"><td><strong>Fit Labels</strong></td>
+<td>Fits all labels inside viewer</td>
+</tr>
+<tr class="row-odd"><td><strong>Auto Fit Labels</strong></td>
+<td>Fits all labels inside the viewer
+during scene rotation, zoom and pan</td>
+</tr>
+<tr class="row-even"><td><strong>Arrange Labels</strong></td>
+<td>Arranges all labels and tables in
+multiple rows according to their
+respective position in the model</td>
+</tr>
+<tr class="row-odd"><td><strong>Auto Arrange Labels</strong></td>
+<td>Arranges all labels automatically
+whenever user modifies the label or
+table dimensions</td>
+</tr>
+<tr class="row-even"><td><strong>Show Model Labels</strong></td>
+<td>Shows Model names which is useful
+while merging models</td>
+</tr>
+<tr class="row-odd"><td><strong>Show Probed Parts</strong></td>
+<td>Shows the parts which have probed
+labels and hides other parts</td>
+</tr>
+<tr class="row-even"><td><strong>Rank Probe Labels</strong></td>
+<td>Ranking the labels based on values
+either in ascending or descending
+order. Applicable only for current
+derived probe type labels</td>
+</tr>
+<tr class="row-odd"><td><strong>Settings...</strong></td>
+<td>Opens up common label settings
+dialog for users to modify font,
+background, border and colors for
+all types of labels.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="label-settings-panel">
+<h2>Label Settings Panel</h2>
+<p><img alt="image2" src="../_images/edit_LabelList_Settings.jpg" /></p>
+<p>The various tabs available in the Label settings panel are explained
+below.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Values tab</strong></td>
+<td>Applicable for CAE Probe label value cells.</td>
+</tr>
+<tr class="row-even"><td><strong>Headers tab</strong></td>
+<td>Applicable for CAE Probe label header cells (Row
+header, Column header and Header Legend table)</td>
+</tr>
+<tr class="row-odd"><td><strong>Others tab</strong></td>
+<td>Applicable for measurement labels.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image3" src="../_images/edit_LabelList_HeaderCells.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Modifications will be applied to <strong>all</strong> <em>Probe</em> labels and
+<em>Measurement</em> labels.</li>
+<li>To format individual probe label, use label context menu.</li>
+</ul>
+</div>
+<p><strong>Steps to create a note for a specific part</strong></p>
+<ul>
+<li><p class="first">Click T<strong>ools | Labels/Notes | Add Notes..</strong> OR</p>
+</li>
+<li><p class="first">Click <strong>Add Notes</strong> icon <img alt="image4" src="../_images/AddNote.JPG" />available in the toolbar.</p>
+</li>
+<li><p class="first">The <strong>Add Notes</strong> dialog box opens up. Check the option <strong>Attach Geometry</strong>.</p>
+<p><img alt="image5" src="../_images/edit_LabelList_AddNotes_Panel.png" /></p>
+</li>
+<li><p class="first">Enter your note in the edit text box provided</p>
+<p><img alt="image6" src="../_images/edit_LabelList_Example.png" /></p>
+</li>
+<li><p class="first">Select the font, size and color for the text.</p>
+</li>
+<li><p class="first">Check or uncheck Background and Border options if necessary. Select
+the color for <strong>Background</strong>, <strong>Border</strong> and <strong>Text</strong> from the
+corresponding color window.</p>
+</li>
+<li><p class="first">Click <strong>OK</strong>.</p>
+</li>
+<li><p class="first">Click in the viewer window to place the label as required.</p>
+</li>
+<li><p class="first">A connecting line is visible between label position and mouse
+pointer.</p>
+</li>
+<li><p class="first">Click a point on the specific part. The label will be seen attached.</p>
+<p><img alt="image7" src="../_images/edit_LabelList_BracetExample.jpg" /></p>
+</li>
+</ul>
+<p><strong>Steps to add a note to the scene</strong></p>
+<ul>
+<li><p class="first">Click <strong>Tools | Labels/Notes | Add Notes.</strong>. OR</p>
+</li>
+<li><p class="first">Click <strong>Add Notes</strong> icon <img alt="image8" src="../_images/AddNote.JPG" /> available in the toolbar.</p>
+</li>
+<li><p class="first">The <strong>Add Notes</strong> dialog box opens up.</p>
+<p><img alt="image9" src="../_images/edit_LabelList_AddNotes_Panel.png" /></p>
+</li>
+<li><p class="first">Enter your note in the edit text box provided</p>
+</li>
+<li><p class="first">Uncheck the option <strong>Attach Geometry</strong></p>
+</li>
+<li><p class="first">Relative Position option appears.It will keep the label relative to
+viewport margins.</p>
+</li>
+<li><p class="first">Check <strong>Relative Position</strong> if necessary.</p>
+<p><img alt="image10" src="../_images/edit_LabelList_AddNotes_Background.png" /></p>
+</li>
+<li><p class="first">If not selected, a constant distance between label position and top
+left corner of view port will be maintained.</p>
+</li>
+<li><p class="first">Click <strong>OK</strong>.</p>
+</li>
+<li><p class="first">Click anywhere in the viewer window to place the label as required.</p>
+<p><img alt="image11" src="../_images/edit_LabelList_Example2.jpg" /></p>
+</li>
+<li><p class="first"><strong>Behind Scene</strong> option sends the user notes behind the model.
+<img alt="image_behind_scene" src="../_images/Label_Behind_Scene.png" /></p>
+</li>
+</ul>
+<p><strong>Steps to edit user notes</strong></p>
+<ul>
+<li><p class="first">Double click on a label to open <strong>Edit Notes</strong> dialog box</p>
+<p><img alt="image12" src="../_images/edit_LabelList_EditNotes.png" /></p>
+</li>
+<li><p class="first">Edit the contents and formats.</p>
+</li>
+<li><p class="first">Click <strong>OK</strong></p>
+<p><img alt="image13" src="../_images/edit_LabelList_EditNotes_Example.png" /></p>
+<p><img alt="image14" src="../_images/edit_LabelList_Bracket_EditNotes.jpg" /></p>
+</li>
+</ul>
+<p><strong>Steps to move an existing label</strong></p>
+<ul class="simple">
+<li>Click <strong>Tools | Labels/Notes | Move Labels/Notes</strong> OR</li>
+<li>Click <strong>Move Labels/Notes</strong> icon <img alt="image15" src="../_images/MoveLabel.JPG" /> available in the toolbar
+to enable it.</li>
+<li>Drag the concerned label or annotation in the viewer.</li>
+<li>Release the mouse after label position is shifted.</li>
+<li>Click the <strong>Move Labels/Notes</strong> icon <img alt="image16" src="../_images/MoveLabel.JPG" /> again to disable it.</li>
+</ul>
+<p><strong>Steps to delete a label</strong></p>
+<ul class="simple">
+<li>Click <strong>Tools | Labels/Notes | Delete Labels/Notes</strong></li>
+<li>Click on a label to be deleted</li>
+<li>Click <strong>Tools | Labels/Notes | Delete All labels</strong> to delete all
+labels at one go.</li>
+</ul>
+<p><strong>Steps to Show/Hide a label</strong></p>
+<ul class="simple">
+<li>Click <strong>Tools | Labels/Notes | Hide Labels/Notes</strong></li>
+<li>Click on a Label to hide it</li>
+</ul>
+<p><strong>Steps to show the hidden Label visible again</strong></p>
+<ul class="simple">
+<li>Go to Label list panel and select the label from the label list</li>
+<li>Click the <strong>Visibility</strong> check box in the panel to show the label
+again.</li>
+</ul>
+<p><strong>Difference between 'Show Visible Labels Only' and 'Auto Visible Labels'</strong></p>
+<p>These options are applicable only for probed labels and annotated notes.
+These labels contain two positions, one is label position and the other
+is attached position in the geometry. Based on these attached positions'
+visibility in the current view, labels can be classified as
+<strong>Observable</strong> and <strong>Non-Observable</strong> labels.</p>
+<ul class="simple">
+<li>The attached positions of <strong>Observable Labels</strong> are visible in the
+view.</li>
+<li>The attached positions of <strong>Non-Observable Labels</strong> are hidden behind
+geometry surfaces in the view.</li>
+<li>Users can hide the Non-Observable labels if necessary using the
+options <strong>'Show Visible Labels Only'</strong> and <strong>'Auto Visible
+Labels'</strong>.</li>
+<li><strong>'Show Visible Labels Only'</strong> hides the Non-Observable labels for
+the current view. This is a one time event.</li>
+<li><strong>'Auto Visible Labels'</strong> hides Non-Observable Labels and shows
+Observable Labels dynamically according to the view.</li>
+</ul>
+<div class="section" id="methods-of-arranging-labels">
+<h3>Methods of Arranging Labels</h3>
+<blockquote>
+<div><ul>
+<li><p class="first"><strong>Near</strong></p>
+<blockquote>
+<div><p>Aligns Labels' bottom left corner positions with probed vertices.
+<strong>Overlapping</strong> is unavoidable here.</p>
+</div></blockquote>
+<p><img alt="image17" src="../_images/edit_LabelList_Near.png" /></p>
+</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p class="first"><strong>Top-Bottom</strong></p>
+<p>Distributes labels to top and bottom of the model evenly based on
+its attached positions.</p>
+</li>
+</ul>
+<blockquote>
+<div><img alt="image18" src="../_images/edit_LabelList_Top-Bottom.png" /></div></blockquote>
+<ul>
+<li><p class="first"><strong>Compact</strong></p>
+<p>Places the label anywhere around the attached position without
+overlapping.</p>
+</li>
+</ul>
+<blockquote>
+<div><img alt="image19" src="../_images/edit_LabelList_Compact.png" /></div></blockquote>
+<ul>
+<li><p class="first"><strong>Rectangular</strong></p>
+<p>Distributes labels either to left or right or top or bottom of the
+model bound rectangle.</p>
+</li>
+</ul>
+<blockquote>
+<div><img alt="image22" src="../_images/edit_LabelList_Rectangle.png" /></div></blockquote>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>Circular</strong></p>
+<blockquote>
+<div><p>Distributes labels around the model bound circle.</p>
+</div></blockquote>
+<p><img alt="image20" src="../_images/edit_LabelList_Circular.png" /></p>
+</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p class="first"><strong>Silhouette</strong></p>
+<p>Distributes labels outside the silhouette edges of the model.</p>
+</li>
+</ul>
+<blockquote>
+<div><img alt="image21" src="../_images/edit_LabelList_Silhouette.png" /></div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Steps to show the parts probed by user</strong></p>
+<ul>
+<li><p class="first">Load a model which shows all the parts and hotspot labels initially</p>
+<p><img alt="image23" src="../_images/edit_LabelList_Airbag.png" /></p>
+</li>
+<li><p class="first">Click <strong>Tools | Labels/Notes | Show Probed Parts</strong></p>
+<p><img alt="image24" src="../_images/edit_LabelList_ShowProbedParts.png" /></p>
+</li>
+<li><p class="first">All other parts which are not probed are hidden</p>
+<p><img alt="image25" src="../_images/edit_LabelList_ShowProbedParts_Example.png" /></p>
+</li>
+</ul>
+</div>
+<div class="section" id="ranking-probe-labels">
+<h3>Ranking Probe Labels</h3>
+<blockquote>
+<div><p>Probe labels are ranked based on current contour scalar results in
+descending order by default. Users can reverse the ranking process
+and make it ascending, i.e., Lowest value will be ranked first.
+Labels having equal values are given the same rank.</p>
+<p>Note: Ranking is applicable only for current derived probe type
+labels.</p>
+</div></blockquote>
+<ul>
+<li><p class="first">Select probe type as <strong>Current Result - Derived type.</strong></p>
+</li>
+<li><p class="first">Probe a few values.</p>
+</li>
+<li><p class="first">Click <strong>Tools | Labels/Notes | Rank Probe Labels</strong>.</p>
+<p><img alt="image26" src="../_images/edit_LabelList_RankProbeLabels.png" /></p>
+</li>
+<li><p class="first">All labels are ranked and displayed with rank number.</p>
+<p><img alt="image27" src="../_images/edit_LabelList_RankProbeLabels_Example.png" /></p>
+</li>
+<li><p class="first">Click <strong>CAE | Probe Settings ...</strong></p>
+</li>
+<li><p class="first">Uncheck or check the <strong>Rank Ascending Order</strong> option to reverse the
+ranking process.</p>
+<p><img alt="image28" src="../_images/edit_LabelList_ProbeSettings.png" /></p>
+</li>
+<li><p class="first">Rank numbers will be reversed.</p>
+<p><img alt="image29" src="../_images/edit_LabelList_RankAscendingOrder.png" /></p>
+</li>
+</ul>
+</div>
+<div class="section" id="table-annotation">
+<h3>Table Annotation</h3>
+<blockquote>
+<div><p>VCollab Pro helps user to create annotation table with multiple rows, column and a header.</p>
+<p><img alt="image31" src="../_images/AddTable_Dialogue.png" /></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Attach Geometry</td>
+<td>Allows user to attach this table to a point on the model.</td>
+</tr>
+<tr class="row-even"><td>Behind Scene</td>
+<td>Allows user to send the 2D table behind the model. This flag will be ignored if Attach Geometry is ON.</td>
+</tr>
+<tr class="row-odd"><td>Relative Position / Use Node ID</td>
+<td>When <strong>Attach Geometry</strong> is checked, then <strong>Relative Position</strong> check is turned into <strong>Use Node ID</strong>.
+<strong>Relative Position</strong> stores position of table relative to window and changes accordingly with window resize.
+<strong>Use Node ID</strong> allows user to enter node id in the Node ID text box, instead of picking node id in viewport.</td>
+</tr>
+<tr class="row-even"><td>Model</td>
+<td>Displays model name if <strong>Use Node ID</strong> is enabled.</td>
+</tr>
+<tr class="row-odd"><td>Part</td>
+<td>Displays Part Name if  Use Node ID is enabled.</td>
+</tr>
+<tr class="row-even"><td>Node ID</td>
+<td>Enables if  <strong>Use Node ID</strong>  is enabled and allows user to enter node ID to be attached with.</td>
+</tr>
+<tr class="row-odd"><td>Rows, Columns</td>
+<td>Allows user to define table rows and columns size.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to add a table</strong></p>
+<ul>
+<li><p class="first">Click the dropdown menu located next to <strong>Add Notes</strong> icon <img alt="image30" src="../_images/AddNote.JPG" />  in the tool bar.</p>
+</li>
+<li><p class="first">Click <strong>Add Table</strong> option to pop up Add Table dialog box.</p>
+<p><img alt="image31" src="../_images/AddTable_Dialogue.png" /></p>
+</li>
+<li><p class="first">Define the number of rows and columns using given interfaces.</p>
+</li>
+<li><p class="first">Double click the cell to edit the contents. For example,</p>
+<p><img alt="image32" src="../_images/AddTable_Column_Row.png" /></p>
+</li>
+<li><p class="first">Enter the texts and click OK.</p>
+</li>
+<li><p class="first">Click on the viewport.</p>
+</li>
+<li><p class="first">User can find the table as below.</p>
+<p><img alt="image33" src="../_images/AddTable_Table_Example.png" /></p>
+</li>
+<li><p class="first"><strong>Relative Position</strong> and <strong>Attach Geometry</strong> options functions same way as in the <strong>Add Notes</strong> annotations.</p>
+</li>
+<li><p class="first">Enabling Attach Geometry option displays Use Node ID options.</p>
+</li>
+<li><p class="first">It helps user to enter model, part and node ID to be attached with</p>
+</li>
+</ul>
+<blockquote>
+<div><img alt="image34" src="../_images/AddTable_Model_Part.png" /></div></blockquote>
+<ul>
+<li><p class="first">To edit a table,  double click on the specific table.</p>
+</li>
+<li><p class="first">It drops down Table context menu</p>
+<p><img alt="image35" src="../_images/AddTable_Context_Menu.png" /></p>
+</li>
+<li><p class="first"><strong>Edif Font</strong>.. allows user to edit font name, size, background etc. same like in probe table, except the <strong>Update All Viewpoints</strong> option.</p>
+</li>
+<li><p class="first"><strong>Edit Table</strong>... popus up <strong>Edit 2D Table</strong> or <strong>Edit 3D Table</strong> dialog box based on <strong>Attach Geometry</strong> option.</p>
+</li>
+<li><p class="first"><strong>Display</strong> option allows user to transpose the table and to highlight the table.</p>
+</li>
+<li><p class="first"><strong>Modify</strong> option allows user to add, delete and insert columns or rows.</p>
+</li>
+<li><p class="first">Context menu for <strong>3D Table</strong> is slightly different from the <strong>2D Table</strong> context menu</p>
+<p><img alt="image36" src="../_images/AddTable_Modify_Option.png" /></p>
+</li>
+<li><p class="first"><strong>Modify | Field Text...</strong> allows to edit current cell text.</p>
+<p><img alt="image37" src="../_images/AddTable_EditLabelText.png" /></p>
+</li>
+<li><p class="first"><strong>Focus Node</strong> focuses the attached location of the label.</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="image-annotation">
+<h3>Image Annotation</h3>
+<blockquote>
+<div><p>User can add images into annotation labels using 'Add Image Labels' option.</p>
+<p><img alt="image38" src="../_images/Add_Image_Labels_Panel.png" /></p>
+</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Attach Geometry</td>
+<td>Allows user to attach this image label to a point on the model.</td>
+</tr>
+<tr class="row-even"><td>Behind Scene</td>
+<td>Allows user to send the 2D Image Labels behind the model. This flag will be ignored if Attach Geometry is ON.</td>
+</tr>
+<tr class="row-odd"><td>Relative Position</td>
+<td>When Attach Geometry is checked, then Relative Position check appears.
+Relative Position stores position of label relative to window and changes accordingly with window resize.</td>
+</tr>
+<tr class="row-even"><td>Font and Text</td>
+<td>Allows user to select font name, font size and text color for label text. User can enter the text in the box if required.</td>
+</tr>
+<tr class="row-odd"><td>Background and Border</td>
+<td>Allows user to choose to apply background and border colors.</td>
+</tr>
+<tr class="row-even"><td>File</td>
+<td>Allows user to pick an image file from the disk.</td>
+</tr>
+<tr class="row-odd"><td>Capture</td>
+<td>Allows user to capture image from the viewer window.</td>
+</tr>
+<tr class="row-even"><td>Image Mode</td>
+<td>Allows user to select image mode from the list Center, Stretch and Fit View options.</td>
+</tr>
+<tr class="row-odd"><td>Text Position</td>
+<td>Allows user to place text in the top or bottom of label (above or below the image)</td>
+</tr>
+<tr class="row-even"><td>Text Align</td>
+<td>Allows user to align the text horizontallly from left, center and right optios.</td>
+</tr>
+<tr class="row-odd"><td>Position</td>
+<td>Allows user to set position directly using normalised screen coordinages i.e. position (x,y) values varies between 0 and 1.</td>
+</tr>
+<tr class="row-even"><td>Dimension</td>
+<td>Allows user to set the dimension of the image label panel using normalized width and height.</td>
+</tr>
+<tr class="row-odd"><td>Add</td>
+<td>Adds the image lable in viewer accordingly.</td>
+</tr>
+<tr class="row-even"><td>Cancel</td>
+<td>Cancels all settings and closes the panel.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Normalized Position and Dimension</strong></p>
+<p><img alt="image51" src="../_images/Image_Label_Position_Dimension_Sketch.png" /></p>
+<p><strong>Steps to add Image labels</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Click the dropdown menu located at the end of Labels tool bar.</li>
+<li>Click &quot;Add Image Labels...&quot; option to pop up Add Image Label dialog.</li>
+</ul>
+<p><img alt="image38" src="../_images/Add_Image_Labels_Panel.png" /></p>
+<ul class="simple">
+<li>Enter text if required.</li>
+<li>Click 'File' button to select an image file from the computer.</li>
+<li>Click 'OK' in the file browser dialog. Or</li>
+<li>Click 'Capture' button to get the image from the viewer.</li>
+<li>Panel disappears and a rectangular window appears in the viewer.</li>
+</ul>
+<p><img alt="image39" src="../_images/Add_Image_Label_Capture.png" /></p>
+<ul class="simple">
+<li>User can resize and move the window as required.</li>
+</ul>
+<p><img alt="image40" src="../_images/Add_Image_Label_Capture_Resize.png" /></p>
+<ul class="simple">
+<li>Click 'Capture' zone in the window.</li>
+<li>Add Image panel appears again.</li>
+<li>Image file path should appear in the text box below 'File' button.</li>
+<li>Change Image Mode, Text Position and Text Align options if required.</li>
+<li>Click 'Add'</li>
+<li>Click on the model if 'Attach Geometry' was checked.</li>
+<li>Click on the viewer anywhere if 'Attach Geometry was unchecked.</li>
+<li>Now label with image will be displayed.</li>
+</ul>
+<p><img alt="image41" src="../_images/Image_Label_Attached.png" /></p>
+</div></blockquote>
+<p><strong>Steps to edit Image label</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Double click the Image label.</li>
+<li>Edit Image Label panel pops up.</li>
+</ul>
+<p><img alt="image42" src="../_images/Edit_Image_Label.png" /></p>
+<ul class="simple">
+<li>User can modify the image using 'File' and 'Capture' options.</li>
+<li>Click 'Update' button to apply the modifications.</li>
+</ul>
+<p><img alt="image43" src="../_images/Image_Label_Modified.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="rich-text-labels">
+<h3>Rich Text Labels</h3>
+<p>Using Rich Text labels, User can format the content in a html editor. Interface for this option is provided in the drop down menu under the User notes toolbar as below,</p>
+<p><img alt="image44" src="../_images/rich_text_interface.png" /></p>
+<p><strong>Rich Text Panel</strong></p>
+<p><img alt="image45" src="../_images/rich_text_panel.png" /></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Background and Border</td>
+<td>Allows user to choose to apply background and border colors.</td>
+</tr>
+<tr class="row-even"><td>Compact</td>
+<td>Crops the Image to fit the text.</td>
+</tr>
+<tr class="row-odd"><td>User Values</td>
+<td>A flag to be used to enable image width and height options for user values.</td>
+</tr>
+<tr class="row-even"><td>Wi and Hi</td>
+<td>Wi and Hi are width and height of the image to be captured.</td>
+</tr>
+<tr class="row-odd"><td>Behind Scene</td>
+<td>Allows user to send the 2D Rich Text Labels behind the model. This flag will be ignored if Attach Geometry is ON.</td>
+</tr>
+<tr class="row-even"><td>Stretch</td>
+<td>By default all the rich table content as Image with stretch option. If unchecked, Fit View mode is considered with fixed aspect ratio.</td>
+</tr>
+<tr class="row-odd"><td>Attach Geometry</td>
+<td>Allows user to attach this label to a part/model.</td>
+</tr>
+<tr class="row-even"><td>Relative Position</td>
+<td>When Attach Geometry is checked, then Relative Position check appears.
+Relative Position stores position of label relative to window and changes accordingly with window resize.</td>
+</tr>
+<tr class="row-odd"><td>Label Size</td>
+<td>Allows user to control the dimension of the rich text label window to be updated with user given W,H values or not.</td>
+</tr>
+<tr class="row-even"><td>W,H</td>
+<td>User defined width and height of the rich text label (not the image width and height)</td>
+</tr>
+<tr class="row-odd"><td>X,Y</td>
+<td>User defined position of the rich text label. Valid values are between 0 to 1 (normalized).</td>
+</tr>
+<tr class="row-even"><td>OK</td>
+<td>Adds the image lable in viewer accordingly.</td>
+</tr>
+<tr class="row-odd"><td>Cancel</td>
+<td>Cancels all settings and closes the panel.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to Rich Text Labels</strong></p>
+<ul>
+<li><p class="first">Click User Notes drop down menu and click <em>Add Rich Text Labels</em></p>
+<p><img alt="image44" src="../_images/rich_text_interface.png" /></p>
+</li>
+<li><p class="first">It pops up <em>Add Rich Text Label</em> dialog, with Rich Text Editor.</p>
+<p><img alt="image45" src="../_images/rich_text_panel.png" /></p>
+</li>
+<li><p class="first">All the menu and toolbar options in the dialog are self explanatory to format the content.</p>
+</li>
+<li><p class="first">Modify Background and Border using the popup windows if required.</p>
+</li>
+<li><p class="first">Click OK and wait for a status bar message in the main window.</p>
+</li>
+<li><p class="first">Follow the instruction appears in the status bar.</p>
+</li>
+<li><p class="first">Click on the screen where ever user wants.</p>
+</li>
+<li><p class="first">Label will be positioned there.</p>
+<p><img alt="image46" src="../_images/rich_text_non_compact.png" /></p>
+</li>
+<li><p class="first">Double Click on the label to be edited.</p>
+</li>
+<li><p class="first">Edit Rich Text Label dialog will pop up.</p>
+<p><img alt="image47" src="../_images/rich_text_edit_panel.png" /></p>
+</li>
+<li><p class="first">Check <em>Behind Scene</em> option to send the label behind the model.</p>
+<p><img alt="image48" src="../_images/rich_text_non_compact_behind_scene.png" /></p>
+</li>
+<li><p class="first">Check <em>Compact</em> to make the content compact.</p>
+<p><img alt="image49" src="../_images/rich_text_compact.png" /></p>
+</li>
+<li><p class="first">UnCheck <em>Background</em> and <em>Border</em> options.</p>
+<p><img alt="image50" src="../_images/rich_text_no_border_background.png" /></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

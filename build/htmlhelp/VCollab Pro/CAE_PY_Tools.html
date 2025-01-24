@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Py Tools</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Py Tools</a><ul>
+<li><a class="reference internal" href="#report-views">Report Views</a></li>
+<li><a class="reference internal" href="#report-template">Report Template</a></li>
+<li><a class="reference internal" href="#select-max-instance">Select Max Instance</a></li>
+<li><a class="reference internal" href="#set-legend">Set Legend</a></li>
+<li><a class="reference internal" href="#find-hotspots">Find Hotspots</a></li>
+<li><a class="reference internal" href="#part-hotspots">Part Hotspots</a></li>
+<li><a class="reference internal" href="#hotspot-table">Hotspot Table</a></li>
+<li><a class="reference internal" href="#update-labels">Update Labels</a></li>
+<li><a class="reference internal" href="#minmax-xyplot">MinMax XYPlot</a></li>
+<li><a class="reference internal" href="#setsi-unit">SetSI_Unit</a></li>
+<li><a class="reference internal" href="#arrange-models">Arrange Models</a></li>
+<li><a class="reference internal" href="#export-csv-result">Export CSV Result</a></li>
+<li><a class="reference internal" href="#blank-view">Blank View</a></li>
+<li><a class="reference internal" href="#distance-plot">Distance Plot</a></li>
+<li><a class="reference internal" href="#import-image-views">Import Image Views</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="py-tools">
+<h1>Py Tools</h1>
+<blockquote>
+<div><p>VCollab provides PY_Tools, a custom tools menu which comes with the
+installer. It contains a set of utility functions which are associated
+with a set of python scripts.
+The description of association between each function name and
+corresponding Python script is to be defined in a specific format in a
+file &quot;<strong>&lt;VCOLLAB_DIR&gt;VCollabPro64VCollabStdPyTools.csv</strong>&quot;. The
+following set of functions are provided in this release.</p>
+<blockquote>
+<div><table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>#VCollab_Python_INTERFACE,
+GUI Mode=0,
+PY_Tools,Images/py_tools.png
+Report Views,%VCOLLAB_DIR%VCollabProXPYToolsReportViews.py
+Report Template,%VCOLLAB_DIR%VCollabProXPYToolsCMDTemplate_Run.py
+Select Max. Instance,%VCOLLAB_DIR%VCollabProXPYToolsSelectMaxInst.py
+SetLegend,%VCOLLAB_DIR%VCollabProXPYToolsSetLegend.py
+Find Hotspots,%VCOLLAB_DIR%VCollabProXPYToolsFindHotspots.py
+Part Hotspots,%VCOLLAB_DIR%VCollabProXPYToolsPartHotspots.py
+Hotspot Table,%VCOLLAB_DIR%VCollabProXPYToolsHotspotTable.py
+Update Labels,%VCOLLAB_DIR%VCollabProXPYToolsUpdate_Labels.py
+MinMax XYPlot,%VCOLLAB_DIR%VCollabProXPYToolsMinMaxXYPlot.py
+Set SI Unit,%VCOLLAB_DIR%VCollabProXPYToolssetUNITS_SI.py
+Arrange Models,%VCOLLAB_DIR%VCollabProXPYToolsArrangeModels.py
+Export CSV Result,%VCOLLAB_DIR%VCollabProXPYToolsExportAllinstance2CSV.py
+Distance Plot,%VCOLLAB_DIR%VCollabProXPYToolsTrackDistPlot.py
+Blank View,%VCOLLAB_DIR%VCollabProXPYToolsBlankview.py
+View2Background,%VCOLLAB_DIR%VCollabProXPYToolsCreate_Background.py
+Import Image Views,%VCOLLAB_DIR%VCollabProXPYToolsImportImageViews.py</td>
+</tr>
+</tbody>
+</table>
+<p><em>User Interface</em></p>
+<p><img alt="PyToolsMenu" src="../_images/Py_Tools_Menu.png" /></p>
+</div></blockquote>
+</div></blockquote>
+<div class="section" id="report-views">
+<h2>Report Views</h2>
+<blockquote>
+<div><p>This function (script) will create a set of Viewpoints based on analysis
+type. For loadcase analysis (Linear/Transient) it will create Maximum
+Instance hotspot views for each result. For Modal Analysis, it will
+create first 10 modal animation views with a Frequency Table view.</p>
+<blockquote>
+<div><img alt="Report_Views_Results" src="../_images/Report_Hotspot_Views.png" /> <img alt="Report Views Modal Analysis" src="../_images/Report_Modal_Views.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="report-template">
+<h2>Report Template</h2>
+<blockquote>
+<div><p>In VCollab, a live 3D report can be created by defining a set of live slides or viewpoints. VCollab Python API can
+be used to create such live slides automatically. To simplify report automation task, a list of generic commands are developed using python. A list of such
+commands ('Report Template' ) can be defined in a text file and run using &quot; PyTools --&gt;Report Template&quot; menu</p>
+<p>The file'Template_CMDList.pdf', located in %VCOLLAB_DIR%VCollabProXPyToolsPyTool_Package, gives a brief description for the supported commands.
+User can create their own template using this commands in a text file and run through this interface.</p>
+<p><img alt="ReportTemplate" src="../_images/PyTools_Report_Template_Dlg.png" /></p>
+<p>Just click 'Apply' button without providing command file, to run default template command file.
+A message box pops up after the command file is executed.</p>
+<p><img alt="ReportTemplateNotify" src="../_images/PyTools_ReportTemplate_Notify.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="select-max-instance">
+<h2>Select Max Instance</h2>
+<blockquote>
+<div>This function will display 'Maximum Value Instance' for the current
+result (and derived type).</div></blockquote>
+</div>
+<div class="section" id="set-legend">
+<h2>Set Legend</h2>
+<blockquote>
+<div><p>This function helps user to set pre-min &amp; pre-max legend values, precision and number of colors quickly. This command pops up the following user interface,</p>
+<blockquote>
+<div><img alt="SetLegend" src="../_images/PyTools_SetLegend.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="find-hotspots">
+<h2>Find Hotspots</h2>
+<blockquote>
+<div><p>This function will display a Python TK Dialog box (as shown below)
+for the current displayed result and instance. In this dialog box
+user can specify,</p>
+<ul class="simple">
+<li>Legend Max, Min values to highlight specific range of values.</li>
+<li>Option to filter parts and associated limit</li>
+<li>Top/Bottom hotspot option (if Top Hotspot check box is check then
+Top option else Bottom option)</li>
+<li>Number of hotspots</li>
+</ul>
+<p><img alt="Py_Find_Hotspots_panel" src="../_images/Py_Find_Hotspots_Panel.png" /></p>
+<p>When Apply button is clicked, hotspots are displayed based on user
+selected probe settings. If filter parts option is selected then the
+parts with result value outside the filter limits will be hidden
+(filter limits Top or Bottom is set based on the hotspot option)</p>
+</div></blockquote>
+</div>
+<div class="section" id="part-hotspots">
+<h2>Part Hotspots</h2>
+<blockquote>
+<div>This function computes hotspots for each individual part according to hotspot settings.</div></blockquote>
+</div>
+<div class="section" id="hotspot-table">
+<h2>Hotspot Table</h2>
+<blockquote>
+<div><p>This function creates a 2D table with Node ID, Position and result Value
+for the probed labels.</p>
+<blockquote>
+<div><img alt="Hotspot TableExample" src="../_images/PY_Hotspot_TableExample.png" /></div></blockquote>
+<p>Note: Use similar probe types (Derived or All result). It will not
+work for multi-model comparison tables.</p>
+</div></blockquote>
+</div>
+<div class="section" id="update-labels">
+<h2>Update Labels</h2>
+<blockquote>
+<div><p>This function updates all labels with latest label settings. User can update all viewpoints label also.</p>
+<blockquote>
+<div><img alt="UpdateLabels" src="../_images/PyTools_Update_Labels.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="minmax-xyplot">
+<h2>MinMax XYPlot</h2>
+<blockquote>
+<div><p>This script will create MinMax XY Plot for current displayed result.</p>
+<blockquote>
+<div><img alt="image1" src="../_images/Py_Min_Max_Plot_View.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="setsi-unit">
+<h2>SetSI_Unit</h2>
+<blockquote>
+<div><p>This function will set Units (SI) for all common result types (Results
+Option Dialog).</p>
+<blockquote>
+<div><img alt="image2" src="../_images/Set_SI_Unit_view.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="arrange-models">
+<h2>Arrange Models</h2>
+<blockquote>
+<div><p>This function arranges all merged models evenly displaced rows.</p>
+<blockquote>
+<div><img alt="image4" src="../_images/Arrange_Labels_Py_Dlg.png" /> <img alt="Arrange Models in view" src="../_images/Arrange_Models_Viewport.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="export-csv-result">
+<h2>Export CSV Result</h2>
+<blockquote>
+<div><p>This function exports current result instance into a csv file. User can enter output file folder path using the popup dialog.
+And user can check 'All Instances' option to write all instances, 'XYZCoord' option to write nodal coordinates data.</p>
+<blockquote>
+<div><img alt="ExportCSV" src="../_images/PyTools_ExportResult_CSV.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="blank-view">
+<h2>Blank View</h2>
+<blockquote>
+<div>This function clears the viewer screen with white background in a
+single click. i.e. It hides all the objects in the viewport.</div></blockquote>
+</div>
+<div class="section" id="distance-plot">
+<h2>Distance Plot</h2>
+<blockquote>
+<div><p>This function helps to find or trace the distance between any two
+nodes among all time steps. Clicking this item, pops up a input dialog and prompts for any two
+node IDs.</p>
+<p>Input dialog takes first two node ids from probe tables if they are
+available. Otherwise user has to enter the node IDs manually in the
+input dialog box.</p>
+<blockquote>
+<div><img alt="Distance Plot Dialog" src="../_images/Distance_Plot_Dlg.png" /></div></blockquote>
+<p>On clicking OK in the dialog, creates an XYPlot with a single curve
+which represents the distance between given nodes.</p>
+<blockquote>
+<div><img alt="Distance Plot View" src="../_images/Distance_Plot_View.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="import-image-views">
+<h2>Import Image Views</h2>
+<blockquote>
+<div><p>This function will ask for the image folder and add 'background image
+viewpoints' for each image in the folder. This function can be used to
+import all the slides from a PowerPoint (PPTx) as 2D viewpoints.</p>
+<p>Export PowerPoint slides as images (png/jpeg) into a folder.</p>
+<blockquote>
+<div><img alt="Import Image Views from PPT" src="../_images/Extract_PPTX.png" /></div></blockquote>
+<p>or Create images from native post processor or CAD tools.</p>
+<p>Select this function. Following Folder selection dialog will appear</p>
+<blockquote>
+<div><img alt="Select Folder" src="../_images/Select_Folder.png" /></div></blockquote>
+<p>It will add viewpoints for all images in the selected folder.</p>
+<blockquote>
+<div><img alt="image3" src="../_images/Import_PPT_Slides.png" /></div></blockquote>
+</div></blockquote>
+<p><strong>Note</strong>:</p>
+<p>This 'PY_Tools' is for common utility functions (may be for company
+level customization). &nbsp;For user level customization, user can create
+same kind of csv file with user defined menu item names and
+corresponding scripts. Then copy the created csv and script files to
+the <strong>&quot;%APPDATA%VCollab&quot;</strong>. VCollab looks for any csv file with the
+proper header and creates the menu in the next application session.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

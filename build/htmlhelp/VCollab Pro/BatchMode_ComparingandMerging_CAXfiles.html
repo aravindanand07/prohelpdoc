@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparing and Merging CAX files</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Image Generator" href="Image_Gen_Pro.html" />
+    <link rel="prev" title="Exporting Viewpoints into a Powerpoint File" href="BatchMode_CreatingMS-Power_Pointfileforviewpoints_inBatchmode.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Comparing and Merging CAX files</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="BatchMode_CreatingMS-Power_Pointfileforviewpoints_inBatchmode.html" title="Previous Chapter: Exporting Viewpoints into a Powerpoint File"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Exporting Vie...</span>
+    </a>
+  </li>
+  <li>
+    <a href="Image_Gen_Pro.html" title="Next Chapter: Image Generator"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Image Generator &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="comparing-and-merging-cax-files">
+<h1>Comparing and Merging CAX files</h1>
+<p>VCollab Pro users can compare two CAX model meshes and merge
+them into a single CAX file in batch mode. The compared result
+is in the form of a contour. The input is given through an XML
+file which consists of all the information to merge the CAX
+files.</p>
+<p>Syntax:</p>
+<blockquote>
+<div>Prompt :VCollabPro.exe file folder&gt; <em>VCollabPro.exe</em> -b
+&lt;<em>input xml file path</em>&gt;</div></blockquote>
+<p>Example:</p>
+<blockquote>
+<div>C:Program FilesVCollabVCollabPro64&gt; VCollabPro.exe -b
+&quot;C:testbatch.xml&quot;</div></blockquote>
+<p><strong>Sample Batch File</strong></p>
+<blockquote>
+<div><p>File Name: VCollabProBatch_MergeCAX.xml</p>
+<p>Location: &quot;..SamplesBatchMode Inputs\&quot;</p>
+</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</p>
+<p>&lt;!-- Purpose : This sample explains how to merge two cax
+files, to compare both models and generate new cax with
+new compare result--&gt;</p>
+<p>&lt;!-- Here the fields, 'sInputFile' and
+'sInputMergeCaxFile' are input cax files and
+'sOutputFile' is the merged file --&gt;</p>
+<p>&lt;VCollabBatch fVersion = &quot;0.1&quot;</p>
+<blockquote>
+<div><p>sInputFile = &quot;g:/Beam.cax&quot; &gt;</p>
+<p>&lt;Output sOutputFile =&quot;g:/ComparedBeam.cax&quot; /&gt;</p>
+</div></blockquote>
+<p>&lt;!-- Merged file can be repositioned from its original
+coordinate system using ENABLE_TRANSLATION,
+ENABLE_ROTATION or ENABLE_SCALE --&gt;</p>
+<p>&lt;!-- Note : Set either 'bCombinedPalette' or
+'bMultiPalette' as TRUE at once, only if needed --&gt;</p>
+<p>&lt;!-- Note iMergePosition value is 0-AsIs; 1-left;
+2-right; 3-top; 4-bottom; 5-Relative translate;
+6-Absolute position; Default is 0--&gt;</p>
+<p>&lt;!-- Translation Rotation Scale will work only when
+iMergePosition=&quot;5&quot; or &quot;6&quot; otherwise they are ignored.--&gt;</p>
+<p>&lt;!-- New viewpath will be added as 'MergeAsNewDataset'
+with a viewpoint named 'Merge' in which all the CAE
+states will be retained.`--&gt;</p>
+<p>&lt;MergeAsNewDataSet ENABLE = &quot;TRUE&quot;</p>
+<blockquote>
+<div><p>sInputMergeCaxFile = &quot;g:/new_file.cax&quot;</p>
+<p>bCombinedPalette = &quot;FALSE&quot;</p>
+<p>bMultiPalette = &quot;FALSE&quot;</p>
+<p>bShowDataSetLabels= &quot;TRUE&quot;</p>
+<p>bApplyCurentSettings =&quot;FALSE&quot;</p>
+<p>iMergePosition=&quot;2&quot;</p>
+<p>ENABLE_TRANSLATION = &quot;FALSE&quot;</p>
+<p>fTranslationX = &quot;3&quot;</p>
+<p>fTranslationY = &quot;0&quot;</p>
+<p>fTranslationZ = &quot;0&quot;</p>
+<p>ENABLE_ROTATION = &quot;FALSE&quot;</p>
+<p>fRotationX = &quot;0&quot;</p>
+<p>fRotationY = &quot;1&quot;</p>
+<p>fRotationZ = &quot;0&quot;</p>
+<p>fRotationAngle = &quot;0&quot;</p>
+<p>ENABLE_SCALE = &quot;FALSE&quot;</p>
+<p>fScaleX = &quot;1&quot;</p>
+<p>fScaleY = &quot;1&quot;</p>
+<p>fScaleZ = &quot;1&quot;</p>
+<p>/&gt;</p>
+</div></blockquote>
+<p>&lt;!--The following option is to compare mesh/geometry
+first model with second model and to generate a result
+with the deviation --&gt;</p>
+<p>&lt;!-- iCompare Mode varies from 0 to 2. 0 refers to same
+part comparison, 1 refers to visible parts comparison and
+2 refers to all parts comparison --&gt;</p>
+<p>&lt;!-- iMaxDistance refers to maximum deviation considered
+for comparison --&gt;</p>
+<p>&lt;!-- bAddViewPoint (TRUE) adds current scene with
+deviation result color plot into viewpoint and save it to
+cax --&gt;</p>
+<p>&lt;!-- bSetPartMax (TRUE) applies part maximum deviation
+value to the color plot of the part. i.e. Each part will
+be of single contour color. --&gt;</p>
+<p>&lt;CompareMesh ENABLE = &quot;TRUE&quot;</p>
+<blockquote>
+<div><p>iCompareMode = &quot;1&quot;</p>
+<p>fMaxDistance= &quot;-1&quot;</p>
+<p>bAddViewPoint =&quot;TRUE&quot;</p>
+<p>bSetPartMax=&quot;FALSE&quot;</p>
+<p>/&gt;</p>
+</div></blockquote>
+<p class="last">&lt;/VCollabBatch&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dynamic Arguments</strong></p>
+<p>Arguments for merging CAX files can also be set dynamically in batch
+mode. This feature is useful for repeated operations without having to
+edit values in the input XML file.</p>
+<p>The XML file is thus used as a template and its values are set
+externally through command line arguments.</p>
+<p>E.g.</p>
+<p>C:Program FilesVCollabVCollabPro64&gt; VCollabPro.exe -b
+&quot;C:testbatch.xml&quot; &quot;..SamplesBatchMode Inputsairbag.cax&quot;
+&quot;..SamplesBatchMode Inputsaudi.cax&quot; &quot;C:output.cax&quot;</p>
+<p>In this example, the input CAX file, output file and input merge CAX
+file have been provided dynamically.</p>
+<p>The arguments are denoted as &#64;arg#<strong>N</strong> where N is the index of the
+argument in the command line. Dynamic arguments can be used in any field
+and in any order, but &#64;arg#<strong>N</strong> has to match with the command line
+input index.</p>
+<blockquote>
+<div><p>In this example,</p>
+<p>&#64;arg#0 = VCollabPro.exe</p>
+<p>&#64;arg#1= -b</p>
+<p>&#64;arg#2 = C:/test/batch.xml</p>
+<p>&#64;arg#3= ..SamplesBatchMode Inputsairbag.cax which is assigned to
+sInputFile</p>
+<p>&#64;arg#4=..SamplesBatchMode Inputsaudi.cax which is assigned to
+sOutputFile</p>
+<p>&#64;arg#5=C:output.cax which is assigned to sInputMergeCaxFile</p>
+</div></blockquote>
+<p><strong>Modified xml</strong></p>
+<blockquote>
+<div>Fields that take values from command line arguments are highlighted.</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</p>
+<p>&lt;!-- Purpose : This sample explains how to merge two cax files, to
+compare both models and generate new cax with new compare result--&gt;</p>
+<p>&lt;!-- Here the fields, 'sInputFile' and 'sInputMergeCaxFile' are
+input cax files and 'sOutputFile' is the merged file --&gt;</p>
+<p>&lt;VCollabBatch fVersion = &quot;0.1&quot;</p>
+<blockquote>
+<div><p>sInputFile = <strong>&quot;&#64;arg#3&quot;</strong> &gt;</p>
+<p>&lt;Output sOutputFile =<strong>&quot;&#64;arg#5&quot;</strong> /&gt;</p>
+</div></blockquote>
+<p>&lt;!-- Merged file can be repositioned from its original coordinate
+system using ENABLE_TRANSLATION, ENABLE_ROTATION or ENABLE_SCALE --&gt;</p>
+<p>&lt;!-- Note : Set either 'bCombinedPalette' or 'bMultiPalette' as TRUE
+at once, only if needed --&gt;</p>
+<p>&lt;!-- Note iMergePosition value is 0-AsIs; 1-left; 2-right; 3-top;
+4-bottom; 5-Relative translate; 6-Absolute posistion; Default is
+0--&gt;</p>
+<p>&lt;!-- Translation Rotation Scale will work only when
+iMergePosition=&quot;5&quot; or &quot;6&quot; other wise they are ignored.--&gt;</p>
+<p>&lt;!-- New viewpath will be added as 'MergeAsNewDataset' with a
+viewpoint named 'Merge' in which all the CAE states will be
+retained.` --&gt;</p>
+<p>&lt;MergeAsNewDataSet ENABLE = &quot;TRUE&quot;</p>
+<blockquote>
+<div><p>sInputMergeCaxFile = <strong>&quot;&#64;arg#4&quot;</strong></p>
+<p>bCombinedPalette = &quot;FALSE&quot;</p>
+<p>bMultiPalette = &quot;FALSE&quot;</p>
+<p>bShowDataSetLabels= &quot;TRUE&quot;</p>
+<p>bApplyCurentSettings =&quot;FALSE&quot;</p>
+<p>iMergePosition=&quot;2&quot;</p>
+<p>ENABLE_TRANSLATION = &quot;FALSE&quot;</p>
+<p>fTranslationX = &quot;3&quot;</p>
+<p>fTranslationY = &quot;0&quot;</p>
+<p>fTranslationZ = &quot;0&quot;</p>
+<p>ENABLE_ROTATION = &quot;FALSE&quot;</p>
+<p>fRotationX = &quot;0&quot;</p>
+<p>fRotationY = &quot;1&quot;</p>
+<p>fRotationZ = &quot;0&quot;</p>
+<p>fRotationAngle = &quot;0&quot;</p>
+<p>ENABLE_SCALE = &quot;FALSE&quot;</p>
+<p>fScaleX = &quot;1&quot;</p>
+<p>fScaleY = &quot;1&quot;</p>
+<p>fScaleZ = &quot;1&quot;</p>
+<p>/&gt;</p>
+</div></blockquote>
+<p>&lt;!--The following option is to compare mesh/geometry first model
+with second model and to generate a result with the deviation --&gt;</p>
+<p>&lt;!-- iCompare Mode varies from 0 to 2. 0 refers to same part
+comparision, 1 refers to visible parts comparison and 2 refers to
+all parts comparison --&gt;</p>
+<p>&lt;!-- iMaxDistance refers to maximum deviation considered for
+comparison --&gt;</p>
+<p>&lt;!-- bAddViewPoint (TRUE) adds current scene with deviation result
+color plot into viewpoint and save it to cax --&gt;</p>
+<p>&lt;!-- bSetPartMax (TRUE) applies part maximum deviation value to the
+color plot of the part. i.e. Each part will be of single contour
+color. --&gt;</p>
+<p>&lt;CompareMesh ENABLE = &quot;TRUE&quot;</p>
+<blockquote>
+<div><p>iCompareMode = &quot;1&quot;</p>
+<p>fMaxDistance= &quot;-1&quot;</p>
+<p>bAddViewPoint =&quot;TRUE&quot;</p>
+<p>bSetPartMax=&quot;FALSE&quot;</p>
+<p>/&gt;</p>
+</div></blockquote>
+<p class="last">&lt;/VCollabBatch&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

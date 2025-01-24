@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List of Commands</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="Video Template Editor GUI" href="../VideoMaker/Template_Editor_GUI.html" />
+    <link rel="prev" title="Report Template Editor GUI" href="Template_Editor_GUI.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../VCollab%20Pro/index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">List of Commands</a><ul>
+<li><a class="reference internal" href="#general-commands">General Commands</a><ul>
+<li><a class="reference internal" href="#save">SAVE</a></li>
+<li><a class="reference internal" href="#cur-folder">CUR_FOLDER</a></li>
+<li><a class="reference internal" href="#loadcax">LOADCAX</a></li>
+<li><a class="reference internal" href="#mergecax">MERGECAX</a></li>
+<li><a class="reference internal" href="#set-var">SET_VAR</a></li>
+<li><a class="reference internal" href="#showcmds">SHOWCMDS</a></li>
+<li><a class="reference internal" href="#set-model">SET_MODEL</a></li>
+<li><a class="reference internal" href="#axis-pos">AXIS_POS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#set-camera-commands">Set Camera Commands</a><ul>
+<li><a class="reference internal" href="#camera-view">CAMERA_VIEW</a></li>
+<li><a class="reference internal" href="#camera-xyaxis">CAMERA_XYAXIS</a></li>
+<li><a class="reference internal" href="#fit-view">FIT_VIEW</a></li>
+<li><a class="reference internal" href="#ortho-view">ORTHO_VIEW</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#viewpoint-commands">ViewPoint Commands</a><ul>
+<li><a class="reference internal" href="#viewpath">VIEWPATH</a></li>
+<li><a class="reference internal" href="#image-vp">IMAGE_VP</a></li>
+<li><a class="reference internal" href="#add-vp">ADD_VP</a></li>
+<li><a class="reference internal" href="#add-vp-anim">ADD_VP_ANIM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#set-display-commands">Set Display Commands</a><ul>
+<li><a class="reference internal" href="#set-font">SET_FONT</a></li>
+<li><a class="reference internal" href="#set-display">SET_DISPLAY</a></li>
+<li><a class="reference internal" href="#show-label">SHOW_LABEL</a></li>
+<li><a class="reference internal" href="#label-precision">LABEL_PRECISION</a></li>
+<li><a class="reference internal" href="#set-model-color">SET_MODEL_COLOR</a></li>
+<li><a class="reference internal" href="#del-entity">DEL_ENTITY</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#legend-commands">Legend Commands</a><ul>
+<li><a class="reference internal" href="#set-legend">SET_LEGEND</a></li>
+<li><a class="reference internal" href="#legend-hexcolors">LEGEND_HEXCOLORS</a></li>
+<li><a class="reference internal" href="#set-legend-dynrange">SET_LEGEND_DYNRANGE</a></li>
+<li><a class="reference internal" href="#legendfont-size">LEGENDFONT_SIZE</a></li>
+<li><a class="reference internal" href="#legend-pos">LEGEND_POS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part-commands">Part Commands</a><ul>
+<li><a class="reference internal" href="#part-options">PART_OPTIONS</a></li>
+<li><a class="reference internal" href="#parts-show">PARTS_SHOW</a></li>
+<li><a class="reference internal" href="#parts-hide">PARTS_HIDE</a></li>
+<li><a class="reference internal" href="#asm-show">ASM_SHOW</a></li>
+<li><a class="reference internal" href="#filter-parts">FILTER_PARTS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#result-commands">Result Commands</a><ul>
+<li><a class="reference internal" href="#sel-result">SEL_RESULT</a></li>
+<li><a class="reference internal" href="#sel-instance">SEL_INSTANCE</a></li>
+<li><a class="reference internal" href="#create-result">CREATE_RESULT</a></li>
+<li><a class="reference internal" href="#create-envelop">CREATE_ENVELOP</a></li>
+<li><a class="reference internal" href="#create-result-cyl">CREATE_RESULT_CYL</a></li>
+<li><a class="reference internal" href="#set-palette-mode">SET_PALETTE_MODE</a></li>
+<li><a class="reference internal" href="#import-xycsv">IMPORT_XYCSV</a></li>
+<li><a class="reference internal" href="#new-instance">NEW_INSTANCE</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nodeset-mask-commands">NodeSet Mask Commands</a><ul>
+<li><a class="reference internal" href="#res-mask">RES_MASK</a></li>
+<li><a class="reference internal" href="#part-mask">PART_MASK</a></li>
+<li><a class="reference internal" href="#set-mask-mode">SET_MASK_MODE</a></li>
+<li><a class="reference internal" href="#node-mask">NODE_MASK</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hotspot-commands">Hotspot Commands</a><ul>
+<li><a class="reference internal" href="#probe-res">PROBE_RES</a></li>
+<li><a class="reference internal" href="#hs-limits">HS_LIMITS</a></li>
+<li><a class="reference internal" href="#comp-hotspots">COMP_HOTSPOTS</a></li>
+<li><a class="reference internal" href="#set-compare-res">SET_COMPARE_RES</a></li>
+<li><a class="reference internal" href="#hotspot-view">HOTSPOT_VIEW</a></li>
+<li><a class="reference internal" href="#loadcase-hsview">LOADCASE_HSVIEW</a></li>
+<li><a class="reference internal" href="#header-pos">HEADER_POS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#auto-view-commands">Auto View Commands</a><ul>
+<li><a class="reference internal" href="#modal-vps">MODAL_VPS</a></li>
+<li><a class="reference internal" href="#all-result-vps">ALL_RESULT_VPS</a></li>
+<li><a class="reference internal" href="#compare-geom-vps">COMPARE_GEOM_VPS</a></li>
+<li><a class="reference internal" href="#envelop-view">ENVELOP_VIEW</a></li>
+<li><a class="reference internal" href="#explode-view">EXPLODE_VIEW</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#xy-plot-commands">XY Plot Commands</a><ul>
+<li><a class="reference internal" href="#minmax-plot">MINMAX_PLOT</a></li>
+<li><a class="reference internal" href="#hs-xyplot">HS_XYPLOT</a></li>
+<li><a class="reference internal" href="#setxyplot-win">SETXYPLOT_WIN</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-commands">Other Commands</a><ul>
+<li><a class="reference internal" href="#add-2dnote">ADD_2DNOTE</a></li>
+<li><a class="reference internal" href="#set-anim">SET_ANIM</a></li>
+<li><a class="reference internal" href="#arrange-model">ARRANGE_MODEL</a></li>
+<li><a class="reference internal" href="#hs-table2d">HS_TABLE2D</a></li>
+<li><a class="reference internal" href="#run-script">RUN_SCRIPT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Template_Editor_GUI.html" title="Previous Chapter: Report Template Editor GUI"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Report Templa...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../VideoMaker/Template_Editor_GUI.html" title="Next Chapter: Video Template Editor GUI"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Video Templat... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="list-of-commands">
+<h1>List of Commands</h1>
+<div class="section" id="general-commands">
+<h2>General Commands</h2>
+<div class="section" id="save">
+<h3>SAVE</h3>
+<p>This command saves the 3D Report into various formats as listed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SAVE</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">HTML</span><span class="o">/</span><span class="n">WCAX</span><span class="o">/</span><span class="n">CAX</span><span class="o">/</span><span class="n">PDF</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Output</span> <span class="n">File</span> <span class="n">Name</span> <span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Output file name is optional. By default, it will take same name as native file name.</li>
+</ul>
+<div class="admonition-examples admonition">
+<p class="first admonition-title">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SAVE</span><span class="p">,</span><span class="n">CAX</span>
+<span class="n">SAVE</span><span class="p">,</span><span class="n">HTML</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>Saves the CAX report with the same name as native file name.</li>
+<li>Saves the HTML file with the same name as CAX file name.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="cur-folder">
+<h3>CUR_FOLDER</h3>
+<p>This command sets default Folder Path for files.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CUR_FOLDER</span><span class="p">,</span><span class="o">&lt;</span><span class="n">CAX</span><span class="o">/</span><span class="n">PY</span><span class="o">/</span><span class="n">TEMP</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>CAX : CAX file path is set as current folder.</li>
+<li>PY : Script file path.</li>
+<li>TEMP : VCollab Temp path or or log file path.</li>
+<li>&lt;Path&gt; : full path.</li>
+</ul>
+</div>
+<div class="section" id="loadcax">
+<h3>LOADCAX</h3>
+<p>This command opens the CAX file from the specified.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LOADCAX</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">CAXFilePath</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mergecax">
+<h3>MERGECAX</h3>
+<p>This command merges the CAX file into the current used CAX file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MERGECAX</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Merge_CAXFilePath</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-var">
+<h3>SET_VAR</h3>
+<p>Define list of variables.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_VAR</span><span class="p">,</span><span class="o">&lt;</span><span class="n">variable_name</span><span class="o">&gt;=&lt;</span><span class="n">variable</span> <span class="n">Value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition-examples admonition">
+<p class="first admonition-title">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_VAR</span><span class="p">,</span><span class="n">A</span><span class="o">=</span><span class="n">L3M1</span>
+<span class="n">SET_VAR</span><span class="p">,</span><span class="n">VMStress_Limit</span><span class="o">=</span><span class="mi">390</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>Defines a variable 'A' which is assigned a VCollab Instance L3M1.</li>
+<li>Defines a variable 'VMStress_Limit' which is assigned a value of 390.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="showcmds">
+<h3>SHOWCMDS</h3>
+<p>Popup Display commands (for debugging).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHOWCMDS</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-model">
+<h3>SET_MODEL</h3>
+<p>This sets model as current.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_MODEL</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">model</span> <span class="n">Name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="axis-pos">
+<h3>AXIS_POS</h3>
+<p>This sets the postion of axis on the screen based on X and Y position.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AXIS_POS</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">X</span> <span class="n">position</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Y</span> <span class="n">position</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>&lt;X position&gt; and &lt;Y position&gt; can be floating values.</li>
+<li>&lt;X position&gt; increases from left to right on the screen.</li>
+<li>&lt;Y position&gt; increases from top to bottom on the screen.</li>
+</ul>
+<img alt="../../_images/Axis_Position.PNG" src="../../_images/Axis_Position.PNG" />
+</div>
+</div>
+<div class="section" id="set-camera-commands">
+<h2>Set Camera Commands</h2>
+<div class="section" id="camera-view">
+<h3>CAMERA_VIEW</h3>
+<p>This command sets camera Z direction vector &lt;dx,dy,dz&gt; and Up-vector &lt;ux,uy,uz&gt;.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAMERA_VIEW</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">,</span> <span class="n">ux</span><span class="p">,</span> <span class="n">uy</span><span class="p">,</span> <span class="n">uz</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>This command specifies camera orientation of a model in VCollab Pro GUI.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAMERA_VIEW</span><span class="p">,</span><span class="o">-</span><span class="mf">0.63</span><span class="p">,</span><span class="mf">0.36</span><span class="p">,</span><span class="o">-</span><span class="mf">0.69</span><span class="p">,</span><span class="o">-</span><span class="mf">0.57</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.72</span>
+</pre></div>
+</div>
+<img alt="../../_images/Camera_Settings.PNG" class="last" src="../../_images/Camera_Settings.PNG" />
+</div>
+</div>
+<div class="section" id="camera-xyaxis">
+<h3>CAMERA_XYAXIS</h3>
+<p>This command sets Camera axis X-dir and Y Dir(Upvector).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAMERA_XYAXIS</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dz</span><span class="p">,</span> <span class="n">ux</span><span class="p">,</span> <span class="n">uy</span><span class="p">,</span> <span class="n">uz</span>
+</pre></div>
+</div>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAMERA_XYAXIS</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="fit-view">
+<h3>FIT_VIEW</h3>
+<p>This command zooms the model view in VCollab Pro GUI.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FIT_VIEW</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">zoom</span> <span class="n">factor</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>&lt;zoom factor&gt; is optional.</li>
+<li>The zoom factor varies from -0.5 to +0.5, default is 1.0.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FIT_VIEW</span>
+<span class="n">FIT_VIEW</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>It fits the model view in VCollab Pro GUI.</li>
+<li>It fits the model view in VCollab Pro GUI with a zoom factor of -0.3.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="ortho-view">
+<h3>ORTHO_VIEW</h3>
+<p>This command sets Ortho/Perspective Projection.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ORTHO_VIEW</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Ortho View</td>
+<td>Perspective View</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="../../_images/Ortho.PNG"><img alt="img_ortho" src="../../_images/Ortho.PNG" style="width: 300px;" /></a></td>
+<td><a class="reference internal" href="../../_images/Perspective.PNG"><img alt="img_pers" src="../../_images/Perspective.PNG" style="width: 300px;" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="viewpoint-commands">
+<h2>ViewPoint Commands</h2>
+<div class="section" id="viewpath">
+<h3>VIEWPATH</h3>
+<p>This generates a ViewPath with user defined name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VIEWPATH</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">ViewPath</span> <span class="n">Name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/Viewpath.PNG" src="../../_images/Viewpath.PNG" />
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VIEWPATH</span><span class="p">,</span><span class="n">Sample</span>
+</pre></div>
+</div>
+<p class="last">This will create a ViewPath by name &quot;Sample&quot;.</p>
+</div>
+</div>
+<div class="section" id="image-vp">
+<h3>IMAGE_VP</h3>
+<p>This creates the background and/or other images to be imported into VCollab.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IMAGE_VP</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">VPName</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">image</span> <span class="n">file</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Title</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Title</span> <span class="n">Position</span><span class="p">(</span><span class="n">Sx</span><span class="p">,</span><span class="n">Sy</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] VPName : ViewPoint name, optional. If VPName=N, then image is set as background. ViewPoint is not created.</li>
+<li>[2] Image File Name : user should provide image file name.</li>
+<li>[3] Title String : ViewPoint title name, optional.</li>
+<li>[4,5] Title Position(Sx,Sy) : ViewPoint title X and Y position.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IMAGE_VP</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">Sample</span><span class="o">.</span><span class="n">png</span>
+<span class="n">IMAGE_VP</span><span class="p">,</span><span class="n">Stress</span><span class="p">,</span><span class="n">Sample</span><span class="o">.</span><span class="n">png</span><span class="p">,</span><span class="n">VM</span> <span class="n">Stress</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.1</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>Background is created using Sample.png file.</li>
+<li>ViewPoint named &quot;Stress&quot;is created with background image as Sample.png. Title &quot;VM Stress&quot; is also created in ViewPoint at the desired location.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="add-vp">
+<h3>ADD_VP</h3>
+<p>This creates a ViewPoint with user defined VPName.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_VP</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">vpname</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">Title</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">title</span> <span class="n">position</span> <span class="n">xy</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[&lt;Title&gt;, &lt;title position xy&gt;] is optional. It creates title in the VP and places at desired position.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_VP</span><span class="p">,</span><span class="n">VM_Stress</span>
+<span class="n">ADD_VP</span><span class="p">,</span><span class="n">VM_Stress</span><span class="p">,</span><span class="n">Stress</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.1</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>It adds a ViewPoint by the name VMStress.</li>
+<li>It adds a ViewPoint by the name VMStress. Title &quot;Stress&quot; is added to the ViewPoint at desired position.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="add-vp-anim">
+<h3>ADD_VP_ANIM</h3>
+<p>This creates a ViewPoint with animation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_VP_ANIM</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">vpname</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">Title</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">title</span> <span class="n">position</span> <span class="n">xy</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[&lt;Title&gt;, &lt;title position xy&gt;] is optional. It creates title in the ViewPoint and places at desired position.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_VP_ANIM</span><span class="p">,</span><span class="n">VM_Stress</span>
+<span class="n">ADD_VP_ANIM</span><span class="p">,</span><span class="n">VM_Stress</span><span class="p">,</span><span class="n">Stress</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.1</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>It adds a ViewPoint with animation by the name VMStress.</li>
+<li>It adds a ViewPoint with animation by the name VMStress. Title &quot;Stress&quot; to the ViewPoint at desired position.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="set-display-commands">
+<h2>Set Display Commands</h2>
+<div class="section" id="set-font">
+<h3>SET_FONT</h3>
+<p>This sets the front for the entity type as listed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_FONT</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Size</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">iR</span><span class="p">,</span><span class="n">iG</span><span class="p">,</span><span class="n">iB</span><span class="o">&gt;</span> <span class="p">,</span> <span class="o">&lt;</span><span class="n">ibR</span><span class="p">,</span><span class="n">ibG</span><span class="p">,</span><span class="n">ibB</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">iborder</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] &lt;Type&gt; : Entity type ,&lt;NOTE, PROBE_VALUE, PROBE_TEXT, OTHERS&gt;</li>
+<li>[2] &lt;Size&gt; : font size</li>
+<li>[3] &lt;Name&gt; : font name</li>
+<li>[4] &lt;iR, iG, iB&gt; : font color RGB</li>
+<li>[5] &lt;ibR,ibG,ibB&gt; : font background color</li>
+<li>[6] &lt;iborder&gt; : Border on/off (0=Off else ON)</li>
+</ul>
+<img alt="../../_images/Add_Notes.PNG" src="../../_images/Add_Notes.PNG" />
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_FONT</span><span class="p">,</span><span class="n">NOTE</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="n">Arial</span> <span class="n">Bold</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">240</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">SET_Font</span><span class="p">,</span><span class="n">NOTE</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="n">Arial</span> <span class="n">Bold</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">141</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will set the note settings accordingly to the parameters with no border.</li>
+<li>This will set the note settings with default label background with border.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Values of &lt;iR, iG, iB&gt; and &lt;ibR, ibG, ibB&gt; are available in Add Notes.
+User can click on the color and decide on the values accordingly.</p>
+</div>
+</div>
+<div class="section" id="set-display">
+<h3>SET_DISPLAY</h3>
+<p>This sets the display mode settings in the VCollab Pro GUI.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_DISPLAY</span><span class="p">,</span> <span class="n">COLOR</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span> <span class="n">LEGEND</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span> <span class="n">DEFORM</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span> <span class="n">UDMESH</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">DMODE</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">AXIS</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span> <span class="n">SECTION</span><span class="o">=</span><span class="n">N</span><span class="p">,</span> <span class="n">BG</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] Color: Optional, Sets CAE color plot. Y to apply color plot.</p>
+</li>
+<li><p class="first">[2] Legend: Optional, Show Legend. Y to show the legend.</p>
+</li>
+<li><p class="first">[3] Deform:  Optional, Show deformation. Y to show the deformation.</p>
+</li>
+<li><p class="first">[4] UDMesh: Optional, sets visibility for undeformed mesh (0-3).</p>
+</li>
+<li><p class="first">[5] DMode: Optional, sets display mode of the scene. Valid range is 0 to 5.</p>
+<blockquote>
+<div><ul class="simple">
+<li>0 - Shaded</li>
+<li>1 - Shaded Mesh</li>
+<li>2 - Wireframe</li>
+<li>3 - Hiddenline Removal</li>
+<li>4 - Point</li>
+<li>5 - Transparent</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[6] Axis: Optional, show Axis(Y/N). Y to show the axis.</p>
+</li>
+<li><p class="first">[7] Section: Optional, show section(Y/N). Y to show the section.</p>
+</li>
+<li><p class="first">[8] BG: Optional, Valid range 0 to 2.</p>
+<blockquote>
+<div><ul class="simple">
+<li>0 - Plain</li>
+<li>1 - Gradient</li>
+<li>2 - Texture</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_DISPLAY</span><span class="p">,</span><span class="n">COLOR</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span><span class="n">LEGEND</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span><span class="n">DEFORM</span><span class="o">=</span><span class="n">N</span><span class="p">,</span><span class="n">SECTION</span><span class="o">=</span><span class="n">N</span><span class="p">,</span><span class="n">AXIS</span><span class="o">=</span><span class="n">Y</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>Sets the display mode settings according to the mentioned parameters.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="show-label">
+<h3>SHOW_LABEL</h3>
+<p>This sets the probe label settings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHOW_LABEL</span><span class="p">,</span> <span class="n">ID</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ROW</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">COL</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">Rank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">PART</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HEADER</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ABR</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">PROBE</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">DISP</span><span class="o">=</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">,</span> <span class="n">ARRANGE</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="mi">5</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] ID: Show node/element id (Y/N). Y to show id (optional)</p>
+</li>
+<li><p class="first">[2] ROW: Show row header (Y/N). Y to show row header (optional)</p>
+</li>
+<li><p class="first">[3] Rank: Show Rank (Y/N). Y to show Rank (optional)</p>
+</li>
+<li><p class="first">[4] PART: Show Part name (Y/N). Y to show Part name (optional)</p>
+</li>
+<li><p class="first">[5] HEADER: Show Header Legend(Y/N). Y to show Header Legend (optional)</p>
+</li>
+<li><p class="first">[6] ABR: Display Abbreviations legend. Y to show Abbreviation Legend (optional)</p>
+</li>
+<li><p class="first">[7] PROBE: Sets current probe type. The valid range is 1 to 5 (optional)</p>
+<blockquote>
+<div><ul class="simple">
+<li>1 - CurrentResult-Derived</li>
+<li>2 - CurrentResult-Full</li>
+<li>3 - All Results-Table</li>
+<li>4 - All Instances-Table</li>
+<li>5 - All Instances-XY Plot</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[7] DISP: Show labels (Y/N). Y to show labels</p>
+</li>
+<li><p class="first">[8] ARRANGE: Sets label arrangement mode. The valid range is 0 to 5 (optional)</p>
+<blockquote>
+<div><ul class="simple">
+<li>0 - Actual.</li>
+<li>1 - Top-Bottom.</li>
+<li>2 - Compact</li>
+<li>3 - Circular</li>
+<li>4 - Silhouette</li>
+<li>5 - Rectangular</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHOW_LABEL</span><span class="p">,</span><span class="n">ID</span><span class="o">=</span><span class="n">N</span><span class="p">,</span><span class="n">Rank</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span><span class="n">PROBE</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>Sets the probe label settings according to the mentioned parameters.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="label-precision">
+<h3>LABEL_PRECISION</h3>
+<p>This sets the probe label precision.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LABEL_PRECISION</span><span class="p">,</span><span class="n">iPrecision</span><span class="p">,</span><span class="n">bScientific</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] iPrecision: sets number of digits required in precision</li>
+<li>[2] bScientific: set Y to show number in scientific notation</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LABEL_PRECISION</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">Y</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>Sets the probe label precision settings according to the mentioned parameters.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="set-model-color">
+<h3>SET_MODEL_COLOR</h3>
+<p>This sets random colors to each part in the model (No arguments).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_MODEL_COLOR</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="del-entity">
+<h3>DEL_ENTITY</h3>
+<p>This command specifies entity types to be deleted.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DEL_ENTITY</span><span class="p">,</span> <span class="n">XY</span><span class="p">,</span> <span class="n">LABEL</span><span class="p">,</span> <span class="n">SYMBOL</span><span class="p">,</span> <span class="n">PROBE</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>This command is used in the beginning of every ViewPoint to clear the data from previous ViewPoint.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="legend-commands">
+<h2>Legend Commands</h2>
+<div class="section" id="set-legend">
+<h3>SET_LEGEND</h3>
+<p>This sets legend settings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_LEGEND</span><span class="p">,</span><span class="o">&lt;</span><span class="n">UserMax</span><span class="o">&gt;</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">UserMin</span><span class="o">&gt;</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">MAXLimit</span><span class="o">&gt;</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">MINLimit</span><span class="o">&gt;</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">Precision</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Discrete</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Reverse</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">NColor</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1,2] UserMax, UserMin : Sets Custom Legend Range.Set NA to skip limit setting</li>
+<li>[3,4] MAXLimit, MINLimit : Legend limits. Set NA to skip limit setting</li>
+<li>[5] Precision : sets number of digits required in precision.</li>
+<li>[4] Discrete : set Y to display discrete legend.</li>
+<li>[5] Reverse : set Y to display reverse legend.</li>
+<li>[6] NColor : set number of colors in legend (optional).</li>
+</ul>
+<img alt="../../_images/CAE_Settings.PNG" src="../../_images/CAE_Settings.PNG" />
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_LEGEND</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">N</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will set the legend settings accordingly.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="legend-hexcolors">
+<h3>LEGEND_HEXCOLORS</h3>
+<p>This sets the legend colors accoridng to the hexcolors.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LEGEND_HEXCOLORS</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">list</span> <span class="n">of</span> <span class="nb">hex</span> <span class="n">colors</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LEGEND_HEXCOLORS</span><span class="p">,</span><span class="n">FF0000</span><span class="p">,</span><span class="n">FFDD00</span><span class="p">,</span><span class="mi">00</span><span class="n">FF00</span><span class="p">,</span><span class="mi">00</span><span class="n">DDFF</span><span class="p">,</span><span class="mi">0000</span><span class="n">FF</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="set-legend-dynrange">
+<h3>SET_LEGEND_DYNRANGE</h3>
+<p>This sets the values of legend as provided.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_LEGEND_DYNRANGE</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">list</span> <span class="n">of</span> <span class="n">legend</span> <span class="n">values</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_LEGEND_DYNRANGE</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="legendfont-size">
+<h3>LEGENDFONT_SIZE</h3>
+<p>This sets the legend font size.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LEGENDFONT_SIZE</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">iSize</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">fontName</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="legend-pos">
+<h3>LEGEND_POS</h3>
+<p>This sets the legend position in the GUI screen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LEGEND_POS</span><span class="p">,</span> <span class="n">X_position</span><span class="p">,</span> <span class="n">Y_position</span><span class="p">,</span> <span class="n">bRelativeiOrientation</span> <span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>X_pos: increases from left to right.</li>
+<li>Y_pos: increases from top to bottom</li>
+<li>bRelativeiOrientation (0-2/N): Optional</li>
+</ul>
+<img alt="../../_images/Axis_Position.PNG" src="../../_images/Axis_Position.PNG" />
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LEGEND_POS</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.25</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="part-commands">
+<h2>Part Commands</h2>
+<div class="section" id="part-options">
+<h3>PART_OPTIONS</h3>
+<p>This command sets the Display Mode and also sets the contour plot mode or material color mode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART_OPTIONS</span><span class="p">,</span><span class="n">MODE</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">5</span><span class="p">),</span> <span class="n">Color</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">),</span> <span class="o">&lt;</span><span class="n">PartList</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">Display modes</p>
+<blockquote>
+<div><ul class="simple">
+<li>0 : Shaded.</li>
+<li>1 : Shaded Mesh.</li>
+<li>2 : WireFrame.</li>
+<li>3 : Hidden Line Removal.</li>
+<li>4 : Points.</li>
+<li>5 : Transparent.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Color : Y for contor plot mode, N for material color mode.</p>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART_OPTIONS</span><span class="p">,</span><span class="n">MODE</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">Bracket</span><span class="o">*</span><span class="p">,</span> <span class="o">*</span><span class="n">Lever</span><span class="o">*</span>
+<span class="n">PART_OPTIONS</span><span class="p">,</span><span class="n">COLOR</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span><span class="o">*</span><span class="n">Bracket</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="n">Lever</span><span class="o">*</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will show the all the parts with Bracket and Lever keywords and will switch on the shaded mode for them.</li>
+<li>This will show the all the parts with Bracket and Lever keywords and will switch on contour plot mode for them.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="parts-show">
+<h3>PARTS_SHOW</h3>
+<p>This shows the required Parts in the GUI.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PARTS_SHOW</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">ALL</span><span class="o">/</span><span class="n">NONE</span><span class="o">/</span><span class="n">INVERT</span><span class="o">/</span><span class="n">ONLY</span><span class="o">/</span><span class="n">ADD</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Part</span> <span class="n">name</span> <span class="nb">list</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>ALL: show all parts.</li>
+<li>NONE: Hide all parts.</li>
+<li>INVERT: Invert part show.</li>
+<li>ONLY: Show Only these parts.</li>
+<li>ADD: Show these parts.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PARTS_SHOW</span><span class="p">,</span><span class="n">ONLY</span><span class="p">,</span><span class="o">*</span><span class="n">Bracket</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="n">Lever</span><span class="o">*</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will show the only the parts with Bracket and Lever keywords.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="parts-hide">
+<h3>PARTS_HIDE</h3>
+<p>This hides the required Parts in the GUI.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PARTS_HIDE</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">ALL</span><span class="o">/</span><span class="n">INVERT</span><span class="o">/</span><span class="n">ONLY</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Part</span> <span class="n">name</span> <span class="nb">list</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>ALL: hide all parts.</li>
+<li>INVERT: Invert part hide.</li>
+<li>ONLY: Hide Only these parts.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PARTS_HIDE</span><span class="p">,</span><span class="n">ONLY</span><span class="p">,</span><span class="o">*</span><span class="n">Bracket</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="n">Lever</span><span class="o">*</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will hide the only the parts with Bracket and Lever keywords.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="asm-show">
+<h3>ASM_SHOW</h3>
+<p>This sets assembly show/noshow.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ASM_SHOW</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Assembly</span> <span class="n">Names</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="filter-parts">
+<h3>FILTER_PARTS</h3>
+<p>This command filters the parts based on results in the GUI screen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FILTER_PARTS</span><span class="p">,</span> <span class="n">fMin</span><span class="p">,</span> <span class="n">fMax</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">bFitView</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] fMin: min result limit for filtering parts or NA can be provided.</li>
+<li>[2] fMax: max result limit for filtering parts or NA can be provided.</li>
+<li>Both fMin and fMax cannot be NA. Atleast one limit should be provided.</li>
+<li>[3] bFitView (Y/N): Optional, for a fit view of filtered parts.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="result-commands">
+<h2>Result Commands</h2>
+<div class="section" id="sel-result">
+<h3>SEL_RESULT</h3>
+<p>This selects the result to be displayed in GUI.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SEL_RESULT</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Result</span> <span class="n">Name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Instance</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Derived</span> <span class="n">Type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Result Name: Selects the name of the result to be displayed.</li>
+<li>Instance: Selects the instance of the result to be displayed.</li>
+<li>Derived Type: Selects the derived type of the result to be displayed.</li>
+<li>By default, Derived type is NA.</li>
+</ul>
+<img alt="../../_images/CAE_Result.PNG" src="../../_images/CAE_Result.PNG" />
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SEL_RESULT</span><span class="p">,</span><span class="o">*</span><span class="n">Stress</span><span class="o">*</span><span class="nb">max</span><span class="o">*</span><span class="n">prin</span><span class="o">*</span><span class="p">,</span><span class="n">L3M1</span><span class="p">,</span><span class="n">NA</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will select the Max Principal Stress result for L3M1 instance.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="sel-instance">
+<h3>SEL_INSTANCE</h3>
+<p>This selects the instance for current result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SEL_INSTANCE</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">InstFlag</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>InstFlag 0: Last Instance.</li>
+<li>InstFlag 1: Max Instance.</li>
+<li>InstFlag 2: Min Instance.</li>
+<li>InstFlag 3: First Instance else current Instance.</li>
+</ul>
+</div>
+<div class="section" id="create-result">
+<h3>CREATE_RESULT</h3>
+<p>This creates the new result from the exsisting result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE_RESULT</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">New</span> <span class="n">Result</span> <span class="n">Name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Result</span> <span class="n">A</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Result</span> <span class="n">B</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Equation</span> <span class="k">with</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">B</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Result A name for the expression.</li>
+<li>Result B name for the expression.</li>
+<li>Arithmetic expression or formula with variables A and B.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE_RESULT</span><span class="p">,</span><span class="n">Name</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">IF</span><span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">&gt;</span><span class="nb">abs</span><span class="p">(</span><span class="n">B</span><span class="p">)),</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This creates a max result from result A and B.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="create-envelop">
+<h3>CREATE_ENVELOP</h3>
+<p>This creates Max/Min envelope result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE_ENVELOP</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">sResult</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">sDerived</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">bIsMax</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] sResult: Required result for creating envelope.</li>
+<li>[2] sDerived: Derived type for the result or NA can be used.</li>
+<li>[3] bIsMax: Optional, Y for Max envelope(default) and N for Min envelope.</li>
+</ul>
+</div>
+<div class="section" id="create-result-cyl">
+<h3>CREATE_RESULT_CYL</h3>
+<p>This creates a cylindrical co-ordinate result for the selected result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE_RESULT_CYL</span><span class="p">,</span> <span class="n">RefResult</span><span class="p">,</span> <span class="n">NewResult</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Origin</span><span class="p">(</span><span class="n">XYZ</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">XDir</span><span class="p">(</span><span class="n">xYZ</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">YDir</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">U</span><span class="o">/</span><span class="n">All</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1]: VCollab Result name.</p>
+</li>
+<li><p class="first">[2]: New result name.</p>
+</li>
+<li><p class="first">[3:5]: Origin of the new coordinate system.</p>
+</li>
+<li><p class="first">[6:8]: X axis vector.</p>
+</li>
+<li><p class="first">[9:11]: Y axis vector.</p>
+</li>
+<li><p class="first">[12]: Component name can be empty or any one of the following</p>
+<blockquote>
+<div><ul class="simple">
+<li>For Vector Result: &quot;U&quot;,&quot;V&quot;,&quot;W&quot;</li>
+<li>For Tensor Result: &quot;S11&quot;,&quot;S22&quot;,&quot;S33&quot;,&quot;S12&quot;,&quot;S23&quot;,&quot;S13&quot;</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Displacement</span><span class="p">,</span><span class="n">Disp</span> <span class="n">Radial</span><span class="p">,</span> <span class="mf">53.66</span><span class="p">,</span> <span class="mf">73.05</span><span class="p">,</span> <span class="mf">42.747</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">U</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This creates a new cylindrical result 'Disp Radial' with origin at &lt;53.66 73.05 42.747&gt;.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="set-palette-mode">
+<h3>SET_PALETTE_MODE</h3>
+<p>This defines the result palette mode when there are merged models.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_PALETTE_MODE</span><span class="p">,</span> <span class="o">&lt;</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[0]: Active Model.</li>
+<li>[1]: Multi Model.</li>
+<li>[2]: Combined Model.</li>
+<li>[3]: Multi_Common Model.</li>
+</ul>
+</div>
+<div class="section" id="import-xycsv">
+<h3>IMPORT_XYCSV</h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IMPORT_XYCSV</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">csvfile</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>This command imports the result from CSV File.</li>
+</ul>
+</div>
+<div class="section" id="new-instance">
+<h3>NEW_INSTANCE</h3>
+<p>This command creates instance using expression.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NEW_INSTANCE</span><span class="p">,</span> <span class="n">Result</span><span class="p">,</span> <span class="n">InstA</span><span class="p">,</span> <span class="n">InstB</span><span class="p">,</span> <span class="n">Expression</span><span class="p">,</span> <span class="n">sNewInst</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: VCollab Result.</li>
+<li>[2]: Instance A name for the expression.</li>
+<li>[3]: Instance B name for the expression.</li>
+<li>[4]: Arithmetic expression or formula with variables A and B.</li>
+<li>[5]: New Instance Name.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NEW_INSTANCE</span><span class="p">,</span><span class="n">Damage</span><span class="p">,</span><span class="n">L1M1</span><span class="p">,</span><span class="n">L2M1</span><span class="p">,</span><span class="n">Max</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">),</span><span class="n">MaxDamage</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This creates a new instance by the name MaxDamage from the Damage instance L1M1 and L2M1.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="nodeset-mask-commands">
+<h2>NodeSet Mask Commands</h2>
+<div class="section" id="res-mask">
+<h3>RES_MASK</h3>
+<p>This creates a NodeSet from the selected result for masking.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RES_MASK</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">mask</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">result</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">n</span> <span class="n">Adj</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">min</span><span class="o">&gt;</span> <span class="p">,</span><span class="o">&lt;</span><span class="nb">max</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: User Defined NodeSet name.</li>
+<li>[2]: VCollab Result name.</li>
+<li>[3]: Number of adjacent layer to mask (optional).</li>
+<li>[4]: Minimum range value to get the nodes within the result (optional).</li>
+<li>[5]: Maximum range value to get the nodes within the result (optional).</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RES_MASK</span><span class="p">,</span><span class="n">CPMask</span><span class="p">,</span><span class="n">Contact</span> <span class="n">Pressure</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mi">1000</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will create a NodeSet 'CPMask' based on Contact Pressure Masking limits.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="part-mask">
+<h3>PART_MASK</h3>
+<p>This creates NodeSet from the selected parts for masking.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART_MASK</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">maskname</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">partname</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Proximity</span> <span class="n">dist</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">n</span> <span class="n">Adj</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: User defined Node set name.</li>
+<li>[2]: Part name to be masked.</li>
+<li>[3]: Proximity of the nodes to be added to the NodeSet.</li>
+<li>[4]: Number of adjacent layer to be masked</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PART_MASK</span><span class="p">,</span><span class="n">BracketMask</span><span class="p">,</span><span class="o">*</span><span class="n">B</span><span class="o">*</span><span class="n">EXCLUDE</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will create a NodeSet 'BracketMask' based on the nodes in &quot;<em>B*EXCLUDE</em>&quot; parts. 1 layer of adjacent nodes is also added to the masking NodeSet 'BracketMask'.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="set-mask-mode">
+<h3>SET_MASK_MODE</h3>
+<p>This sets the mode of the masking node sets.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_MASK_MODE</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">MODE</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">mask</span> <span class="n">name</span> <span class="nb">list</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Mode can be 0/1/2.</dt><dd><ul>
+<li>0 means NA.</li>
+<li>1 means In.</li>
+<li>2 means Out.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>&lt;mask name list&gt; can be the NodeSet names available for masking.</li>
+</ul>
+</div>
+<div class="section" id="node-mask">
+<h3>NODE_MASK</h3>
+<p>This creates NodeSet from the selected nodes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NODE_MASK</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">maskname</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Radius</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">nodelist</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] maskname: User defined Mask Name.</li>
+<li>[2] Radius: The nodes within this range are added to the NodeSet.It should be floating value.</li>
+<li>[3] nodelist: list of nodes ids for masking.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NODE_MASK</span><span class="p">,</span><span class="n">NodeMask</span><span class="p">,</span><span class="mf">15.0</span><span class="p">,</span><span class="mi">11234</span><span class="p">,</span><span class="mi">3456</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will create a NodeSet 'NodeMask' based on the nodeslist 11234,3456.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="hotspot-commands">
+<h2>Hotspot Commands</h2>
+<div class="section" id="probe-res">
+<h3>PROBE_RES</h3>
+<p>This creates a list of results to be displayed in probe label.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROBE_RES</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">ProbeResultList</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROBE_RES</span><span class="p">,</span><span class="o">*</span><span class="n">Stress</span><span class="o">*</span><span class="n">von</span><span class="o">*</span><span class="n">mis</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="n">Stress</span><span class="o">*</span><span class="n">Max</span><span class="o">*</span><span class="n">prin</span><span class="o">*</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will create a list of VonMises and Max Principal Stress Probing.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="hs-limits">
+<h3>HS_LIMITS</h3>
+<p>This command sets the Hotspot Dialog Parameters.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HS_LIMITS</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">filter</span> <span class="nb">range</span><span class="p">:</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">nTop</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">nBottom</span><span class="o">&gt;</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">ZoneRadius</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: Sets minimum range value.</li>
+<li>[2]: Sets maximum range value.</li>
+<li>[3]: Number of top hotspots.</li>
+<li>[4]: Number of bottom hotspots.</li>
+<li>[5]: Defines the zone radius for hotspots.</li>
+</ul>
+<img alt="../../_images/CAE_Settings_Hotspot.PNG" src="../../_images/CAE_Settings_Hotspot.PNG" />
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HS_LIMITS</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">20.0</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will set the hotspot dialogue box parameters.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="comp-hotspots">
+<h3>COMP_HOTSPOTS</h3>
+<p>This computes the hotspot with NodeSet masking.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COMP_HOTSPOTS</span><span class="p">,</span> <span class="n">sVPName</span><span class="p">,</span> <span class="n">Masklist</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: ViewPoint name. 'N' for not adding ViewPoint.</li>
+<li>[2]: Node Sets name for masking.</li>
+<li>If no parameters are given, it will find the hotspot in the GUI. (ViewPoint needs to saved using <em>ADD_VP</em> command.)</li>
+</ul>
+</div>
+<div class="section" id="set-compare-res">
+<h3>SET_COMPARE_RES</h3>
+<p>This sets the Hotspots compare settings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_COMPARE_RES</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">ON</span><span class="o">=</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">BY</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">MODE</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">WITH</span><span class="o">=</span><span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">RADIUS</span><span class="o">=</span><span class="mf">5.0</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">SHOWALL</span><span class="o">=</span><span class="n">Y</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">B2A</span><span class="o">=</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] ON=Y/N: Y to set hotspots compare option ON.</p>
+</li>
+<li><p class="first">[2] BY=0-2: Sets Comparison of Results mode. Valid Range 0-2.</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: Same Result Name.</li>
+<li>1: Selected Results Order.</li>
+<li>2: Result's Display Name.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[3] MODE=0-2: Sets comparison mode. Valid range 0 to 2.</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: For Same Part.</li>
+<li>1: For Current Visible Parts.</li>
+<li>2: For All parts.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[4] WITH=0-2: Sets comparison with Valid range 0 to 2.</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: For Same Part.</li>
+<li>1: For Current Visible Parts.</li>
+<li>2: For All parts.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[5] RADIUS: Float value. Sets a radius to compare hotspots within a sphere.</p>
+</li>
+<li><p class="first">[6] SHOWALL: Y/N. If set to Y, Sets additional label lines to compared node/element of other models.</p>
+</li>
+<li><p class="first">[7] B2A=Y/N: If set to Y, finds hotspots in all models and compares across all models. If set to N, find Hotspots only in the current model and those Hotspots are used to compare across all models.</p>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_COMPARE_RES</span><span class="p">,</span><span class="n">ON</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span><span class="n">BY</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">MODE</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">WITH</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">RADIUS</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span><span class="n">SHOWALL</span><span class="o">=</span><span class="n">Y</span><span class="p">,</span><span class="n">B2A</span><span class="o">=</span><span class="n">N</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will set the result compare settings accordingly.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="hotspot-view">
+<h3>HOTSPOT_VIEW</h3>
+<p>This creates a ViewPoint with the given hotspots settings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HOTSPOT_VIEW</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">sVPName</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Hotspot</span> <span class="n">Params</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">sVPName: ViewPoint name.</p>
+</li>
+<li><p class="first">HS Parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li>[1]: Sets minimum range value.</li>
+<li>[2]: Sets maximum range value.</li>
+<li>[3]: Number of top hotspots.</li>
+<li>[4]: Number of bottom hotspots.</li>
+<li>[5]: Zone radius for the hotspot.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HOTSPOT_VIEW</span><span class="p">,</span><span class="n">Hotspots</span> <span class="n">VP</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">20.0</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will create new ViewPoint named &quot;Hotspots VP&quot; with top 5 hotspots and zone radius of 20.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="loadcase-hsview">
+<h3>LOADCASE_HSVIEW</h3>
+<p>This creates hotspot view for each instance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LOADCASE_HSVIEW</span><span class="p">,</span><span class="o">&lt;</span><span class="n">VPathName</span><span class="o">&gt;</span> <span class="p">,</span><span class="o">&lt;</span><span class="n">iFirstInstance</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">iLastInstance</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: ViewPath name (optional).</li>
+<li>[2]: Starting Instance (optional).</li>
+<li>[3]: Ending Instance (optional).</li>
+<li>If no parameters are provided then, hotspot view for all instances will be generated for the displayed result.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LOADCASE_HSVIEW</span><span class="p">,</span><span class="n">sVPathName</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span>
+</pre></div>
+</div>
+<ul class="last simple">
+<li>This will create new hotspot ViewPoints in ViewPath for instances 5 to 9.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="header-pos">
+<h3>HEADER_POS</h3>
+<p>This sets the location for header legend (set before PROBE_RES call).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HEADER_POS</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Screen_Xpos</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Screen_Ypos</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: Screen Xpos (optional).</li>
+<li>[2]: Screen Ypos (optional).</li>
+<li>[3]: Ending Instance (optional).</li>
+<li>If no parameters are provided then, the Screen_Xpos and Screen_Ypos are set to 0.05 and 0.7.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="auto-view-commands">
+<h2>Auto View Commands</h2>
+<div class="section" id="modal-vps">
+<h3>MODAL_VPS</h3>
+<p>If Modal data is available this command creates Modal views else it creates hotspot views for each result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MODAL_VPS</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">no</span> <span class="n">of</span> <span class="n">modes</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">summary</span> <span class="n">table</span><span class="o">=</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: Number of mode case.</li>
+<li>[2]: Creates a mode case table if set to Y.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MODAL_VPS</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">Y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="all-result-vps">
+<h3>ALL_RESULT_VPS</h3>
+<p>This command computes hotspots and creates a ViewPoint. If Modal result is available it creates one Modal ViewPoint.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALL_RESULT_VPS</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">nhotspots</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: Number of Hotspots.</li>
+<li>Results with name &lt;Thickness Bottom Material Force Volume Constraint&gt; are not considered.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALL_RESULT_VPS</span><span class="p">,</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="compare-geom-vps">
+<h3>COMPARE_GEOM_VPS</h3>
+<p>This command finds the difference between the two model's geometry (Merged models) and creates the ViewPoints.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COMPARE_GEOM_VPS</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">compare</span> <span class="n">mode</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">max</span> <span class="n">search</span> <span class="n">distance</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1]: Sets compare mode(Valid range 0-2).</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: Same Parts.</li>
+<li>1: Visible Parts.</li>
+<li>2: All Parts</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[2] Two model points are compared within this value. Geometry deviation more than this value is ignored.</p>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COMPARE_GEOM_VPS</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="envelop-view">
+<h3>ENVELOP_VIEW</h3>
+<p>This command creates a CAE envelope result for transient or multi-instances data and creates hotspot view.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ENVELOP_VIEW</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">sResultStr</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">hotspot</span> <span class="n">parameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1]: Result name for the envelop result.</p>
+</li>
+<li><p class="first">HS Parameters list (optional):</p>
+<blockquote>
+<div><ul class="simple">
+<li>HS Parameter [0]: Sets minimum range value.</li>
+<li>HS Parameter [1]: Sets maximum range value.</li>
+<li>HS Parameter [2]: Number of top hotspots.</li>
+<li>HS Parameter [3]: Number of bottom hotspots.</li>
+<li>HS Parameter [4]: Zone radius for the hotspot.</li>
+<li>hslimits: None, If the user does not want to change the Hotspot settings.</li>
+<li>DelInst: Instance name that is to be deleted(optional).</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ENVELOP_VIEW</span><span class="p">,</span><span class="o">*</span><span class="n">von</span><span class="o">*</span><span class="n">Mises</span><span class="o">*</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="n">NA</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">20.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="explode-view">
+<h3>EXPLODE_VIEW</h3>
+<p>This command sets parts in an exploded view.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXPLODE_VIEW</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Percentage</span><span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] Y/N: For Explode and reset.</li>
+<li>[2]: Percentage value of current explode. It should be positive and less than or equal to 100.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="xy-plot-commands">
+<h2>XY Plot Commands</h2>
+<div class="section" id="minmax-plot">
+<h3>MINMAX_PLOT</h3>
+<p>This command creates Min-Max plot for current result.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MINMAX_PLOT</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Plot</span> <span class="n">Name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">iMinmax</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] Min max Plot name.</p>
+</li>
+<li><p class="first">[2] iMinmax: Index of curve to be created.</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: Max curve(default).</li>
+<li>1: Min curve.</li>
+<li>2: Both min and max curves.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="hs-xyplot">
+<h3>HS_XYPLOT</h3>
+<p>This command computes hotspots and creates Transient XY plot with curves for selected number of hotspots.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HS_XYPLOT</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Plot</span> <span class="n">Name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">MaxHS</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] XY Plot name.</li>
+<li>[2] MaxHS: Max number of hotspots/curves.</li>
+</ul>
+</div>
+<div class="section" id="setxyplot-win">
+<h3>SETXYPLOT_WIN</h3>
+<p>This command sets the XY plot background and windows size.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SETXYPLOT_WIN</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">bgColor</span><span class="p">(</span><span class="n">rgb</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">winsize</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span><span class="n">ymin</span><span class="p">,</span><span class="n">xmax</span><span class="p">,</span><span class="n">ymax</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1:3]: XY Plot background colors RGB(0 to 1).</li>
+<li>[4:6]: XY Plot window size(xmin,ymin,xmax,ymax).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-commands">
+<h2>Other Commands</h2>
+<div class="section" id="add-2dnote">
+<h3>ADD_2DNOTE</h3>
+<p>This command adds a 2d note in the ViewPoint.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_2DNOTE</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Note</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="mi">2</span><span class="n">D</span> <span class="n">position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1]: Note text.</li>
+<li>[2]: X and Y normalized position in GUI(0 to 1)</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_2DNOTE</span><span class="p">,</span><span class="n">Title</span> <span class="n">Page</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="set-anim">
+<h3>SET_ANIM</h3>
+<p>This command sets animation type and settings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_ANIM</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">nFrames</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">bStaticFringe</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Scale</span> <span class="n">factor</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Speed</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] Type: Animation type, valid values 0/1/3.</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: Linear.</li>
+<li>1: Transient.</li>
+<li>3: Harmonic.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[2] nFrames: sets number of frames(instances).</p>
+</li>
+<li><p class="first">[3] bStaticFringe: Y for Static fringe.</p>
+</li>
+<li><p class="first">[4] Scale factor: Sets scale factor based on bounding box. Deformation percentage is with respect to geometry size.</p>
+</li>
+<li><p class="first">[5] Speed: Set delay value to slow animation in milliseconds. Valid range 0 to 100. 100 sets max speed.</p>
+</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_ANIM</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="arrange-model">
+<h3>ARRANGE_MODEL</h3>
+<p>This command arranges the models in a row.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ARRANGE_MODEL</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Nrow</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] Nrow: Number of rows to arrange models. If Nrow&lt;0, it resets the model.</li>
+</ul>
+</div>
+<div class="section" id="hs-table2d">
+<h3>HS_TABLE2D</h3>
+<p>This command creates a hotspots summary table.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HS_TABLE2D</span><span class="p">,</span><span class="o">&lt;</span><span class="n">ScreenX</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">ScreenY</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Header</span> <span class="n">strings</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] ScreenX: X position of table in screen.</li>
+<li>[2] ScreenY: Y position of table in screen.</li>
+<li>[3:] Header text for table fields.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HS_TABLE2D</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="n">NodeID</span><span class="p">,</span><span class="n">VonMises</span><span class="p">,</span><span class="n">StressMaxP</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="run-script">
+<h3>RUN_SCRIPT</h3>
+<p>This command runs a script file with given arguments.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RUN_SCRIPT</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">ScriptFile</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">bReUse</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">FunctionName</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">Arguments</span><span class="o">..&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] : Script file path.</li>
+<li>[2] : Set Y to reuse module(optional).</li>
+<li>[3] : Function name in script to be executed.</li>
+<li>[4:]: Arguments for the function.</li>
+</ul>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RUN_SCRIPT</span><span class="p">,</span><span class="n">E</span><span class="p">:</span>\<span class="n">Userlocation</span>\<span class="n">sample</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

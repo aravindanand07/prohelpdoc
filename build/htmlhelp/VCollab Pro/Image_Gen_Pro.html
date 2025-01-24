@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Generator</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Script Interface" href="Batch_ScriptInterface.html" />
+    <link rel="prev" title="Comparing and Merging CAX files" href="BatchMode_ComparingandMerging_CAXfiles.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Image Generator</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="BatchMode_ComparingandMerging_CAXfiles.html" title="Previous Chapter: Comparing and Merging CAX files"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Comparing and...</span>
+    </a>
+  </li>
+  <li>
+    <a href="Batch_ScriptInterface.html" title="Next Chapter: Script Interface"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Script Interface &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="image-generator">
+<h1>Image Generator</h1>
+<p>VCollabImageGenerator.exe is a batch mode application to generate image from cax file. This application is available at <strong>VCollab_Installation_Directory\VCollabPro64.</strong></p>
+<p><strong>Usage #1 Single Image Generation</strong></p>
+<blockquote>
+<div><p><em>Syntax :</em></p>
+<blockquote>
+<div><p><em>C/&gt;:&quot;VCollabImageGenerator.exe&quot; [input] [output] [Image Dimension] [Model View] [Background Color] [Legend State] [Result Name] [Instance Name] [Derived Result Name]</em></p>
+<blockquote>
+<div><p>Where,</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>[input]</td>
+<td>input cax file path.</td>
+</tr>
+<tr class="row-even"><td>[output]</td>
+<td>output image file path.</td>
+</tr>
+<tr class="row-odd"><td>[Image Dimension]</td>
+<td>width and height of image. A
+space is required between width
+and height values.</td>
+</tr>
+<tr class="row-even"><td>[Model View]</td>
+<td><p class="first">any one of the following views</p>
+<p>{ &quot;Front&quot;,
+&quot;Rear&quot;,&quot;Top&quot;,&quot;Bottom&quot;,
+&quot;Left&quot;,&quot;Right&quot;, &quot;Iso&quot;,</p>
+<p>&quot;FrontMesh&quot;, &quot;RearMesh&quot;,
+&quot;TopMesh&quot;, &quot;BottomMesh&quot;,
+&quot;LeftMesh&quot;, &quot;RightMesh&quot;,
+&quot;IsoMesh&quot;,</p>
+<p>&quot;FrontWire&quot;, &quot;RearWire&quot;,
+&quot;TopWire&quot;, &quot;BottomWire&quot;,
+&quot;LeftWire&quot;, &quot;RightWire&quot;,
+&quot;IsoWire&quot;,</p>
+<p class="last">&quot;FrontHiddenLine&quot;,
+&quot;RearHiddenLine&quot;,
+&quot;TopHiddenLine&quot;,
+&quot;BottomHiddenLine&quot;,
+&quot;LeftHiddenLine&quot;,
+&quot;RightHiddenLine&quot;,
+&quot;IsoHiddenLine&quot; }</p>
+</td>
+</tr>
+<tr class="row-odd"><td>[Background Color]</td>
+<td>Three values with space between
+them. Each value should be in the
+interval [0,1].</td>
+</tr>
+<tr class="row-even"><td>[Legend State]</td>
+<td>&quot;LegendON&quot; or &quot;LegendOFF&quot;.</td>
+</tr>
+<tr class="row-odd"><td>[Result Name]</td>
+<td>CAE result name. e.g.,
+&quot;Displacement&quot;.</td>
+</tr>
+<tr class="row-even"><td>[Instance Name]</td>
+<td>CAE result instance name. e.g.,
+&quot;L1M3&quot;.</td>
+</tr>
+<tr class="row-odd"><td>[Derived Result Name]</td>
+<td>CAE result derived name. e.g.,
+&quot;Translational Magnitude&quot;.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Example:</div>
+</div>
+<blockquote>
+<div><blockquote>
+<div><p>&quot;C:\...\bin&gt;VCollabImageGenerator.exe &quot;F:\bracket_multiple.cax&quot;
+&quot;C:\bracket_displacement.jpg&quot; 600 400 &quot;Iso&quot; 1 1 1 &quot;LegendON&quot;
+&quot;Displacement&quot; &quot;L1M1&quot; &quot;Translational Magnitude&quot;</p>
+<p>where,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">param[0] = &quot;VCollabImageGenerator.exe&quot; : application</div>
+<div class="line">param[1] = &quot;F:\bracket_multiple.cax&quot; : input data File</div>
+<div class="line">param[2] = &quot;C:\bracket_displacement.jpg&quot; : output jpg image
+File; bmp, jpg, tif, png, wcax, pdf(3D) and Jt, are supported
+formats</div>
+<div class="line">The following are OPTIONAL parameters, but has to be in the
+same order</div>
+<div class="line">param[3] = 600 : width of the image; Default is 600</div>
+<div class="line">param[4] = 400 : height of the image; Default is 500n&quot;);</div>
+<div class="line">param[5] = &quot;Front&quot; :to set Frontview and Shaded display mode;
+&quot;FrontWire&quot; :to set Frontview and Wireframe display mode;
+Default is &quot;Iso&quot;</div>
+<div class="line">param[6] = 1 : Back ground color red field [range 0-1];
+Default is 0</div>
+<div class="line">param[7] = 0.5 : Back ground color green field [ range 0-1];
+Default is 0</div>
+<div class="line">param[8] = 0.2 : Back ground color blue field [range 0-1];
+Default is 0</div>
+<div class="line">param[9] = LegendOFF : Legend display is 'Off'; Defalut is
+&quot;LegendON&quot;</div>
+<div class="line">param[10] = &quot;ResultName&quot; : Result Name; Default is First
+result in the cax</div>
+<div class="line">param[11] = &quot;Instance&quot; : Instance Name; Default is First
+instance in the result</div>
+<div class="line">param[12] = &quot;Derived Result Name&quot; : Derived Result Name;
+Default is &quot;Translational Magnitude&quot; for vector type and &quot;Von
+Mises Stress&quot; for tensor type</div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Note:</div>
+</div>
+<blockquote>
+<div><ul>
+<li><p class="first">Set param[6]=-1, param[7]=-1, param[8]=-1 to ignore the
+background color.</p>
+</li>
+<li><p class="first">To set other standard views, use param[5] as &quot;Front&quot; for front
+view &quot;Rear&quot; for rear view...</p>
+</li>
+<li><p class="first">Note: To use software renderer, Insert param[1] as &quot;-swrend&quot;</p>
+<blockquote>
+<div><p>e.g.: C:...bin&gt;VCollabImageGenerator.exe &quot;-swrend&quot;
+&quot;F:bracket_multiple.cax&quot;</p>
+</div></blockquote>
+</li>
+</ul>
+<p>Note: If you get blank images(depends on graphics cards), Insert
+param[1] as &quot;-w&quot;,</p>
+<blockquote>
+<div>e.g C:...bin&gt;VCollabImageGenerator.exe &quot;-w&quot;
+&quot;F:\bracket_multiple.cax&quot; ...this will generates right image,but
+displays window.</div></blockquote>
+<p>Note: To mix window &amp; software renderer option, Insert param[1] as
+&quot;-wswrend&quot;,</p>
+<blockquote>
+<div>e.g C:...bin&gt;VCollabImageGenerator.exe &quot;-wswrend&quot;
+&quot;F:\bracket_multiple.cax&quot; ...</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Usage#2 Multi Image Generation</strong></p>
+<blockquote>
+<div><p><em>Syntax:</em></p>
+<blockquote>
+<div><p><em>C/&gt;&quot;VCollabImageGenerator.exe&quot; -v [input] [output] [Image Format] [Image Dimension] [CreateDir] [View Path] [vpt File Path]</em></p>
+<blockquote>
+<div><p>Where,</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>[input]</td>
+<td>input cax file path.</td>
+</tr>
+<tr class="row-even"><td>[output]</td>
+<td>output image Dir path.</td>
+</tr>
+<tr class="row-odd"><td>[Image Format]</td>
+<td>&quot;jpg&quot; or &quot;bmp&quot; or &quot;png&quot; or &quot;tif&quot;.</td>
+</tr>
+<tr class="row-even"><td>[Image Dimension]</td>
+<td>width and height of image. A
+space is required between width
+and height values.</td>
+</tr>
+<tr class="row-odd"><td>[CreateDir]</td>
+<td>createDir=0 or createDir=1.
+'CreateDir'=1 creates directories
+inside 'OutputDir' for each
+'viewpath' in 'vpt' file.
+'CreateDir'=0 makes all image
+files written in 'OutputDir'</td>
+</tr>
+<tr class="row-even"><td>[View Path]</td>
+<td><p class="first"><strong>viewPath =&quot;viewPathName&quot;.
+Images will be generated for all
+viewpoints of this path. If path
+is empty, then images for all
+available viewpaths inside the
+vpt file.</strong>
+or</p>
+<p>To Generate images for CAE
+results set,</p>
+<p>ViewPath==&quot;&#64;CAE&quot; or
+&quot;&#64;CAE&#64;AllInstance&quot; or
+&quot;&#64;CAE&#64;AllDerived&quot; or
+&quot;&#64;CAE&#64;AllInstance&#64;AllDerived&quot; or
+&quot;&#64;CAE&#64;AllDerived&#64;AllInstance&quot;inp
+uts.</p>
+<p>This will help to generate
+multiple images of all CAE
+results.</p>
+<p>&#64;CAE : To generate images for all
+CAE results, with default
+instance (first) and default
+derived type.</p>
+<p>&#64;CAE&#64;AllInstance : To generate
+images for all CAE results and
+all Instances, with default
+derived type.</p>
+<p>&#64;CAE&#64;AllDerived : To generate
+images for all CAE results and
+all derived types, with default
+instance.</p>
+<p class="last">&quot;&#64;CAE&#64;AllInstance&#64;AllDerived&quot; or
+&quot;&#64;CAE&#64;AllDerived&#64;AllInstance&quot; :
+To generate images for all CAE
+result's All instances with all
+derived types.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>[vpt File Path]</td>
+<td><strong>vpt file path.
+vptFile=&quot;vptFilePath&quot;.</strong>
+Note: If viewpath is one of &#64;CAE
+type then vptfilePath can be
+ignored or can be used to set std
+views by passing one of the
+following
+&quot;Front/Rear/Top/Bottom/Left/Right
+/Iso&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>E.g.</p>
+<blockquote>
+<div><p>C:...bin&gt;VCollabImageGenerator.exe -v
+&quot;F:\bracket_multiple.cax&quot; &quot;H:\OutputDirPath&quot; &quot;png&quot; 600 500 1
+&quot;(blank)&quot; &quot;C:\bracket.vpt&quot;</p>
+<p>Where,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Inputcaxfile=&quot;F:\bracket_multiple.cax&quot;
+outputdir=&quot;h:\OutputDirPath&quot; ImageFormat=&quot;png&quot; width=600
+height=500 createDir=1 viewPath=&quot;
+vptFile=&quot;C:\bracket.vpt&quot;</div>
+<div class="line"><br /></div>
+</div>
+<p>Note:</p>
+<ol class="arabic">
+<li><p class="first">'OutputDir' must exist.</p>
+</li>
+<li><p class="first">'CreateDir'=1 creates directories inside 'OutputDir' for
+each 'viewpath' in 'vpt' file.</p>
+</li>
+<li><p class="first">'CreateDir'=0 makes all image files written in
+'OutputDir'</p>
+</li>
+<li><div class="first line-block">
+<div class="line">'ViewPath' is data inside .vpt file. Set this field with proper value to generate images for that particular viewpath.</div>
+<div class="line">To generate all viewpath images, Set this value as &quot; &quot;. (a space that inside 2 double quotes). But the field should not be ignored.</div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>Note:</p>
+<blockquote>
+<div><p>To have more options, VCollab Profile can be used in image generator.</p>
+<p>To use VCollab profile use -vp field insted of -v.</p>
+<p>C:...bin&gt;VCollabImageGenerator.exe <strong>-vp</strong> &quot;F:\bracket_multiple.cax&quot; &quot;H:\OutputDirPath&quot; &quot;png&quot; 600 500 1 &quot;&#64;CAE&quot; &quot;Iso&quot;</p>
+<p>For Example to Switch OFF Legend and change background color,</p>
+<p>1.Launch VCollab Pro Application.</p>
+<p>2.Set Legend OFF and change background color</p>
+<p>3.Enable Profile and Save Profile.</p>
+<p>All these profile settings will be reflected in generated images.</p>
+</div></blockquote>
+<p><strong>Error Codes</strong></p>
+<blockquote>
+<div><p>Image generator returns one of the following error codes.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Error Code</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>0</td>
+<td>Image is generated successfully.</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Unexpected error.</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Write permission is not available
+for output file.</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>VCollab license is not available.</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>Out of memory.</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>Invalid input file extension</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>Invalid output file extension</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>Invalid input file path</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>Invalid arguments</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>Image is not generated.</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>Specified result is not found.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

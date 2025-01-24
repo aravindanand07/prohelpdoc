@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cutaway</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Refresh Normals" href="Tools_Recompute_Normal_Pro.html" />
+    <link rel="prev" title="Section" href="Tools_Section_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Cutaway</a><ul>
+<li><a class="reference internal" href="#cutaway-panel">Cutaway Panel</a></li>
+<li><a class="reference internal" href="#cutaway-types">Cutaway Types</a><ul>
+<li><a class="reference internal" href="#cutaway-none">Cutaway None</a></li>
+<li><a class="reference internal" href="#sphere">Sphere</a><ul>
+<li><a class="reference internal" href="#steps">Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cylinder">Cylinder</a></li>
+<li><a class="reference internal" href="#box">Box</a></li>
+<li><a class="reference internal" href="#other-options">Other options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Tools_Section_Pro.html" title="Previous Chapter: Section"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Section</span>
+    </a>
+  </li>
+  <li>
+    <a href="Tools_Recompute_Normal_Pro.html" title="Next Chapter: Refresh Normals"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Refresh Normals &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="cutaway">
+<h1>Cutaway</h1>
+<p>This feature helps users see inside a part or model, like cutting it open. Normally, user can only cut a section with a plane and look at it. But with this new feature, called <em>Cutaway</em>, user can choose different shapes like spheres, cylinders, or boxes to cut out. This lets the users understand the inside of the object in more ways.</p>
+<div class="section" id="cutaway-panel">
+<h2>Cutaway Panel</h2>
+<p>Cutaway function can be invoked using the menu option <strong>Tools | Cutaway...</strong></p>
+<blockquote>
+<div><p><img alt="image1" src="../_images/Cutaway_Panel.PNG" /></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Cutaway</td>
+<td>Allows user to select a cutaway option. None
+option clears the cutaway function.</td>
+</tr>
+<tr class="row-even"><td>Mouse Mode</td>
+<td>Allows users to pick points in the model to define
+different cutaway shapes.</td>
+</tr>
+<tr class="row-odd"><td>P1</td>
+<td>This point becomes Center for Sphere, Base Circle
+Center for cylinder, Corner 1 for Box shaphes.</td>
+</tr>
+<tr class="row-even"><td>P2</td>
+<td>This point becomes Top Center for cylinder and
+Corner 2 for box shapes</td>
+</tr>
+<tr class="row-odd"><td>Radius</td>
+<td>Radius for Sphere and Cylinder. User can modify.</td>
+</tr>
+<tr class="row-even"><td>Height</td>
+<td>Height for Cylinder.</td>
+</tr>
+<tr class="row-odd"><td>Offset</td>
+<td>Incremental step value for all edit fields.</td>
+</tr>
+<tr class="row-even"><td>Thickness</td>
+<td>Enabled only for cylinder option. With thickness,
+it becomes pipe.</td>
+</tr>
+<tr class="row-odd"><td>Snap Vertex</td>
+<td>Allows user to pick a nearest vertex in picking.</td>
+</tr>
+<tr class="row-even"><td>Invert</td>
+<td>Toggles the culling side. True will cull outside.</td>
+</tr>
+<tr class="row-odd"><td>Show</td>
+<td>Show/hides the shape with default transparency.
+Users can change the shape color and transparency.</td>
+</tr>
+<tr class="row-even"><td>Apply</td>
+<td>Applies the modification.</td>
+</tr>
+<tr class="row-odd"><td>OK</td>
+<td>Applies the modification and closes dialog.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="cutaway-types">
+<h2>Cutaway Types</h2>
+<p><img alt="image2" src="../_images/Cutaway_Shapes.png" /></p>
+<p>The following options are supported in cutaway.</p>
+<ul class="simple">
+<li>None</li>
+<li>Sphere</li>
+<li>Cylinder</li>
+<li>Box</li>
+</ul>
+<div class="section" id="cutaway-none">
+<h3>Cutaway None</h3>
+<p>Selecting this option will remove all cutaway data and present the model without any culling.</p>
+<p><img alt="image3" src="../_images/Cutaway_None.png" /></p>
+</div>
+<div class="section" id="sphere">
+<h3>Sphere</h3>
+<p><img alt="image4" src="../_images/Cutaway_Sphere_Panel.PNG" /></p>
+<p>In order to define a sphere in VCollab, users have the option to enter center and radius values. VCollab offers default center and radius values based on the model's bounding data.</p>
+<p>The center of the sphere can be defined in three ways:
+- Manually entering values
+- Selecting a vertex in the model
+- Selecting three points in the model to derive a circle center</p>
+<p>Users also have the ability to manually enter the radius of the sphere.</p>
+<div class="section" id="steps">
+<h4>Steps</h4>
+<ul class="simple">
+<li>Load a cax file.</li>
+<li>Click Tools | Cutaway</li>
+<li>Select Sphere in the Cutaway drop down list.</li>
+<li>Enter center values manually in the edit boxes provided,</li>
+<li>Or</li>
+<li>Select <em>Center</em> option in the mousemode drop down list. This allows users to pick a point in the model.</li>
+<li>Click a point in the model.</li>
+<li>Enable <em>Snap Vertex</em> option to pick a nearest vertex in the model.</li>
+<li>Or</li>
+<li>Select <em>3Pt Arc</em> which allow users pick any three points to define a circular arc. Arc center will be used for cutawy sphere center.</li>
+</ul>
+<p><img alt="image13" src="../_images/Cutaway_3Point_Arc_Pre_Sphere.png" /></p>
+<p><img alt="image14" src="../_images/Cutaway_3Point_Arc_Sphere.png" /></p>
+<ul>
+<li><p class="first">Enter Sphere radius manully.</p>
+</li>
+<li><p class="first">Click Apply.</p>
+</li>
+<li><p class="first">Notice in the viewer that cutaway sphere is displayed with transparency and inner portion is culled and visible to the user.</p>
+</li>
+<li><p class="first">To pick and move the sphere, Select CutawayPan option.</p>
+</li>
+<li><p class="first">Clcik on the cutaway surface and drag it to anywhere in the screen.</p>
+<p><img alt="image7" src="../_images/Cutaway_sphere.png" /></p>
+</li>
+<li><p class="first">Click <em>Invert</em> to toggle the culling side from inside to outside.</p>
+<p><img alt="image10" src="../_images/Cutaway_Sphere_Invert.png" /></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="cylinder">
+<h3>Cylinder</h3>
+<p>Once user selects the 'Cylinder' option, Panel changes as follows with base center and top center point.</p>
+<p><img alt="image5" src="../_images/Cutaway_Cylinder_Panel.PNG" /></p>
+<p>Users can define the cylinder by</p>
+<ul class="simple">
+<li>Entering base center and top center manually.</li>
+<li>Entering height will update the top center point values.</li>
+<li>User can pick the base center using Base Center option in mouse mode dropdown</li>
+<li>User can pick the top center using Top Center option in the mouse mode dropdown.</li>
+<li>User can define base center as well as top center by picking 3 points using '3Pt Arc' option in the mouse mode dropdown.</li>
+<li>Cutaway shape can be moved horizontally and vertically using <em>CutawayPan</em> option.</li>
+</ul>
+<p><img alt="image8" src="../_images/Cutaway_Cylinder.png" /></p>
+<ul class="simple">
+<li>Toggle the culling side using <em>Invert</em> option</li>
+</ul>
+<p><img alt="image11" src="../_images/Cutaway_Cylinder_Invert.png" /></p>
+</div>
+<div class="section" id="box">
+<h3>Box</h3>
+<p>Once user selects the 'Box' option, Panel changes as follows with Corner 1 and Corner 2 points.</p>
+<p><img alt="image6" src="../_images/Cutaway_Box_Panel.PNG" /></p>
+<p>User can define the box by,</p>
+<ul class="simple">
+<li>Entering two extreme corner point values manually,</li>
+<li>Pick Corner 1 and Corner 2 points using <em>Corner 1</em> and <em>Corner 2</em> options in the mouse mode dropdown.</li>
+<li>Shape can be moved using CutawayPan option in mouse mode dropdown.</li>
+</ul>
+<p><img alt="image9" src="../_images/Cutaway_Box.png" /></p>
+<ul class="simple">
+<li>User can toggle the culling side using <em>Invert</em> option.</li>
+</ul>
+<p><img alt="image12" src="../_images/Cutaway_Box_Invert.png" /></p>
+</div>
+<div class="section" id="other-options">
+<h3>Other options</h3>
+<p><strong>Snap Vertex</strong> - allows user to pick nearest vertex in moused mode.</p>
+<p><strong>Invert</strong> - allows to toggle the culling side and can visualize the zone in alternate way.</p>
+<p><strong>Show</strong> - allows to show or hide the cutaway shape. User can change the color of the shape and can control the shape transparency.</p>
+<p><strong>Offset</strong> and <strong>Spin Control</strong> - User can increment or decrement any edit field by step size value in 'Offset' field using the spin control.
+For example, if the offset value is 5, then spin control for any edit fiels increase or decrease 5 units for each click.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUI to Create CAX using VMoveCAESubmit</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="Example Command File" href="VMoveSubmitExample.html" />
+    <link rel="prev" title="List of Commands" href="../VideoMaker/Commands_List.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../VCollab%20Pro/index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">GUI to Create CAX using VMoveCAESubmit</a><ul>
+<li><a class="reference internal" href="#file-section">File Section</a></li>
+<li><a class="reference internal" href="#results-section">Results Section</a></li>
+<li><a class="reference internal" href="#parts-section">Parts Section</a></li>
+<li><a class="reference internal" href="#step-section">Step Section</a></li>
+<li><a class="reference internal" href="#vmovecaesubmit-options">VMoveCAESubmit Options</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../VideoMaker/Commands_List.html" title="Previous Chapter: List of Commands"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; List of Commands</span>
+    </a>
+  </li>
+  <li>
+    <a href="VMoveSubmitExample.html" title="Next Chapter: Example Command File"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Example Command File &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="gui-to-create-cax-using-vmovecaesubmit">
+<h1>GUI to Create CAX using VMoveCAESubmit</h1>
+<p><strong>VMoveCAESubmit</strong> is a VCollab Tool to convert CAX file from a native CAE file based on the parameters specified in a txt file. This GUI tool is developed to simplify CAX file creation using VMoveCAESubmit. Using this tool user can select or specify list of commands or parameters for File, Result, Parts and Step sections and create VMoveCAESubmit  parameter file. This Command parameter file can be run to create and load CAX file in VCollabPro. This help manual explains the functionalities of this tool.</p>
+<p>General help for VMoveCAESubmit command parameters is available in <a class="reference external" href="https://training.vcollab.com/Translators/VMoveCAE/Submit/usage.html" target="_blank">https://training.vcollab.com/Translators/VMoveCAE/Submit/usage.html</a></p>
+<div class="section" id="file-section">
+<h2>File Section</h2>
+<p>Used to specify VMoveCAE which files to use.</p>
+<img alt="../../_images/file_section.png" src="../../_images/file_section.png" />
+<ul class="simple">
+<li><strong>Native File</strong>: Specify the Native CAE file which need to be converted to CAX.</li>
+<li><strong>Cax File</strong>: This field specifies the path for the CAX file to be saved. This is auto filled once the Native file is selected (If the Native file folder has the write permission). User can modify this CAX file path as required.</li>
+<li><strong>Command File</strong>: This is the path where VMoveSubmit Command File is saved. This field as well is auto-filled once the Native file is selected. User can edit this path and specify the location where Command File is to be saved. If this field is empty or not valid, Command file is saved in &lt;VCollab Tempfile Path&gt;.</li>
+<li><strong>Additional Lines</strong>: This field is used to specify additional file section input lines (based on the native files). For certain native files, It may be required to add additional files.</li>
+</ul>
+<p>For example, ds.dat command file can be specified along with native ANSYS rst file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">ds</span><span class="o">.</span><span class="n">dat</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">ANSYS_CMDS</span>
+</pre></div>
+</div>
+<p>For Fluent .cas file, it is required to append .dat file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">blower</span><span class="o">.</span><span class="n">dat</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">FLUENT_DAT</span>
+</pre></div>
+</div>
+<p>Additional results (such as fatigue) files can be added as additional lines</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">abc</span><span class="o">.</span><span class="n">dma</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">FEMFAT_DMA</span><span class="p">,</span> <span class="n">CONTENT</span><span class="o">=</span><span class="n">RESULTS</span>
+<span class="o">-</span> <span class="n">abc</span><span class="o">.</span><span class="n">csv</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">VCOLLAB_CSV</span>
+<span class="o">-</span> <span class="n">abc</span><span class="o">.</span><span class="n">npz</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">NUMPY_NPZ</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>Abaqus Input File</strong>: This is an optional selection. This field is activated only if Abaqus .odb file is selected as Native file. As the name suggests user can select Abaqus .inp file to create <strong>entity sets</strong> (CONTENT=ENTITY_SETS) instead of odb.</li>
+<li><strong>History File</strong>: This is an optional selection. This field is activated only if Abaqus .odb file is selected as Native file. Specify the path to save history data file in json format.</li>
+<li><dl class="first docutils">
+<dt><strong>Options</strong>: Specify the file specific load and translation options.</dt><dd><ul>
+<li><em>ZERO_FRAMES</em> : Select this option to include Frame number Zero for each Step (LxM0)</li>
+<li><em>FAST_LOAD_ODB</em> : Select this option only if all the frames in the ODB file have same set of results.</li>
+<li><em>MID_NODES</em> : Select this option to translate mid nodes (if present)</li>
+<li><em>NO_AVERAGE_ACROSS_REGIONS</em>: Refer to VMoveCAESubmit manual for this option.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><strong>Command Template File</strong>: This function allows to reuse an existing Command File as a template. When the user select the file, the Result, Part and Step sections are read from the file and respective sections in this dialog are updated. User can then modify these sections if required.</li>
+<li><strong>Help</strong> <img alt="Help" src="../../_images/Help1.png" /> : Opens VMoveCAESubmit File section help. For the detailed description of the File Section parameters please refer to the File Section help.</li>
+</ul>
+</div>
+<div class="section" id="results-section">
+<h2>Results Section</h2>
+<p>Used to specify required results to be translated and associated control parameters. Refer to the VMoveSubmit help for supported parameters.</p>
+<img alt="../../_images/result_section.png" src="../../_images/result_section.png" />
+<ul>
+<li><p class="first"><strong>Select From List</strong>: User can select common results from available list of results along with <strong>Position</strong>, <strong>Map Type</strong> and <strong>Section</strong> parameters. Please refer to the Result Section help for the detailed description of each of the parameters.</p>
+<p>First select required results from the two list boxes and also select required result parameters. Then click &quot;<em>Select Result</em>&quot; button. This will add selected results to the <em>Result Section Editor</em> field. User can modify these results or optional parameters.</p>
+</li>
+<li><p class="first"><strong>Custom Result</strong>: Add any specific result (along with the parameters) in the edit field and click <em>Add Result</em> button. This result line will be added to the <em>Result Section Editor</em>.</p>
+</li>
+<li><p class="first"><strong>Result Section Editor</strong>:All selected results are displayed in this multiline edit field. User can modify any result line. Note: need to select <strong>Edit</strong> icon to enable editing. Select <strong>Clear</strong> icon to clear all selected results.</p>
+</li>
+<li><p class="first"><strong>Edit</strong> <img alt="editiconN" src="../../_images/editiconN1.png" /> : This is a toggle button. When green, user can directly edit the commands in the Result List.</p>
+</li>
+<li><p class="first"><strong>Delete</strong> <img alt="icons8-trash-64" src="../../_images/icons8-trash-641.png" /> : Clears the Result list.</p>
+</li>
+<li><p class="first"><strong>Help</strong> <img alt="Help" src="../../_images/Help1.png" /> : Opens VMoveCAESubmit Result section help. For the detailed description of the Result Section parameters please refer to the Result Section help.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="parts-section">
+<h2>Parts Section</h2>
+<p>Used to specify VMoveCAE how to group elements into parts, what parts to translate or what parts to filter.</p>
+<img alt="../../_images/parts_section.png" src="../../_images/parts_section.png" />
+<ul>
+<li><p class="first"><strong>Grouping</strong>: From the drop down user can select Part grouping to be used.</p>
+</li>
+<li><p class="first"><strong>Part Name</strong>: User can specify the part names to be grouped. User can enter all the part names to be grouped separated by comma. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STD</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="n">TETRA_MESH</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="n">WarnElem</span><span class="o">*</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><strong>Filter</strong>: Filters the part from Cax output. If the checkbox is checked Filter is applied to all the parts specified in Part name.</p>
+</li>
+<li><p class="first"><strong>Add List</strong> <img alt="icons8-addlist1-64" src="../../_images/icons8-addlist1-641.png" /> : Adds the comma separated part names into list.</p>
+</li>
+<li><p class="first"><strong>Delete</strong> <img alt="icons8-trash-64" src="../../_images/icons8-trash-641.png" /> : Deletes the part name selected from the Part List.</p>
+</li>
+<li><p class="first"><strong>Help</strong> <img alt="Help" src="../../_images/Help1.png" /> : Opens VMoveCAESubmit Part Section help. For the detailed description of the Part Section parameters please refer to the Part Section help.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="step-section">
+<h2>Step Section</h2>
+<p>Used to specify the steps/frames/load cases/modes that needs to be translated or filtered by VMoveCAE.</p>
+<img alt="../../_images/step_section.png" src="../../_images/step_section.png" />
+<p>User can manually enter the values in the multiline edit field. The example section shows common commands used to select required steps. For the detailed description of the Step Section parameters please refer to the Step Section help.</p>
+<ul class="simple">
+<li><strong>Delete</strong> <img alt="icons8-trash-64" src="../../_images/icons8-trash-641.png" /> : Clears step list.</li>
+<li><strong>Help</strong> <img alt="Help" src="../../_images/Help1.png" /> : Opens VMoveCAESubmit Step Section help. For the detailed description of the Step Section parameters please refer to the Step Section help.</li>
+</ul>
+</div>
+<div class="section" id="vmovecaesubmit-options">
+<h2>VMoveCAESubmit Options</h2>
+<p>Once all section parameters are specified, user can save these parameters to the command file. It is also possible to run VMoveSubmit application to create CAX file and load it into VCollabPro.</p>
+<img alt="../../_images/load_functions.png" src="../../_images/load_functions.png" />
+<ul class="simple">
+<li><strong>Load Cax File</strong>: Click this button to save these parameters to the command file and create CAX file using it. Once the CAX conversion is completed it will load the CAX file. Please Note that CAX conversion can take time if the Native file is very large.</li>
+<li><strong>Save Command File</strong>: Click this button to save all the section parameters to the command file. User can use this file to run VMoveCAESubmit application in a batch mode. This option can be used if the native file is very large.</li>
+<li><strong>Close</strong>: Close VMoveCAESubmit GUI dialog and exit</li>
+<li><strong>Help</strong>: Opens this VmoveCAESubmit GUI tool help documentation</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

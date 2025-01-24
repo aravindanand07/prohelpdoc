@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import viewpoints from external file</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Import viewpoints from external file</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="import-viewpoints-from-external-file">
+<h1>Import viewpoints from external file</h1>
+<p>This option helps user to import viewpoints of a cax file into another cax file. Input file is an xml file which consists of all the information to import viewpoints. Below is given the syntax and a sample xml batch file.</p>
+<p>Syntax:</p>
+<blockquote>
+<div><p>Prompt :VCollabPro.exe file folder&gt; <em>VCollabPro.exe</em> -b &lt;<em>input xml file path</em>&gt;</p>
+<p>Example:</p>
+<blockquote>
+<div>C:Program FilesVCollabVCollabPro32&gt; VCollabPro.exe -b &quot;C:testbatch.xml&quot;</div></blockquote>
+</div></blockquote>
+<p><strong>Sample Batch File</strong></p>
+<blockquote>
+<div><p>File Name: VCollabProBatch_ImportViewPt.xml</p>
+<p>Location: &quot;..SamplesBatchMode Inputs&quot;</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first line-block">
+<div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</div>
+<div class="line">&lt;!-- BatchVersion 1.0 --&gt;</div>
+<div class="line">&lt;!-- VCollab Pro : Allows batch mode execution using -b
+option from command line. --&gt;</div>
+<div class="line">&lt;!-- Sample Usage : C:VCollabAppPath&gt;VCollabPro.exe -b
+this.xml --&gt;</div>
+<div class="line">&lt;!-- Copyright (C) 2010 Visual Collaboration Technologies
+Inc. --&gt;</div>
+<div class="line">&lt;!-- This xml format is alpha and it can be improved or
+changed by VCollab at the time of release VCollab Pro --&gt;</div>
+<div class="line">&lt;!-- Purpose : This sample explains, How to merge
+viewpoints from external file into a new cax file --&gt;</div>
+<div class="line">&lt;!-- Here, viewpoints from sInputViewPointFile are merged
+with sInputFile to create sOutputFile --&gt;</div>
+<div class="line">&lt;VCollabBatch</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">fVersion = &quot;0.1&quot;</div>
+<div class="line">sInputFile = &quot;..SamplesBatchMode
+Inputsairbag.cax&quot; &gt;</div>
+<div class="line">&lt;!-- sInputViewPointFile is the external file that has
+viewpoints to be imported. Either it can cax or .vpt
+file--&gt;</div>
+<div class="line">&lt;!-- To Skip viewpoint state Set bApplyViewPointState
+= &quot;FALSE&quot; --&gt;</div>
+<div class="line">&lt;ImportViewpoint ENABLE = &quot;TRUE&quot;</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">sInputViewPointFile = &quot;..SamplesBatchMode
+Inputsairbag_viewpoints.vpt&quot;</div>
+<div class="line">bApplyViewPointState = &quot;TRUE&quot; /&gt;</div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">&lt;!--sOutputFile is the merger of sInputFile and
+sInputViewPointFile--&gt;</div>
+<div class="line">&lt;Output sOutputFile = &quot;C:output.cax&quot; /&gt;</div>
+</div>
+</div></blockquote>
+<div class="last line-block">
+<div class="line">&lt;/VCollabBatch&gt;</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Dynamic Arguments</strong></p>
+<blockquote>
+<div><p>This section explains how to set values for xml fields through command line argument.</p>
+<p>Means, To do a fixed set of repeated operation, it is not needed to edit values in xml file .</p>
+<p>This XML files can be used as template and its values will be set from external command line arguments.</p>
+<p>E.g.</p>
+<blockquote>
+<div><em>C:Program FilesVCollabVCollabPro32&gt; VCollabPro.exe -b &quot;C:testbatch.xml&quot; &quot;..SamplesBatchMode Inputsairbag.cax&quot; &quot;..SamplesBatchMode Inputsairbag_viewpoints.vpt&quot; &quot;C:output.cax&quot;</em></div></blockquote>
+<p>This example sets values of xml fields in command arguments.</p>
+<p>To input the command line arguments, xml fields need to to set as,</p>
+<p>sInputFile = &quot;&#64;arg#3&quot;</p>
+<p>sInputViewPointFile = &quot;&#64;arg#4&quot;</p>
+<p>sOutputFile =&quot;&#64;arg#5&quot;</p>
+<p>The number is the index of command line argument list.</p>
+<p>In this example,</p>
+<p>&#64;arg#0 =VCollabPro.exe</p>
+<p>&#64;arg#1= -b</p>
+<p>&#64;arg#2 = C:/test/batch.xml</p>
+<p>&#64;arg#3= ..SamplesBatchMode Inputsairbag.cax</p>
+<p>&#64;arg#4=..SamplesBatchMode Inputsairbag_viewpoints.vpt</p>
+<p>&#64;arg#5=C:output.cax</p>
+<p>Modified xml</p>
+<p>Fields that takes values from command line arguments are
+highlighted.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first line-block">
+<div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</div>
+<div class="line">&lt;!-- BatchVersion 1.0 --&gt;</div>
+<div class="line">&lt;!-- VCollab Pro : Allows batch mode execution using -b
+option from command line. --&gt;</div>
+<div class="line">&lt;!-- Sample Usage : C:VCollabAppPath&gt;VCollabPro.exe -b
+this.xml --&gt;</div>
+<div class="line">&lt;!-- Copyright (C) 2010 Visual Collaboration Technologies
+Inc. --&gt;</div>
+<div class="line">&lt;!-- This xml format is alpha and it can be improved or
+changed by VCollab at the time of release VCollab Pro --&gt;</div>
+<div class="line">&lt;!-- Purpose : This sample explains, How to merge
+viewpoints from external file into a new cax file --&gt;</div>
+<div class="line">&lt;!-- Here, viewpoints from sInputViewPointFile are merged
+with sInputFile to create sOutputFile --&gt;</div>
+<div class="line">&lt;VCollabBatch</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">fVersion = &quot;0.1&quot;</div>
+<div class="line">sInputFile = &quot;<strong>&#64;arg#3</strong>&quot; &gt;</div>
+<div class="line">&lt;!-- sInputViewPointFile is the external file that has
+viewpoints to be imported. Either it can cax or .vpt
+file--&gt;</div>
+<div class="line">&lt;!-- To Skip viewpoint state Set bApplyViewPointState
+= &quot;FALSE&quot; --&gt;</div>
+<div class="line">&lt;ImportViewpoint ENABLE = &quot;TRUE&quot;</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">sInputViewPointFile = &quot;<strong>&#64;arg#4</strong>&quot;</div>
+<div class="line">bApplyViewPointState = &quot;TRUE&quot; /&gt;</div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">&lt;!--sOutputFile is the merger of sInputFile and
+sInputViewPointFile--&gt;</div>
+<div class="line">&lt;Output sOutputFile = &quot;<strong>&#64;arg#5</strong>&quot; /&gt;</div>
+</div>
+</div></blockquote>
+<p class="last">&lt;/VCollabBatch&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Dynamic arguments can be used in any field and in any order, but &#64;arg#*Number</em> has to match with command line input index.*</p>
+</div></blockquote>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

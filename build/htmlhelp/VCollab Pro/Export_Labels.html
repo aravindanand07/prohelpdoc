@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Export Probe Labels</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Create Result" href="CAE_Create_Results_Pro.html" />
+    <link rel="prev" title="Hotspots Extrema" href="CAE_Hotspots_Extrema.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Export Probe Labels</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="CAE_Hotspots_Extrema.html" title="Previous Chapter: Hotspots Extrema"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Hotspots Extrema</span>
+    </a>
+  </li>
+  <li>
+    <a href="CAE_Create_Results_Pro.html" title="Next Chapter: Create Result"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Create Result &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="export-probe-labels">
+<h1>Export Probe Labels</h1>
+<p>VCollab Pro users can export labels data into CSV (comma separated
+values) file using <strong>Export Probe Labels</strong> option.</p>
+<p>The following values are exported with a header row.</p>
+<ol class="arabic simple">
+<li>Model Name</li>
+<li>Part Name</li>
+<li>Node ID</li>
+<li>Element ID</li>
+<li>Position Coordinates (x, y, z)</li>
+<li>Instance Name</li>
+<li>CAE result name</li>
+<li>Derived result name and</li>
+<li>Result value</li>
+</ol>
+<p>Example:</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first"><strong>Model,Part,NodeID,ElementID,Xpos,Ypos,Zpos,Instance,Result,Value</strong></p>
+<p>beam,1,248,396,80,9,10,L1M1,Displacement:Translational
+Magnitude,8.57873</p>
+<p>beam,1,364,282,28,12,5,L1M1,Displacement:Translational
+Magnitude,1.40889</p>
+<p class="last">beam,1,182,379,16,12,10,L1M1,Displacement:Translational
+Magnitude,0.546442</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to Export Probe Labels</strong></p>
+<ol class="arabic simple">
+<li>Load a CAX file</li>
+<li>Find hotspots or probe the results manually</li>
+<li>Click <strong>CAE | Export Probe Labels</strong>...</li>
+</ol>
+<p><img alt="image1" src="../_images/cae_Export_Probe_Labels_Panel.png" /></p>
+<ol class="arabic simple">
+<li>A file save dialog box opens. Enter a <strong>filename</strong> for the CSV file.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

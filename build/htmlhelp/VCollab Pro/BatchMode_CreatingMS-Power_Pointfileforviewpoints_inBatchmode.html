@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exporting Viewpoints into a Powerpoint File</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Comparing and Merging CAX files" href="BatchMode_ComparingandMerging_CAXfiles.html" />
+    <link rel="prev" title="Image Generation Using View Point" href="BatchMode_ImageGeneration_usingViewPoint.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Exporting Viewpoints into a Powerpoint File</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="BatchMode_ImageGeneration_usingViewPoint.html" title="Previous Chapter: Image Generation Using View Point"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Image Generat...</span>
+    </a>
+  </li>
+  <li>
+    <a href="BatchMode_ComparingandMerging_CAXfiles.html" title="Next Chapter: Comparing and Merging CAX files"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Comparing and... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="exporting-viewpoints-into-a-powerpoint-file">
+<h1>Exporting Viewpoints into a Powerpoint File</h1>
+<p>VCollab Pro users can export viewpoints of a CAX file into a Powerpoint
+file in batch mode. The input is given through an XML file which
+consists of all the information to export viewpoints into a PPT file.
+Powerpoint file using viewpoint.</p>
+<p>Syntax:</p>
+<blockquote>
+<div>Prompt :VCollabPro.exe file folder&gt; VCollabPro.exe -b &lt;input xml
+file path&gt;</div></blockquote>
+<p>Example:</p>
+<blockquote>
+<div>C:Program FilesVCollabVCollabPro64&gt; VCollabPro.exe -b
+&quot;C:testbatch.xml&quot;</div></blockquote>
+<p><strong>Sample Batch File - Basic</strong></p>
+<blockquote>
+<div><p>File Name: VCollabProBatch_ViewPt2PPT_Basic.xml</p>
+<p>Location: &quot;..SamplesBatchMode Inputs&quot;</p>
+</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first"><strong>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</strong></p>
+<p><em>&lt;!-- BatchVersion 1.0 --&gt;</em></p>
+<p><em>&lt;!-- VCollab Pro : Allows batch mode execution using -b option from
+command line. --&gt;</em></p>
+<p><em>&lt;!-- Sample Usage : C:VCollabAppPath&gt;VCollabPro.exe -b this.xml
+--&gt;</em></p>
+<p><em>&lt;!-- Copyright (C) 2010 Visual Collaboration Technologies Inc. --&gt;</em></p>
+<p><em>&lt;!-- This xml format is alpha and it can be improved or changed by
+VCollab at the time of release VCollab Pro --&gt;</em></p>
+<p><em>&lt;!-- Purpose: This sample explains, How to generate MS-PowerPoint
+PPT files from VCollab Pro application in batch mode --&gt;</em></p>
+<p><em>&lt;!-- Here, each viewpoints in cax file are exported as PowerPoint
+slide --&gt;</em></p>
+<p>&lt;VCollabBatch fVersion = &quot;0.1&quot;</p>
+<blockquote>
+<div><p>sInputFile = &quot;..SamplesBatchMode Inputscylinder.cax&quot; &gt;</p>
+<p><em>&lt;!-- sPPtTemplatePath is PowerPoint template (.pot) file path.
+If there is no PowerPoint template input then set
+bUsePptTemplate=&quot;FALSE&quot; --&gt;</em></p>
+<p>&lt;ViewPoint2PPT ENABLE = &quot;TRUE&quot;</p>
+<p>sOutputPPTPath = &quot;C:output.ppt&quot;</p>
+<p>bUsePptTemplate = &quot;TRUE&quot;</p>
+<p>sPPtTemplatePath = &quot;..SamplesBatchMode Inputstemplate.pot&quot; /&gt;</p>
+<p><em>&lt;!-- For more options, See
+VCollabProBatch_ViewPt2PPT_Advanced.xml --&gt;</em></p>
+</div></blockquote>
+<p class="last">&lt;/VCollabBatch&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dynamic Arguments</strong></p>
+<p>Arguments for exporting viewpoints into a powerpoint file can also be
+set dynamically in batch mode. This feature is useful for repeated
+operations without having to edit values in the input XML file.</p>
+<p>The XML file is thus used as a template and its values are set
+externally through command line arguments.</p>
+<p>E.g.</p>
+<p>C:Program FilesVCollabVCollabPro64&gt; VCollabPro.exe -b
+&quot;C:testbatch.xml&quot; &quot;..SamplesBatchMode Inputscylinder.cax&quot;
+&quot;..SamplesBatchMode Inputstemplate.pot&quot; &quot;C:output.ppt&quot;</p>
+<p>In this example, the input CAX file, powerpoint template path, and
+output powerpoint file have been provided dynamically.</p>
+<p>The arguments are denoted as &#64;arg#<strong>N</strong> where N is the index of the
+argument in the command line. Dynamic arguments can be used in any field
+and in any order, but &#64;arg#<strong>N</strong> has to match with the command line
+input index.</p>
+<p>In this example,</p>
+<blockquote>
+<div><p>&#64;arg#0 = VCollabPro.exe</p>
+<p>&#64;arg#1 = -b</p>
+<p>&#64;arg#2 = C:/test/batch.xml</p>
+<p>&#64;arg#3 = ..SamplesBatchMode Inputscylinder.cax which is assigned
+to sInputFile</p>
+<p>&#64;arg#4 = ..SamplesBatchMode Inputstemplate.pot which is assigned
+to sPPtTemplatePath</p>
+<p>&#64;arg#5 = C:output.ppt which is assigned to sOutputPPTPath</p>
+<p><strong>Modified xml</strong></p>
+<p>Fields that take values from command line arguments are highlighted.</p>
+</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</p>
+<p><em>&lt;!-- BatchVersion 1.0 --&gt;</em></p>
+<p><em>&lt;!-- VCollab Pro : Allows batch mode execution using -b option from
+command line. --&gt;</em></p>
+<p><em>&lt;!-- Sample Usage : C:VCollabAppPath&gt;VCollabPro.exe -b this.xml
+--&gt;</em></p>
+<p><em>&lt;!-- Copyright (C) 2010 Visual Collaboration Technologies Inc. --&gt;</em></p>
+<p><em>&lt;!-- This xml format is alpha and it can be improved or changed by
+VCollab at the time of release VCollab Pro --&gt;</em></p>
+<p><em>&lt;!-- Purpose: This sample explains, How to generate MS-PowerPoint
+PPT files from VCollab Pro application in batch mode --&gt;</em></p>
+<p><em>&lt;!-- Here, each viewpoints in cax file are exported as PowerPoint
+slide --&gt;</em></p>
+<p>&lt;VCollabBatch fVersion = &quot;0.1&quot;</p>
+<blockquote>
+<div><p>sInputFile = &quot;<strong>&#64;arg#3</strong>&quot; &gt;</p>
+<p><em>&lt;!-- sPPtTemplatePath is PowerPoint template (.pot) file path.
+If there is no PowerPoint template input then set
+bUsePptTemplate=&quot;FALSE&quot; --&gt;</em></p>
+<p>&lt;ViewPoint2PPT ENABLE = &quot;TRUE&quot;</p>
+<p>sOutputPPTPath = &quot;<strong>&#64;arg#5</strong>&quot;</p>
+<p>bUsePptTemplate = &quot;TRUE&quot;</p>
+<p>sPPtTemplatePath = &quot;<strong>&#64;arg#4</strong>&quot; /&gt;</p>
+<p><em>&lt;!-- For more options, See
+VCollabProBatch_ViewPt2PPT_Advanced.xml --&gt;</em></p>
+</div></blockquote>
+<p class="last"><strong>&lt;/VCollabBatch&gt;</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Batch File - Advanced</strong></p>
+<blockquote>
+<div><p>File Name: VCollabProBatch_ViewPt2PPT_Advanced.xml</p>
+<p>Location: &quot;..SamplesBatchMode Inputs&quot;</p>
+<p>It can be used with dynamic arguments also.</p>
+</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</p>
+<p><em>&lt;!-- BatchVersion 1.0 --&gt;</em></p>
+<p><em>&lt;!-- VCollab Pro : Allows batch mode execution using -b option from
+command line. --&gt;</em></p>
+<p><em>&lt;!-- Sample Usage : C:VCollabAppPath&gt;VCollabPro.exe -b this.xml
+--&gt;</em></p>
+<p><em>&lt;!-- Copyright (C) 2010 Visual Collaboration Technologies Inc. --&gt;</em></p>
+<p><em>&lt;!-- This xml format is alpha and it can be improved or changed by
+VCollab at the time of release VCollab Pro --&gt;</em></p>
+<p><em>&lt;!-- Purpose: This sample explains, How to generate MS-PowerPoint
+PPT files from VCollab Pro application in batch mode --&gt;</em></p>
+<p><em>&lt;!-- Here, each viewpoints in cax file are exported as PowerPoint
+slide --&gt;</em></p>
+<p>&lt;VCollabBatch fVersion = &quot;0.1&quot;</p>
+<blockquote>
+<div><p>sInputFile = &quot;..SamplesBatchMode
+InputsAirBag_Displacement.cax&quot; &gt;</p>
+<p><em>&lt;!-- sPPtTemplatePath is PowerPoint template (.pot) file path.
+If there is no PowerPoint template input then set
+bUsePptTemplate=&quot;FALSE&quot; --&gt;</em></p>
+<p>&lt;ViewPoint2PPT ENABLE = &quot;TRUE&quot;</p>
+<p>sOutputPPTPath = &quot;C:AirBagDisplacement.ppt&quot;</p>
+<p>bUsePptTemplate = &quot;TRUE&quot;</p>
+<p>sPPtTemplatePath = &quot;..SamplesBatchMode
+InputsVCollabTemplate.pot&quot; /&gt;</p>
+<p><em>&lt;!-- On all these Optional blocks, Set ENABLE as &quot;FALSE&quot; if that
+block need to be skipped --&gt;</em></p>
+<p><em>&lt;!-- Optional Block; Used to import viewpoint from external
+cax/vpt file --&gt;</em></p>
+<p><em>&lt;!-- ImportViewpoint block is used if it is needed to import
+viewpoint from external file. or Set ENABLE as FALSE --&gt;</em></p>
+<p><em>&lt;!-- ImportViewpoint : sInputViewPointFile is either viewpoints
+only .vpt file or .cax that has viewpoints --&gt;</em></p>
+<p><em>&lt;!-- To skip state of the viewpoint then Set
+bImportViewPointState as &quot;FALSE&quot;. So that only camera position
+imported --&gt;</em></p>
+<p>&lt;ImportViewpoint ENABLE = &quot;TRUE&quot;</p>
+<p>sInputViewPointFile = &quot;..SamplesBatchMode
+InputsAirBag_ViewPoints.vpt&quot;</p>
+<p>bImportViewPointState = &quot;TRUE&quot; /&gt;</p>
+<p><em>&lt;!-- The above sample bImportViewPointState is set to FALSE,
+means the view state is skipped and only camera positions will be
+applied--&gt;</em></p>
+<p><em>&lt;!-- try the other sample to import viewpoint state.
+sInputViewPointFile=&quot;..SamplesBatchMode
+InputsAirBag_AllResults.cax&quot; and bImportViewPointState=&quot;TRUE&quot;
+/&gt;</em></p>
+<p><em>&lt;!-- Optional Select Viewpoint Block --&gt;</em></p>
+<p><em>&lt;!-- SelectViewPoint block is used if there exists more than one
+viewpath. Select a viewpath that has to be exported as ppt slides
+or First path will be exported--&gt;</em></p>
+<p>&lt;SelectViewPoint ENABLE = &quot;TRUE&quot; sViewPathName = &quot;ViewPath1&quot; /&gt;</p>
+</div></blockquote>
+<p class="last">&lt;/VCollabBatch&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

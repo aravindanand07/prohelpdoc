@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Template Editor GUI</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="List of Commands" href="Commands_List.html" />
+    <link rel="prev" title="List of Commands" href="../ReportCMDEditor/Commands_List.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../VCollab%20Pro/index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Video Template Editor GUI</a><ul>
+<li><a class="reference internal" href="#command-list">Command List</a></li>
+<li><a class="reference internal" href="#menu">Menu</a></li>
+<li><a class="reference internal" href="#add-commands">Add Commands</a></li>
+<li><a class="reference internal" href="#model-transform">Model Transform</a></li>
+<li><a class="reference internal" href="#camera-transform">Camera Transform</a></li>
+<li><a class="reference internal" href="#save-video">Save Video</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../ReportCMDEditor/Commands_List.html" title="Previous Chapter: List of Commands"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; List of Commands</span>
+    </a>
+  </li>
+  <li>
+    <a href="Commands_List.html" title="Next Chapter: List of Commands"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">List of Commands &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="video-template-editor-gui">
+<h1>Video Template Editor GUI</h1>
+<p>To open the GUI, select the submenu <em>Video Maker</em> from <em>PY_Tools</em> main menu of VCollab Pro or ProX.</p>
+<img alt="../../_images/TitlePage.png" src="../../_images/TitlePage.png" />
+<div class="section" id="command-list">
+<h2>Command List</h2>
+<p>Current list of commands in the template. User can Add, Modify, Run or Save these commands.</p>
+</div>
+<div class="section" id="menu">
+<h2>Menu</h2>
+<ul class="simple">
+<li><img alt="open" src="../../_images/icons8-open-641.png" /> <strong>File Open</strong>: Select a video template file (A file selection dialog will popup). The commands from this file will be added to the <em>Command List</em>.</li>
+<li><img alt="save" src="../../_images/icons8-save-641.png" /> <strong>Save File</strong>: Save all commands defined in  the <em>Command List</em> as a video template file.</li>
+<li><img alt="runcmd" src="../../_images/icons8-run-641.png" /> <strong>Run Commands</strong>: Run all commands in the <em>Command List</em>.</li>
+<li><img alt="editcmdn" src="../../_images/editiconN2.png" /> <img alt="editcmdy" src="../../_images/editiconY1.png" /> <strong>Edit Commands</strong>: This is a toggle button. When green, user can directly edit the commands in the <em>Command List</em>.</li>
+<li><img alt="delete" src="../../_images/icons8-trash-642.png" /> <strong>Clear All</strong>: Clear all commands from the <em>Command List</em>.</li>
+<li><img alt="recon" src="../../_images/rec_on.png" /> <img alt="recoff" src="../../_images/rec_off.png" /> <strong>Record Images</strong>: Toggle button to set image capturing ON/OFF. When this is in ON mode, Images will be captured into a temporary folder. Save command will create video from these images.</li>
+<li><img alt="exit" src="../../_images/icons8-closewin1.png" /> <strong>Exit</strong>: Close this dialog and exit.</li>
+<li><img alt="help" src="../../_images/Help2.png" /> <strong>Help</strong>: Show this help message in a browser tab.</li>
+</ul>
+</div>
+<div class="section" id="add-commands">
+<h2>Add Commands</h2>
+<p>User can define a new command in this text filed. This command can be added to the <em>Command list</em>.</p>
+<img alt="../../_images/AddCmdTab.png" src="../../_images/AddCmdTab.png" />
+<ul class="simple">
+<li><strong>Argument List</strong>: When user enters a valid command, a list of parameters that can be specified for the command will be displayed in this text box.</li>
+<li><strong>Run Command</strong>: If this checkbox is <em>ON</em>, command will be run before entering into the <em>Command List</em>.</li>
+<li><strong>Enter</strong>: Click this button to add the command in the text filed to the <em>Command List</em>.</li>
+<li><strong>Clear</strong>: Click this button to clear current command in the text field.</li>
+<li><strong>Select Commands</strong>: Click this button to select a command from the Tree View (as shown below).</li>
+</ul>
+<img alt="../../_images/TreeView.png" src="../../_images/TreeView.png" />
+<p>When a new command is selected/edited in text filed, corresponding argument list will be displayed in the <em>Argument List</em> text box.</p>
+</div>
+<div class="section" id="model-transform">
+<h2>Model Transform</h2>
+<p>User can define a set of Model/Part transformation (rotate and move) commands using GUI.</p>
+<img alt="../../_images/ModelTransTab.png" src="../../_images/ModelTransTab.png" />
+<ul class="simple">
+<li>Select few parts from screen and use <strong>+/-</strong> buttons to rotate or translate the selected parts.</li>
+<li>Selected parts will be displayed in the <strong>Selected Parts</strong> list box.</li>
+<li>Use <strong>Part Menu</strong> to select any parts from a listbox.</li>
+<li><strong>Screen</strong> toggle can be used to define axis in Screen/Camera cordinate system.</li>
+<li><strong>Save as Command</strong> will save all the model movement commands.</li>
+<li><strong>NFrames</strong> will be used as number of frames.</li>
+</ul>
+</div>
+<div class="section" id="camera-transform">
+<h2>Camera Transform</h2>
+<p>User can define a set of Camera transform commands (rotate and move) in this GUI.</p>
+<img alt="../../_images/Camera_Transforms_Tab.png" src="../../_images/Camera_Transforms_Tab.png" />
+<ul class="simple">
+<li>Use <strong>+/-</strong> buttons to rotate or translate the camera.</li>
+<li><strong>Screen</strong> toggle can be used to define axis in Screen/Camera cordinate system.</li>
+<li><strong>Save as Command</strong> will save all the camera movement commands.</li>
+<li><strong>NFrames</strong> will be used as number of frames.</li>
+</ul>
+</div>
+<div class="section" id="save-video">
+<h2>Save Video</h2>
+<p>User can Save a video file from this tab.</p>
+<ul class="simple">
+<li>When the <strong>Record Images</strong> button is <em>ON</em>, the recorded images will be saved in a temperory folder and the <strong>Number of Images Saved</strong> will be updated.</li>
+<li><strong>Reset Capture</strong> will reset the captured images.</li>
+<li>User can <strong>Browse</strong> to the folder and set the video file name. Currently supported formats are: <em>MP4</em>, <em>GIF</em>, <em>AVI</em>, <em>FLV</em>, and <em>WMV</em>.</li>
+<li><strong>Save</strong> will stitch all the captured images together and save them as the video file.</li>
+</ul>
+<img alt="../../_images/SaveVideo.png" src="../../_images/SaveVideo.png" />
+</div>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>Here is a sample command template file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#-- VPANIM_PARAMS,nFrame_VP2VP,nImgsPerView=1,iSectionAnimFrames,iExplodeAnimFrames</span>
+<span class="n">VPANIM_PARAMS</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">25</span>
+<span class="c1">#-- VPANIM_CAEPARAMS,bCAEAnim(Y/N),nCylesPerView,nFramesPerCyle,nImgsPerCAEFrame</span>
+<span class="n">VPANIM_CAEPARAMS</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">1</span>
+<span class="c1">#-- Select ViewPoint 1</span>
+<span class="n">APPLY_VP</span><span class="p">,</span><span class="mi">1</span>
+<span class="n">VP2VP_ANIM</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span>
+<span class="n">MOVE_CAMERA</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="n">Y</span>
+<span class="n">ROTATE_CAMERA</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="n">Y</span>
+<span class="n">SAVE_VIDEO</span><span class="p">,</span><span class="n">Test123</span><span class="o">.</span><span class="n">mp4</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">EXIT</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Commands will be excecuted line by line. Any text after '#' is a comment.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

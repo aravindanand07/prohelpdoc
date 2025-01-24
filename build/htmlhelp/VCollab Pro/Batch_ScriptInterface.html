@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script Interface</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Context Menu" href="BatchMode_Context_Menu.html" />
+    <link rel="prev" title="Image Generator" href="Image_Gen_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Script Interface</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Image_Gen_Pro.html" title="Previous Chapter: Image Generator"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Image Generator</span>
+    </a>
+  </li>
+  <li>
+    <a href="BatchMode_Context_Menu.html" title="Next Chapter: Context Menu"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Context Menu &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="script-interface">
+<h1>Script Interface</h1>
+<p>VCollab Python API is an Application Programming Interface (API) for
+integrating and customizing VCollab Pro application using Python
+scripts. Python is embedded into VCollab Pro to provide a scripting
+interface to VCollab Pro users.</p>
+<p>For more information, refer to VCollab Python API.pdf in the VCollab
+installation directory.</p>
+<p><strong>Uses of Python Scripts</strong></p>
+<p>In general, these python interface functions can be used for,</p>
+<ul class="simple">
+<li>Developing customized functions, load specific models, show required
+parts, compare models, display specific 2D labels, create specific
+results, hotspots and viewpoints.</li>
+<li>Develop customized batch mode applications to create images or merge
+CAX files.</li>
+<li>Develop customized applications to generate viewpoints (CAX Reports)
+automatically (Report Automation)</li>
+</ul>
+<p>The VCollab Pro python API functions are arranged into the following
+groups.</p>
+<ul class="simple">
+<li><strong>General functions:</strong> General status query functions are in this
+group.</li>
+<li><strong>File operation functions:</strong> Functions such as load, save and merge
+CAX files, export viewpoints as PPT are present in this group.</li>
+<li><strong>Edit operation functions:</strong> Functions for the selection and
+manipulation (show/hide/delete/rename/transform) of parts are in
+this group. Functions for setting background color are also in
+this group.</li>
+<li><strong>View operation functions:</strong> Functions related to viewing such as
+setting display modes, feature edge display mode, explode mode,
+fit view etc. are present in this group.</li>
+<li><strong>CAE operation functions:</strong> CAE operation functions that are used to
+select result, set legend parameters, probe label attributes, set
+hotspot dialog parameters, create hotspots, set CAE animation
+settings, etc. are present in this group.</li>
+<li><strong>Multi-Model operation functions:</strong> Functions that set multi model
+parameters such as current model, legend options etc. are present
+here.</li>
+<li><strong>Viewpoint operation functions:</strong> Functions that create, select and
+manipulate viewpoints are present in this group.</li>
+<li><strong>Note/Label operation functions:</strong> Functions that add and edit notes
+are present in this group.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul class="simple">
+<li>Python version 3 scripts are supported</li>
+<li>Most of the function names and arguments for Python interface
+functions are the same as Presenter API functions.</li>
+<li>When a CAD model is loaded, CAE functions may not work</li>
+<li>The functions are a part of VCollab Pro. Python scripts with VCollab
+API can’t be executed independently.</li>
+</ul>
+<p><strong>VCollab Scripting Interface</strong></p>
+<p>Python 3 is embedded into VCollab Pro (using C++) to provide scripting interface to VCollab. VCollab API functions listed here can be called from python scripts. Users need to create a python script and run it from VCollab Pro. The python scripts can be run in following two modes:</p>
+<ul>
+<li><p class="first"><strong>In Batch Mode:</strong></p>
+<ul class="simple">
+<li>When python scripts are specified as command argument, the script
+will be executed in batch mode. In this mode users can use a
+python script to create a CAX file with viewpoints or create
+customized reports as image, PPT and other supported formats.</li>
+<li>Run script: &quot;C:Program FilesVCollabVCollabPro64VCollabPro.exe&quot;
+-b &quot;C:TempMyReport_A.py&quot;</li>
+<li>Load file1.cax and run script: &quot;C:Program
+FilesVCollabVCollabPro64VCollabPro.exe&quot; -b
+&quot;C:TempMyReport_A.py&quot; &lt;file1.cax&gt;</li>
+<li>Load file1.cax, merge file2.cax and run script: &quot;C:Program
+FilesVCollabVCollabPro64VCollabPro.exe&quot; -b
+&quot;C:TempMyReport_A.py&quot; &lt;file1.cax&gt; &lt;file2.cax&gt;</li>
+</ul>
+</li>
+<li><p class="first"><strong>In GUI Mode :</strong></p>
+<ul class="simple">
+<li>Python scripts can be specified as input in File-&gt;Import menu</li>
+<li>Python scripts can also be specified as input for the <strong>Import
+ViewPoints…</strong> function in the Viewpoints context menu in GUI
+mode.</li>
+<li>In this mode users can run a python script as a customized
+functionality in VCollab Pro.</li>
+</ul>
+<blockquote>
+<div><p><img alt="image1" src="../_images/BatchMode_ImportViewPoints.png" /></p>
+</div></blockquote>
+</li>
+</ul>
+<p>The python scripts are executed from VCollab Pro. All VCollab
+functions are listed under python interface object _VCollabAPI.</p>
+<p>A typical python script will look like this.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">#Sample VCollab Script to create a viewpoint with Stress result</p>
+<p>import _VCollabAPI # import Python interface Object from VCollabPro</p>
+<p>bRtnFlag = False;</p>
+<p>bDebugFlag = True; # flag used to show pop-up messages while
+debugging</p>
+<p># Open CAX file</p>
+<p>bRtnFlag = _VCollabAPI.xFileOpen(u&quot;c:\Temp\beam.cax&quot;);</p>
+<p>#Check for error status, If there is an error display a pop-up
+message</p>
+<p>if bRtnFlag == False:
+_VCollabAPI.xMessageBox(_VCollabAPI.xGetLastError(),bDebugFlag);</p>
+<p>_VCollabAPI.xMessageBox(u&quot;Start: beam.cax File Loaded&quot;,
+bDebugFlag);</p>
+<p>#Get Current Model Name</p>
+<p>sCurModel = _VCollabAPI.xGetCurCAEModelName();</p>
+<p>#Display Stress Result</p>
+<p>sCurResult = u&quot;Stress&quot;;</p>
+<p>sCurInstance = u&quot;L1M1&quot;;</p>
+<p>sCurDerivedResult = u&quot;Von Mises Stress&quot;;</p>
+<p>bRtnFlag =
+_VCollabAPI
+.xSetCAEResult(sCurModel,sCurResult,sCurInstance,sCurDerivedResult);</p>
+<p>if bRtnFlag == False:
+_VCollabAPI.xMessageBox(_VCollabAPI.xGetLastError(),bDebugFlag);</p>
+<p># Create Viewpoint</p>
+<p>sViewPathName = u&quot;Path 1&quot;;</p>
+<p>sViewPointName = u&quot;VP1- Von Mises Stress&quot;</p>
+<p>bRtnFlag = _VCollabAPI.xAddViewPoint(sViewPointName,
+sViewPathName,-1);</p>
+<p>if bRtnFlag == False:
+_VCollabAPI.xMessageBox(_VCollabAPI.xGetLastError(),bDebugFlag);</p>
+<p>#Save as CAX file</p>
+<p>bRtnFlag=_VCollabAPI.xFileSave(u&quot;C:\Temp\beam-vp.cax&quot;);</p>
+<p>if bRtnFlag == False:
+_VCollabAPI.xMessageBox(_VCollabAPI.xGetLastError(),bDebugFlag);</p>
+<p class="last">_VCollabAPI.xMessageBox(u&quot;END: beam-vp.cax File Saved&quot;,
+bDebugFlag);</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>For more details, refer to the VCollab Python API manual, which is
+available in the VCollab Pro installation directory.</p>
+<p><strong>Menu Customization</strong></p>
+<p>VCollab Pro allows users to append the menu with their own items using
+python script files and a CSV file.</p>
+<ul class="simple">
+<li>Go to &quot;%VCOLLAB_DIR%SamplesVCollab Python Script&quot;</li>
+<li>Look for a file named, &quot;VCollabPythonUI.csv&quot;</li>
+<li>It contains menu name, item names and its corresponding python file
+path</li>
+<li>Open and edit the file with your own titles and python file paths.</li>
+<li>Save the file.</li>
+<li>Copy the file &quot;VCollabPythonUI.csv&quot; to %APPDATA%VCollab folder.</li>
+<li>Open or restart VCollabPro application.</li>
+<li>The new interfaces can be seen as menu or toolbar items based on the
+UI style specified in the CSV file.</li>
+</ul>
+<p><strong>CSV file content format</strong></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="20%" />
+<col width="40%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Line Number</th>
+<th class="head">Syntax</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first">1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>.</p>
+<p class="last">.</p>
+</td>
+<td><p class="first">#
+VCollab_Python_INTERFACE</p>
+<p>GUI Mode = &lt;style &gt;</p>
+<p>&lt; Menu Name &gt;</p>
+<p>&lt; Menu Item 1 &gt; , &lt;
+Python File Path &gt;</p>
+<p>&lt; Menu Item 2 &gt; , &lt;
+Python File Path &gt;</p>
+<p class="last">...</p>
+</td>
+<td><p class="first">VCollab header constant</p>
+<p>Style of interface;
+&quot;style=0&quot; means menu
+with items and &quot;style=1&quot;
+means toolbar with
+items.</p>
+<p>Enter your menu name.</p>
+<p>Enter menu item name and
+corresponding python
+file path</p>
+<p>...</p>
+<p class="last">...</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example CSV File</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">#VCollab_Python_INTERFACE</p>
+<p>GUI Mode=0</p>
+<p>My Menu</p>
+<p>Set SI Unit,%VCOLLAB_DIR%SamplesVCollab Python
+ScriptsetUNITS_SI.py</p>
+<p>Modal Views,%VCOLLAB_DIR%SamplesVCollab Python
+ScriptCreate_ModalViews.py</p>
+<p class="last">HotSpot Views,%VCOLLAB_DIR%SamplesVCollab Python
+ScriptCreate_HotSpotViews.py</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Corresponding Menu/toolbar in VCollab Pro for above csv file</strong></p>
+<p>In &quot;GUI Mode =0&quot;, the menu is appended with item names.</p>
+<p><img alt="image2" src="../_images/BatchMode_MyMenu.png" /></p>
+<p>In &quot;GUI Mode =1&quot;, the toolbar is appended with item indices.</p>
+<p><img alt="image3" src="../_images/BatchMode_ItemIndices.png" /></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

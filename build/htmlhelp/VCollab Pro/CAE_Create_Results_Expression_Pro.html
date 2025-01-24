@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Result Using Expression</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Create Results Using Coord System" href="CAE_Result_Transformation_Pro.html" />
+    <link rel="prev" title="Create Result" href="CAE_Create_Results_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Create Result Using Expression</a><ul>
+<li><a class="reference internal" href="#create-result-panel">Create Result Panel</a></li>
+<li><a class="reference internal" href="#notation-for-a-derived-component-of-a-vector-or-tensor-result">Notation for a derived component of a Vector or Tensor result</a></li>
+<li><a class="reference internal" href="#basic-operators">Basic Operators</a></li>
+<li><a class="reference internal" href="#inequalities">Inequalities</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#application-constants">Application Constants</a></li>
+<li><a class="reference internal" href="#operands">Operands</a></li>
+<li><a class="reference internal" href="#sample-expressions">Sample Expressions</a></li>
+<li><a class="reference internal" href="#steps-to-create-a-new-result-using-expression">Steps to create a new result using expression</a></li>
+<li><a class="reference internal" href="#different-cases-of-result-creation">Different cases of Result Creation</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="CAE_Create_Results_Pro.html" title="Previous Chapter: Create Result"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Create Result</span>
+    </a>
+  </li>
+  <li>
+    <a href="CAE_Result_Transformation_Pro.html" title="Next Chapter: Create Results Using Coord System"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Create Result... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="create-result-using-expression">
+<h1>Create Result Using Expression</h1>
+<p>VCollab Pro users can create a new CAE result from existing results in
+two ways- using expressions and using coordinate systems.</p>
+<p>For creating results <strong>Using Expression,</strong> users have to provide a
+formula with specific notations, supported operators and functions. New
+results will have the same number of instances as other results have.</p>
+<p><img alt="image1" src="../_images/cae_Create_Result_Using_Expression_Panel.png" /></p>
+<p>A new CAE result can be created for</p>
+<ul class="simple">
+<li>Combining results</li>
+<li>Average of two or more results</li>
+<li>Difference between the two results</li>
+<li>Summation of two derived results</li>
+<li>Scaling result, etc.</li>
+</ul>
+<p>The computed new result will be updated to <strong>CAE | Result List</strong>
+immediately and users can view the new result in the same way as other
+results.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Complex results are not supported.</p>
+</div>
+<div class="section" id="create-result-panel">
+<h2>Create Result Panel</h2>
+<p>The Create Result panel opens on clicking <strong>CAE Settings| Create Result
+| Using Expression</strong></p>
+<p><img alt="image2" src="../_images/cae_Create_Result_Using_Expression_CreateResultPanel.png" /></p>
+<p>The various fields in the Create Result Panel are explained below.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Instances</strong></td>
+<td>Enables Instance Creation.</td>
+</tr>
+<tr class="row-even"><td><strong>Results</strong></td>
+<td>Displays the name of existing Results.</td>
+</tr>
+<tr class="row-odd"><td><strong>Notations</strong></td>
+<td>Displays the corresponding notations. An
+alphabetic notation which refers to the
+result in the first column is used. Every
+result has its own unique alphabet notation.</td>
+</tr>
+<tr class="row-even"><td><strong>Result Type</strong></td>
+<td>Displays result type of the corresponding
+results. The type of results can either be a
+Scalar or Vector or Tensor. An acronym in the
+bracket specifies if the result is of
+nodal(N), elemental(E) or element nodal
+type(EN)</td>
+</tr>
+<tr class="row-odd"><td><strong>Use Formula</strong></td>
+<td>Enter the formula to be used in the form of
+an expression with arithmetic operators,
+notations and constants.</td>
+</tr>
+<tr class="row-even"><td><strong>Functions</strong></td>
+<td>Drops down a list of functions that can be
+used in the formula text box.</td>
+</tr>
+<tr class="row-odd"><td><strong>New Result Name</strong></td>
+<td>Specify a name for new result that will be
+created</td>
+</tr>
+<tr class="row-even"><td><strong>Create Result</strong></td>
+<td>Evaluates the expression in the formula bar
+and creates the new result. A success or
+error message will be displayed depending
+upon the outcome.</td>
+</tr>
+</tbody>
+</table>
+<p>Once a result is created, a success message &quot;New result is created and
+added successfully&quot; is displayed. The new result will be added to the
+Current CAE model and will contain the same number of instances as the
+other results.</p>
+<p>The new result name will be added to the <strong>CAE | Result List</strong> panel as
+well as the current panel.</p>
+</div>
+<div class="section" id="notation-for-a-derived-component-of-a-vector-or-tensor-result">
+<h2>Notation for a derived component of a Vector or Tensor result</h2>
+<ul class="simple">
+<li>Select a Vector / SixDOF / Tensor result.</li>
+<li>Right click to open a context menu which lists a set of derived
+result names based on the result type of selected CAE result.</li>
+<li>Select a result.</li>
+<li>The derived result name selected by the user will be added at the end
+of the result list temporarily for computation. This result name
+is of the form, &quot;Result Name - Derived result name&quot; (Eg.
+Displacement-Translational Magnitude).</li>
+<li>Temporary Notation and result type will be generated and will be used
+for current expression.</li>
+<li>All the temporary derived result names will be cleared if the dialog
+is refreshed.</li>
+</ul>
+<blockquote>
+<div><p><strong>Context Menu for Six Degrees of Freedom Result</strong></p>
+<p><img alt="image3" src="../_images/cae_Create_Result_Using_Expression_ContextMenuforSixDegrees.png" /></p>
+</div></blockquote>
+<p><strong>Context Menu for Vector</strong></p>
+<blockquote>
+<div><img alt="image4" src="../_images/cae_Create_Result_Using_Expression_Context_Menufor_Vector.png" /></div></blockquote>
+<p><strong>Context Menu for Tensor</strong></p>
+<blockquote>
+<div><img alt="image5" src="../_images/cae_Create_Result_Using_Expression_ContextMenuforTensor.png" /></div></blockquote>
+</div>
+<div class="section" id="basic-operators">
+<h2>Basic Operators</h2>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="23%" />
+<col width="58%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Operator</strong></th>
+<th class="head"><strong>Description</strong></th>
+<th class="head"><strong>Syntax</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&quot;+&quot;</td>
+<td>Addition between A &amp; B</td>
+<td>A+B</td>
+</tr>
+<tr class="row-odd"><td>&quot;-&quot;</td>
+<td>Subtraction between A &amp; B</td>
+<td>A-B</td>
+</tr>
+<tr class="row-even"><td>*</td>
+<td>Multiplication between A &amp; B</td>
+<td>A*B</td>
+</tr>
+<tr class="row-odd"><td>/</td>
+<td>Division between A &amp; B</td>
+<td>A/B</td>
+</tr>
+<tr class="row-even"><td>^</td>
+<td>A to the power of B</td>
+<td>A^B</td>
+</tr>
+<tr class="row-odd"><td>%</td>
+<td>Modulus of A with respect to B</td>
+<td>A%B</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inequalities">
+<h2>Inequalities</h2>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="29%" />
+<col width="50%" />
+<col width="21%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Inequality</strong></th>
+<th class="head"><strong>Description</strong></th>
+<th class="head"><strong>Syntax</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>&lt;</strong></td>
+<td>Less than</td>
+<td>A &lt; B</td>
+</tr>
+<tr class="row-odd"><td><strong>&gt;</strong></td>
+<td>Greater than</td>
+<td>A &gt; B</td>
+</tr>
+<tr class="row-even"><td><strong>&lt;=</strong></td>
+<td>Less than or equal to</td>
+<td>A &lt;= B</td>
+</tr>
+<tr class="row-odd"><td><strong>&gt;=</strong></td>
+<td>Greater than or equal to</td>
+<td>A &gt;= B</td>
+</tr>
+<tr class="row-even"><td><strong>==</strong></td>
+<td>Equal to</td>
+<td>A == B</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Any inequality will result in either 0 (false) or 1 (true).</p>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions</h2>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="21%" />
+<col width="50%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Function</strong></th>
+<th class="head"><strong>Description</strong></th>
+<th class="head"><strong>Syntax</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>abs</td>
+<td>Absolute value of a variable</td>
+<td>abs(A), abs(A+B)</td>
+</tr>
+<tr class="row-odd"><td>avg</td>
+<td>Average of variables</td>
+<td>avg(A,B,C...,H)</td>
+</tr>
+<tr class="row-even"><td>min</td>
+<td>Minimum of values</td>
+<td>min(A,B,C)</td>
+</tr>
+<tr class="row-odd"><td>max</td>
+<td>Maximum of values</td>
+<td>max(A,B,C)</td>
+</tr>
+<tr class="row-even"><td>sqrt</td>
+<td>Square root of a value</td>
+<td>sqrt(A)</td>
+</tr>
+<tr class="row-odd"><td>sum</td>
+<td>Sum of values</td>
+<td>sum(A,B,C)</td>
+</tr>
+<tr class="row-even"><td>sin</td>
+<td>sine of A (in radians)</td>
+<td>sin(A)</td>
+</tr>
+<tr class="row-odd"><td>cos</td>
+<td>cosine of A</td>
+<td>cos(B)</td>
+</tr>
+<tr class="row-even"><td>tan</td>
+<td>tangent of A</td>
+<td>tan(A)</td>
+</tr>
+<tr class="row-odd"><td>asin</td>
+<td>arc sine of A</td>
+<td>asin(A)</td>
+</tr>
+<tr class="row-even"><td>acos</td>
+<td>arc cosine of A</td>
+<td>acos(A)</td>
+</tr>
+<tr class="row-odd"><td>atan</td>
+<td>arc tangent of A</td>
+<td>atan(A)</td>
+</tr>
+<tr class="row-even"><td>atan2</td>
+<td>arc tan of (A/B)</td>
+<td>atan2(A,B)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="application-constants">
+<h2>Application Constants</h2>
+<p>1. &quot;NoR&quot; / &quot;NoRes&quot;
+This refers to No Result value, aconstant value (3.402823466e+38F). User can use these in the formula as a constant.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Application replaces &quot;NoR&quot; / &quot;NoRes&quot; with  the  No Result value, i.e. 3.402823466e+38 in the user expression.</p>
+<p class="last">Example: if(A&lt;0.5,NoR,A) : this is equalent to if(A&lt;0.5, 3.402823466e+38F,A)</p>
+</div>
+</div>
+<div class="section" id="operands">
+<h2>Operands</h2>
+<p><strong>Create Result</strong> panel lists a set of notations for all CAE results.
+These notations can be used in the formula bar. Notations will be in
+capital letters for result creation and in small letters for result
+instance creation. Other than these notations, users can use any real
+value constants.</p>
+</div>
+<div class="section" id="sample-expressions">
+<h2>Sample Expressions</h2>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>S.No.</strong></th>
+<th class="head"><strong>Sample Expressions</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>1.</strong></td>
+<td>A+B</td>
+</tr>
+<tr class="row-odd"><td><strong>2.</strong></td>
+<td>A*B</td>
+</tr>
+<tr class="row-even"><td><strong>3.</strong></td>
+<td>A-B</td>
+</tr>
+<tr class="row-odd"><td><strong>4.</strong></td>
+<td>A/B</td>
+</tr>
+<tr class="row-even"><td><strong>5.</strong></td>
+<td>Sin(B)</td>
+</tr>
+<tr class="row-odd"><td><strong>6.</strong></td>
+<td>3*A or A*3</td>
+</tr>
+<tr class="row-even"><td><strong>7.</strong></td>
+<td>A+((-B*C)/(2*D))*cos(B)</td>
+</tr>
+<tr class="row-odd"><td><strong>8.</strong></td>
+<td>-A</td>
+</tr>
+<tr class="row-even"><td><strong>9.</strong></td>
+<td>A * (-B)</td>
+</tr>
+<tr class="row-odd"><td><strong>10.</strong></td>
+<td>abs(A+B)</td>
+</tr>
+<tr class="row-even"><td><strong>11.</strong></td>
+<td>sqrt(A)</td>
+</tr>
+<tr class="row-odd"><td><strong>12</strong></td>
+<td>A^2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="steps-to-create-a-new-result-using-expression">
+<h2>Steps to create a new result using expression</h2>
+<ul class="simple">
+<li>Click <strong>CAE | Create Result…</strong> to open the Create Result panel.</li>
+<li>Enter a valid expression.</li>
+<li>Click on <strong>Functions</strong> to insert a supported function.</li>
+<li>Enter a name for the new result.</li>
+<li>Click <strong>Create Result</strong>.</li>
+<li>Wait for the message &quot;Successfully created and added&quot;. An error
+message will be shown if there is an invalid expression.</li>
+<li>Computed result will be added to 'CAE | Result List ' panel which
+can be opened by clicking <strong>CAE | Result List..</strong></li>
+<li>To interpret the new results, click on the new name appended to the
+result list</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Avoid division operator '/', as it leads to undefined results.
+VCollab Pro identifies undefined results and sets <strong>No Result</strong>
+value to those nodes.</li>
+<li>For any node/element, if any one component of a Vector or Tensor
+result has <strong>No Result</strong> as value, the same value will be set to
+all the components of the new result.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="different-cases-of-result-creation">
+<h2>Different cases of Result Creation</h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Creating a new CAE results in a single model.</li>
+<li>Creating a new Instance.</li>
+<li>Creating a new CAE result across merging models.</li>
+</ol>
+</div></blockquote>
+<p><strong>Case 1: Steps to Create a new CAE result in a single model.</strong></p>
+<ul>
+<li><p class="first">Load a CAX model, which contains CAE data.</p>
+</li>
+<li><p class="first">Click <strong>CAE | Create Result</strong></p>
+<blockquote>
+<div><p><img alt="image6" src="../_images/cae_Create_Result_Using_Expression_CreateResult.png" /></p>
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Enter the expression or formula in the Use Formula text box. The
+expression should be valid with correct notations, operators
+and constants. For example - &quot;A+B/E&quot;.</li>
+<li>Enter a name for the new result.</li>
+<li>Click <strong>Create Result</strong>.</li>
+<li>A message box will be shown either for successful creation or
+with error information</li>
+</ul>
+</div></blockquote>
+<p><strong>Case 2: Creating a new CAE instance in a single model.</strong></p>
+<blockquote>
+<div><ul>
+<li><p class="first">Load a CAX model, which contains CAE data.</p>
+</li>
+<li><p class="first">Click <strong>CAE | Create Result</strong></p>
+</li>
+<li><p class="first">Check <strong>Instances</strong> option. This enables the <strong>All Results</strong>
+option</p>
+<p><img alt="image7" src="../_images/cae_Create_Result_Using_Expressio_AllResults.png" /></p>
+</li>
+<li><p class="first">Users can create a new instance to the currently selected CAE
+result or all results. This can be controlled by the option
+<strong>All Results</strong></p>
+</li>
+<li><p class="first">Enter the expression or formula in the Use Formula text box. The
+expression should be valid with correct notations, operators
+and constants. For example - &quot;A+B/E&quot;.</p>
+</li>
+<li><p class="first">Enter a name for the new result.</p>
+</li>
+<li><p class="first">Click <strong>Create Result</strong>.</p>
+</li>
+<li><p class="first">A message box will be shown either for successful creation or
+with error information</p>
+</li>
+</ul>
+<p><strong>Case 3: Creating a new CAE result across merged models.</strong></p>
+<ul>
+<li><p class="first">Load a CAX model, which contains CAE data.</p>
+</li>
+<li><p class="first">Merge one or more CAX files or models.</p>
+</li>
+<li><p class="first">Click <strong>CAE | Create Result</strong></p>
+<p><img alt="image8" src="../_images/cae_Create_Result_Using_Expression_CreateResult_Example.png" /></p>
+</li>
+<li><p class="first">Check the option <strong>Merged Models</strong>, which opens a drop box list
+of merged files.</p>
+<p><img alt="image9" src="../_images/cae_Create_Result_Using_Expression_MergedModels.png" /></p>
+</li>
+<li><p class="first">Notations change accordingly with an extension of model number.
+'A1' refers to the first result of model 1 and 'B2' refers to
+the second result of model 2.</p>
+</li>
+<li><p class="first">Users can create a new instance to the currently selected CAE
+result or all results. This can be controlled by the option
+<strong>All Results</strong></p>
+</li>
+<li><p class="first">Enter the expression or formula in the <strong>Use Formula</strong> text box.
+The expression should be valid with correct notations,
+operators and constants. For example: - &quot;A+B/E&quot;.</p>
+</li>
+<li><p class="first">Enter a name for the new result.</p>
+</li>
+<li><p class="first">Click <strong>Create Result</strong>.</p>
+</li>
+<li><p class="first">A message box will be shown either for successful creation or
+with error information</p>
+</li>
+</ul>
+<p><strong>Examples</strong></p>
+<p>The following images describe the addition of two results. Notice
+the contours of,</p>
+<p>Result one: <strong>Reaction Force.</strong></p>
+<blockquote>
+<div><img alt="image10" src="../_images/cae_Create_Result_Using_Expression_ReactionForce.png" /></div></blockquote>
+<p>Result two: <strong>External Applied Force</strong></p>
+<blockquote>
+<div><img alt="image11" src="../_images/cae_Create_Result_Using_Expression_ExternalAppliedForce.png" /></div></blockquote>
+<p>New Result :<strong>CombineReactionNExternalForce</strong></p>
+<blockquote>
+<div><p><img alt="image12" src="../_images/cae_Create_Result_Using_Expression_CombineReactionNExternalForce.png" /></p>
+<p><img alt="image13" src="../_images/cae_Create_Result_Using_Expression_GUI_Example.png" /></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

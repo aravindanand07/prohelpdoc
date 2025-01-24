@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measuring 3D distance</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Measuring 3 Point Arc" href="Tools_Measure%20_3Point%20Arc.html" />
+    <link rel="prev" title="Measurements" href="Tools_Measurments_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Measuring 3D distance</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Tools_Measurments_Pro.html" title="Previous Chapter: Measurements"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Measurements</span>
+    </a>
+  </li>
+  <li>
+    <a href="Tools_Measure%20_3Point%20Arc.html" title="Next Chapter: Measuring 3 Point Arc"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Measuring 3 Point Arc &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="measuring-3d-distance">
+<h1>Measuring 3D distance</h1>
+<p>VCollab Pro users can measure the shortest 3D distance in a model
+between two points, point to edge and point to face. Annotation labels
+with measured value will be attached to the dimension lines.</p>
+<ol class="arabic">
+<li><p class="first"><strong>Point to Point</strong>: Measures distance between two points.</p>
+</li>
+<li><p class="first"><strong>Point to Edge:</strong> Measures shortest distance between a point and an
+edge picked by the user.</p>
+<p><img alt="image1" src="../_images/tools_Measurement_3D_Distance_PointTOPoint.png" /></p>
+</li>
+<li><p class="first"><strong>Point to Face:</strong> Measures shortest distance between a point and a
+triangle picked by the user.</p>
+<p><img alt="image2" src="../_images/tools_Measurement_3D_Distance_PointtoFace.png" /></p>
+</li>
+</ol>
+<p><strong>Steps to measure the distance between two points in the model</strong></p>
+<ul>
+<li><p class="first">Click <strong>Tools | Measurements | 3D Distance</strong> or the 3D
+icon<img alt="image3" src="../_images/3DDistance.png" /> from the toolbar</p>
+</li>
+<li><p class="first">Click 2 points of interest on the model to measure the distance</p>
+</li>
+<li><p class="first">The points clicked are highlighted in red and a line is drawn between
+the endpoints</p>
+</li>
+<li><p class="first">An annotated label with distance value is attached to the middle
+point of the line drawn.</p>
+<p><img alt="image4" src="../_images/tools_Measurement_3D_Distance_TwoPoints.png" /></p>
+</li>
+<li><p class="first">Double clicking on the label pops up a measure label dialog box</p>
+</li>
+<li><p class="first">User can edit the measure name and its attributes.</p>
+</li>
+</ul>
+<p><strong>Steps to measure distance between a point and an edge</strong></p>
+<ul>
+<li><p class="first">Click <strong>Tools | Measurements | Point to Edge</strong>.</p>
+</li>
+<li><p class="first">Click a point on the model and click on the closest triangle edge.</p>
+</li>
+<li><p class="first">The point and the closest edge will be highlighted in red. Edge is
+extended if end point of the perpendicular does not lie on the
+edge segment.</p>
+</li>
+<li><p class="first">An annotated label with distance value is attached to the middle point of the line drawn.</p>
+<p><img alt="image5" src="../_images/tools_Measurement_3D_Distance_PointtoEdge_Example.png" /></p>
+</li>
+</ul>
+<p><strong>Steps to measure distance between point and a face</strong></p>
+<ul>
+<li><p class="first">Click <strong>Tools | Measurements | Point to Face</strong>.</p>
+</li>
+<li><p class="first">Click a point on a model and click on a model triangle.</p>
+</li>
+<li><p class="first">The point and triangle points will be highlighted in red.</p>
+</li>
+<li><p class="first">An annotated label with distance value is attached to the middle  point of the line
+drawn.</p>
+<p><img alt="image6" src="../_images/tools_Measurement_3D_Distance_PointtoFace_Example.png" /></p>
+</li>
+</ul>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

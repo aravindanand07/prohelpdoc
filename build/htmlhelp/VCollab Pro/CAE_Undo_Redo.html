@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undo/Redo</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Shortcut Keys" href="CAE_Shortcut_Keys.html" />
+    <link rel="prev" title="Node Set Manager" href="CAE_NodeSet_Manager_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Undo/Redo</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="CAE_NodeSet_Manager_Pro.html" title="Previous Chapter: Node Set Manager"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Node Set Manager</span>
+    </a>
+  </li>
+  <li>
+    <a href="CAE_Shortcut_Keys.html" title="Next Chapter: Shortcut Keys"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Shortcut Keys &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="undo-redo">
+<h1>Undo/Redo</h1>
+<p>The undo and redo option is available for the following functions in
+VCollab Pro</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Module</strong></td>
+<td><strong>Events</strong></td>
+<td><strong>Description
+(Undo/Redo)</strong></td>
+</tr>
+<tr class="row-even"><td>Mouse Mode</td>
+<td>Mouse button
+assignments</td>
+<td>Modification on mouse
+button customization
+can be cleared or
+retrieved.</td>
+</tr>
+<tr class="row-odd"><td>Part Color</td>
+<td>Modifying Part Color
+values</td>
+<td>Modification on part
+color values can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-even"><td><p class="first">Product</p>
+<p class="last">Explorer</p>
+</td>
+<td>Part visibility, CAE
+settings.</td>
+<td>Toggling on part
+visibility and CAE
+settings can be
+cleared and
+retrieved.</td>
+</tr>
+<tr class="row-odd"><td>Part List</td>
+<td>Part selection,
+visibility, part
+display mode and
+undeformed mesh mode.</td>
+<td>Modifications on part
+oriented values can
+be cleared or
+retrieved.</td>
+</tr>
+<tr class="row-even"><td>Labels</td>
+<td>Label Deletion</td>
+<td>Deleted Labels can be
+retrieved or cleared.</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Display</p>
+<p class="last">Modes</p>
+</td>
+<td>Selection of display
+mode.</td>
+<td>Modification on
+selection of display
+modes can be
+retrieved or cleared.</td>
+</tr>
+<tr class="row-even"><td><p class="first">Show</p>
+<p class="last">all/Hide Others</p>
+</td>
+<td>Part Selection and
+Visibility</td>
+<td>Modifications on part
+selection and
+visibility can be
+retrieved or cleared.</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Invert</p>
+<p class="last">Show</p>
+</td>
+<td>Part Selection and
+Visibility</td>
+<td>Modifications on part
+selection and
+visibility can be
+retrieved or cleared.</td>
+</tr>
+<tr class="row-even"><td><p class="first">Feature</p>
+<p class="last">Edges</p>
+</td>
+<td>Feature Edges
+visibility, color and
+crease angle
+settings.</td>
+<td>Modifications on
+Feature Edges and
+settings can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-odd"><td>Projection</td>
+<td>Projection type.</td>
+<td>Modification on
+projection type can
+be cleared or
+retrieved.</td>
+</tr>
+<tr class="row-even"><td><p class="first">Coordinate</p>
+<p class="last">Sys</p>
+</td>
+<td>Coordinate System.</td>
+<td>Selection on
+coordinate system
+types can be cleared
+or retrieved.</td>
+</tr>
+<tr class="row-odd"><td>Explode</td>
+<td>Explode Parts.</td>
+<td>Modifications on
+exploding parts can
+be cleared or
+retrieved.</td>
+</tr>
+<tr class="row-even"><td>Pick</td>
+<td>Pick, transformations</td>
+<td>Modifications on the
+transformation on
+parts using pick and
+drop function can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-odd"><td>Labels/Notes</td>
+<td>Labels/Nodes, label
+visibility, settings
+on size of panel,
+fonts, border and
+color.</td>
+<td>Modifications on
+label settings can be
+cleared.</td>
+</tr>
+<tr class="row-even"><td><p class="first">Cae</p>
+<p class="last">Results</p>
+</td>
+<td>Selection of CAE
+results</td>
+<td>Selections can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Scale</p>
+<p class="last">factor</p>
+</td>
+<td>Scale factor.</td>
+<td>Modifications on
+scale factor can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-even"><td>Animation</td>
+<td>frame selection.</td>
+<td>Manual frame
+selection can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Animation</p>
+<p class="last">Settings</p>
+</td>
+<td>CAE Animation
+settings</td>
+<td>Modifications on
+animation settings
+can be cleared or
+retrieved.</td>
+</tr>
+<tr class="row-even"><td><p class="first">Probe</p>
+<p class="last">/Hotspot Finder</p>
+</td>
+<td>Probe Label
+visibility, Hotspot
+finder settings.</td>
+<td>Modifications on
+applied hotspot
+labels and settings
+can be cleared or
+retrieved.</td>
+</tr>
+<tr class="row-odd"><td><p class="first">CAE</p>
+<p class="last">Display Options</p>
+</td>
+<td>Visibility of vector
+plot, contour lines,
+undeformed mesh,
+Legend and color
+plot.</td>
+<td>Modifications done on
+CAE display functions
+can be cleared or
+retrieved.</td>
+</tr>
+<tr class="row-even"><td>Focus</td>
+<td>Viewing
+transformation.</td>
+<td>Transformations made
+on viewer can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Set</p>
+<p class="last">as current Dataset</p>
+</td>
+<td>Current CAE Model
+selection.</td>
+<td>Selections on current
+CAE model can be
+cleared or retrieved.</td>
+</tr>
+<tr class="row-even"><td>Measure</td>
+<td>visibility of
+measurement and
+count.</td>
+<td>Measurements can be
+cleared and retrieved</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Set</p>
+<p class="last">as Deform Result</p>
+</td>
+<td>Selection of
+Deformation result.</td>
+<td>Selection of
+deformation results
+can be cleared or
+retrieved.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

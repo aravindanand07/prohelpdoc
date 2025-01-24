@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List of Commands</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="GUI to Create CAX using VMoveCAESubmit" href="../VMSubmitEditor/VMoveSubmitHelp.html" />
+    <link rel="prev" title="Video Template Editor GUI" href="Template_Editor_GUI.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../VCollab%20Pro/index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">List of Commands</a><ul>
+<li><a class="reference internal" href="#set-parameters">Set Parameters</a><ul>
+<li><a class="reference internal" href="#vpanim-params">VPANIM_PARAMS</a></li>
+<li><a class="reference internal" href="#vpanim-caeparams">VPANIM_CAEPARAMS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#viewpoint-animation">ViewPoint Animation</a><ul>
+<li><a class="reference internal" href="#vp2vp-anim">VP2VP_ANIM</a></li>
+<li><a class="reference internal" href="#morphanim-vp2vp">MORPHANIM_VP2VP</a></li>
+<li><a class="reference internal" href="#go2vp-anim">GO2VP_ANIM</a></li>
+<li><a class="reference internal" href="#apply-vp">APPLY_VP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#model-movements">Model movements</a><ul>
+<li><a class="reference internal" href="#rotate-model">ROTATE_MODEL</a></li>
+<li><a class="reference internal" href="#move-model">MOVE_MODEL</a></li>
+<li><a class="reference internal" href="#set-moving-parts">SET_MOVING_PARTS</a></li>
+<li><a class="reference internal" href="#reset-allmoves">RESET_ALLMOVES</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#camera-movements">Camera movements</a><ul>
+<li><a class="reference internal" href="#rotate-camera">ROTATE_CAMERA</a></li>
+<li><a class="reference internal" href="#move-camera">MOVE_CAMERA</a></li>
+<li><a class="reference internal" href="#move-camera-dir">MOVE_CAMERA_DIR</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#insert-video-image-file">Insert Video / Image File</a><ul>
+<li><a class="reference internal" href="#insert-video">INSERT_VIDEO</a></li>
+<li><a class="reference internal" href="#insert-imgfolder">INSERT_IMGFOLDER</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#capture-cae-animation">Capture CAE Animation</a><ul>
+<li><a class="reference internal" href="#caputre-caeanim">CAPUTRE_CAEANIM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#save-video-to-file">Save Video to File</a><ul>
+<li><a class="reference internal" href="#save-video">SAVE_VIDEO</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#explode-animation">Explode Animation</a><ul>
+<li><a class="reference internal" href="#explode-anim">EXPLODE_ANIM</a></li>
+<li><a class="reference internal" href="#explode-dir">EXPLODE_DIR</a></li>
+<li><a class="reference internal" href="#cutsection-anim">CUTSECTION_ANIM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#capture-images">Capture Images</a><ul>
+<li><a class="reference internal" href="#caputre-wait">CAPUTRE_WAIT</a></li>
+<li><a class="reference internal" href="#capture-image">CAPTURE_IMAGE</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#viewpoint">ViewPoint</a><ul>
+<li><a class="reference internal" href="#select-vpath">SELECT_VPATH</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#others">Others</a><ul>
+<li><a class="reference internal" href="#showcmds">SHOWCMDS</a></li>
+<li><a class="reference internal" href="#start-caeanim">START_CAEANIM</a></li>
+<li><a class="reference internal" href="#stop-caeanim">STOP_CAEANIM</a></li>
+<li><a class="reference internal" href="#exit">EXIT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Template_Editor_GUI.html" title="Previous Chapter: Video Template Editor GUI"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Video Templat...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../VMSubmitEditor/VMoveSubmitHelp.html" title="Next Chapter: GUI to Create CAX using VMoveCAESubmit"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">GUI to Create... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="list-of-commands">
+<h1>List of Commands</h1>
+<div class="section" id="set-parameters">
+<h2>Set Parameters</h2>
+<div class="section" id="vpanim-params">
+<h3>VPANIM_PARAMS</h3>
+<p>This command contains parameters responsible for smoothness of the video generation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VPANIM_PARAMS</span><span class="p">,</span><span class="n">nFrame_VP2VP</span><span class="p">,</span><span class="n">nImgsPerView</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">iSectionAnimFrames</span><span class="p">,</span><span class="n">iExplodeAnimFrames</span><span class="p">,</span><span class="n">bAnimTransparency</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+
+<span class="n">Default</span> <span class="n">Values</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">Y</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] nFrame_VP2VP: Specify number of frames while navigating from ViewPoint to ViewPoint</li>
+<li>[2] nImgsPerView: Specify number of images to be captured for video creation for the view</li>
+<li>[3] iSectionAnimFrames: Specify number of frames for showing section cut animation; 0 =&gt; Off</li>
+<li>[4] iExplodeAnimFrame: Specify number of frames for Explode operation, 0 =&gt; Off</li>
+<li>[5] bAnimTransparency(Y/N): To set part show/hide transparancy animation on (Y) or off (N). Default Y</li>
+</ul>
+</div>
+<div class="section" id="vpanim-caeparams">
+<h3>VPANIM_CAEPARAMS</h3>
+<p>This command contains parameters to control CAE animation smoothness. If viewpoint has animation, it will show animation after moving to that viewpoint.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VPANIM_CAEPARAMS</span><span class="p">,</span><span class="n">bCAEAnim</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">),</span><span class="n">nCylesPerView</span><span class="p">,</span><span class="n">nFramesPerCyle</span><span class="p">,</span><span class="n">nImgsPerCAEFrame</span>
+
+<span class="n">Default</span> <span class="n">Values</span><span class="p">:</span><span class="n">Y</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] bCAEAnim (Y/N): Specify if CAE Animation capture is required for video generation, Yes or No</li>
+<li>[2] nCylesPerView: Specify the number of cycles of the CAE animation to be captured</li>
+<li>[3] nFramesPerCyle: Specify the number of frames for CAE Animation. Specify 0 to use animation dialog parameter</li>
+<li>[4] nImgsPerCAEFrame: Specify the number of images per frame to be captured</li>
+</ul>
+</div>
+</div>
+<div class="section" id="viewpoint-animation">
+<h2>ViewPoint Animation</h2>
+<div class="section" id="vp2vp-anim">
+<h3>VP2VP_ANIM</h3>
+<p>This command captures ViewPoint animation of the ViewPoints as listed in index. The animation parameters are defined using VPANIM_PARAMS and VPANIM_CAEPARAMS commands.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VP2VP_ANIM</span><span class="p">,</span><span class="n">index1</span><span class="p">,</span><span class="n">index2</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] index1: Specify ViewPoint index number to start from</li>
+<li>[2] index2: Specify ViewPoint index number to end with. If index2 is 0, all ViewPoints are animated</li>
+</ul>
+</div>
+<div class="section" id="morphanim-vp2vp">
+<h3>MORPHANIM_VP2VP</h3>
+<p>This command captures animation of image morphing from one viewpoint to another.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MORPHANIM_VP2VP</span><span class="p">,</span><span class="n">vpIndex1</span><span class="p">,</span><span class="n">vpIndex2</span><span class="p">,</span><span class="n">nFrames</span><span class="p">,</span><span class="n">sMethod</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] vpindex1: Specify ViewPoint index of first frame. Specify N for current display</p>
+</li>
+<li><p class="first">[2] vpindex2: Specify ViewPoint index for the second frame.</p>
+</li>
+<li><p class="first">[3] nFrames: Specify number of frames for morphing</p>
+</li>
+<li><p class="first">[4] sMethod: Specify a method for morphing</p>
+<blockquote>
+<div><ul class="simple">
+<li>F1 : Fade</li>
+<li>R1 : Left to Right Roll/Drag from first frame image to second</li>
+<li>R2 : Right to Left Roll from first frame image to second</li>
+<li>R3 : Top to Bottom Roll from first frame image to second</li>
+<li>R4 : Bottom to Top Roll from first frame image to second</li>
+<li>C1 : Left to Right Cover - second frame image onto first</li>
+<li>C2 : Right to Left Cover - second frame image onto first</li>
+<li>C3 : Top to Bottom Cover - second frame image onto first</li>
+<li>C4 : Bottom to Top Cover - second frame image onto first</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="go2vp-anim">
+<h3>GO2VP_ANIM</h3>
+<p>This command animates from current model view to the specified ViewPoint.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GO2VP_ANIM</span><span class="p">,</span><span class="n">ViewPath</span><span class="o">/</span><span class="n">N</span><span class="p">,</span><span class="n">ViewPointName</span><span class="o">/</span><span class="n">Index</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] ViewPath/N: Specify the ViewPath name to be selected, user can select <em>N</em> for current ViewPath</li>
+<li>[2] ViewPoint/index: Specify the ViewPoint name or index to which the model view will be moved</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="apply-vp">
+<h3>APPLY_VP</h3>
+<p>This command applies the specified ViewPoint. Images are not captuted.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">APPLY_VP</span><span class="p">,</span><span class="n">vpindex</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] vpindex: Specify the ViewPoint index value (starts from 1)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="model-movements">
+<h2>Model movements</h2>
+<div class="section" id="rotate-model">
+<h3>ROTATE_MODEL</h3>
+<p>This command rotates the model about an axis with respect to the center. Animation frames are captured.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ROTATE_MODEL</span><span class="p">,</span><span class="n">Axis</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span><span class="n">bScreen</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">),</span><span class="n">fTeta</span><span class="p">,</span><span class="n">nFrames</span><span class="p">,</span><span class="n">PartNameInfo</span><span class="o">=</span><span class="n">ALL</span><span class="o">/</span><span class="n">NONE</span><span class="o">/</span><span class="n">ADD</span><span class="o">/</span><span class="n">DEL</span><span class="o">/</span><span class="n">ONLY</span><span class="o">/</span><span class="n">INVERT</span><span class="o">/</span><span class="n">VP</span><span class="p">,</span><span class="n">Part</span> <span class="n">name</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] Axis x,y,z: Specify the axis of rotation. For example: Rotation about Z-axis will be denoted as 0,0,1</p>
+</li>
+<li><p class="first">[2] bScreen: Specify if coordinate system for rotation should be Global or Camera/Screen</p>
+</li>
+<li><p class="first">[3] fTheta: Specify the angle of rotation</p>
+</li>
+<li><p class="first">[4] nFrames: Specify the number of frames for a smoother video capture</p>
+</li>
+<li><p class="first">[5] PartNameInfo: Specify the moving parts list for rotation. Optional(Default is current moving parts list)</p>
+<blockquote>
+<div><ul class="simple">
+<li>ALL/NONE: All visible parts are considered. [6] is not used for this option</li>
+<li>INVERT: All visible parts which are not present in current moving parts list. [6] is not used for this option</li>
+<li>ADD: Add user specified parts to the current moving parts list. [6] is parts list</li>
+<li>DEL: Delete user specified parts from the current moving parts list. [6] is is parts list</li>
+<li>ONLY: Only user-specified parts will be considered. [6] is parts list</li>
+<li>VP: Displayed parts in the user-specified ViewPoint will be considered</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[6] Specify the part names list(Wild card character '*' is supported), or ViewPoint and ViewPath</p>
+</li>
+</ul>
+</div>
+<div class="section" id="move-model">
+<h3>MOVE_MODEL</h3>
+<p>This command translates the model in a user-specified direction. Animation frames are captured.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MOVE_MODEL</span><span class="p">,</span><span class="n">Vector</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span><span class="n">bScreen</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">),</span><span class="n">fLength</span><span class="p">,</span><span class="n">nFrames</span><span class="p">,</span><span class="n">PartNameInfo</span><span class="o">=</span><span class="n">ALL</span><span class="o">/</span><span class="n">NONE</span><span class="o">/</span><span class="n">ADD</span><span class="o">/</span><span class="n">DEL</span><span class="o">/</span><span class="n">ONLY</span><span class="o">/</span><span class="n">INVERT</span><span class="o">/</span><span class="n">VP</span><span class="p">,</span><span class="n">Part</span> <span class="n">name</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] x,y,z: Specify vector direction for translation. For example: Translation in Z-axis will be denoted as 0,0,1</p>
+</li>
+<li><p class="first">[2] bScreen: Specify if coordinate system for rotation should be Global or Camera/Screen</p>
+</li>
+<li><p class="first">[3] fLength: Specify the length of translation</p>
+</li>
+<li><p class="first">[4] nFrames: Specify the number of frames for a smoother video capture</p>
+</li>
+<li><p class="first">[5] PartNameInfo: Specify the moving parts list for translation. Optional(Default is current moving parts list)</p>
+<blockquote>
+<div><ul class="simple">
+<li>ALL/NONE: All visible parts are considered. [6] is not used for this option</li>
+<li>INVERT: All visible parts which are not present in current moving parts list. [6] is not used for this option</li>
+<li>ADD: Add user specified parts to the current moving parts list. [6] is parts list</li>
+<li>DEL: Delete user specified parts from the current moving parts list. [6] is is parts list</li>
+<li>ONLY: Only user-specified parts will be considered. [6] is parts list</li>
+<li>VP: Displayed parts in the user-specified ViewPoint will be considered</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[6] Specify the part names list(Wild card character '*' is supported), or ViewPoint and ViewPath</p>
+</li>
+</ul>
+</div>
+<div class="section" id="set-moving-parts">
+<h3>SET_MOVING_PARTS</h3>
+<p>This command specifies the user-defined part name list for <em>ROTATE_MODEL</em> or <em>MOVE_MODEL</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET_MOVING_PARTS</span><span class="p">,</span><span class="n">ALL</span><span class="o">/</span><span class="n">NONE</span><span class="o">/</span><span class="n">ADD</span><span class="o">/</span><span class="n">DEL</span><span class="o">/</span><span class="n">ONLY</span><span class="o">/</span><span class="n">INVERT</span><span class="o">/</span><span class="n">VP</span><span class="p">,</span><span class="n">Part</span> <span class="n">name</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] PartNameInfo: Specify the part selection option:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ALL/NONE: All visible parts are considered. [2] is not used for this option</li>
+<li>INVERT: All visible parts which are not present in current moving parts list. [2] is not used for this option</li>
+<li>ADD: Add user specified parts to the current moving parts list. [2] is parts list</li>
+<li>DEL: Delete user specified parts from the current moving parts list. [2] is parts list</li>
+<li>ONLY: Only user-specified parts will be considered. [2] is parts list</li>
+<li>VP: Displayed parts in the user-specified ViewPoint will be considered</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[2] Specify the part names list (Wild card character '*' is supported), or ViewPoint and ViewPath</p>
+</li>
+</ul>
+</div>
+<div class="section" id="reset-allmoves">
+<h3>RESET_ALLMOVES</h3>
+<p>This command resets all moves previously specified, and no image is captured for this command for video command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RESET_ALLMOVES</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="camera-movements">
+<h2>Camera movements</h2>
+<div class="section" id="rotate-camera">
+<h3>ROTATE_CAMERA</h3>
+<p>This command rotates the camera to capture video while the model remains at the same location.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ROTATE_CAMERA</span><span class="p">,</span><span class="n">Axis</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span><span class="n">fDegrees</span><span class="p">,</span><span class="n">nFrames</span><span class="p">,</span><span class="n">bRelativeToScreen</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">),</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">rotation_centervector</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] Axis x,y,z: Specify the axis of rotation. For example: Rotation about Z-axis will be denoted as 0,0,1</li>
+<li>[2] fDegrees: Specify the angle of rotation in degrees</li>
+<li>[3] nFrames: Specify the number of frames for a smoother video capture</li>
+<li>[4] bRelativeToScreen: Specify if rotation of camera is with respect to screen</li>
+<li>[5] Rotation_Center [x,y,z]: Specify the rotation center</li>
+</ul>
+</div>
+<div class="section" id="move-camera">
+<h3>MOVE_CAMERA</h3>
+<p>This command translates the camera to capture video while the model remains at the same location.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MOVE_CAMERA</span><span class="p">,</span><span class="n">Translation</span> <span class="n">Vector</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span><span class="n">nFrames</span><span class="p">,</span><span class="n">bRelativeToScreen</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] Vector x,y,z: Specify the translation vector. For example: Translation in Z-axis will be denoted as 0,0,1</li>
+<li>[2] nFrames: Specify the number of frames for a smoother video capture</li>
+<li>[3] bRelativeToScreen: Specify if translation of camera is with respect to screen</li>
+</ul>
+</div>
+<div class="section" id="move-camera-dir">
+<h3>MOVE_CAMERA_DIR</h3>
+<p>This command translates the camera to capture video while the model remains at the same location.
+In this case translation vector is defined by direction vector and distance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MOVE_CAMERA_DIR</span><span class="p">,</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">Direction</span> <span class="n">Vector</span><span class="p">,</span> <span class="nb">float</span> <span class="n">Distance</span><span class="p">,</span><span class="nb">int</span> <span class="n">nFrames</span><span class="p">,</span><span class="nb">bool</span> <span class="n">bRelativeToScreen</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] Direction Vector x,y,z: Specify the translation vector (3 float values) (Program will normalise)</li>
+<li>[2] Distance: translation distance</li>
+<li>[3] nFrames: Specify the number of frames for video capture</li>
+<li>[4] bRelativeToScreen: Specify if translation of camera is with respect to screen</li>
+</ul>
+</div>
+</div>
+<div class="section" id="insert-video-image-file">
+<h2>Insert Video / Image File</h2>
+<div class="section" id="insert-video">
+<h3>INSERT_VIDEO</h3>
+<p>This command inserts the video from a user-specified file path.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT_VIDEO</span><span class="p">,</span><span class="n">filepath</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] filepath</li>
+</ul>
+</div>
+<div class="section" id="insert-imgfolder">
+<h3>INSERT_IMGFOLDER</h3>
+<p>This command inserts images from a user-specified folder path.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT_IMGFOLDER</span><span class="p">,</span><span class="n">folderpath</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] folderpath</li>
+</ul>
+</div>
+</div>
+<div class="section" id="capture-cae-animation">
+<h2>Capture CAE Animation</h2>
+<div class="section" id="caputre-caeanim">
+<h3>CAPUTRE_CAEANIM</h3>
+<p>This command captures the CAE Animation in the current ViewPort. Viewpoint need not have animation stored.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPUTRE_CAEANIM</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is recommended to preceed this command with <em>VPANIM_CAEPARAMS</em>. All parameters set will be used for capturing CAE animation.</p>
+</div>
+</div>
+</div>
+<div class="section" id="save-video-to-file">
+<h2>Save Video to File</h2>
+<div class="section" id="save-video">
+<h3>SAVE_VIDEO</h3>
+<p>This command creates and saves the video (from the captured images) in the user-defined file path. Note that video can also be saved using GUI. Note that, all the images in the temporary folder will be deleted after creating the video.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SAVE_VIDEO</span><span class="p">,</span><span class="n">filepath</span><span class="p">,</span><span class="n">iSpeed</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span> <span class="n">to</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] filepath: Specify user-defined location(along with filename and extension) for saving the video</li>
+<li>[2] iSpeed: Specify speed of the video, -4 being the slowest and 3 being the fastest</li>
+</ul>
+</div>
+</div>
+<div class="section" id="explode-animation">
+<h2>Explode Animation</h2>
+<div class="section" id="explode-anim">
+<h3>EXPLODE_ANIM</h3>
+<p>This command captures the exploded animation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXPLODE_ANIM</span><span class="p">,</span><span class="n">percent</span><span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">100</span><span class="p">),</span><span class="n">bReset</span><span class="p">,</span><span class="n">nFrames</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] percent: Specify the explode percentage</li>
+<li>[2] bReset: Specify if model needs to be reset after explosion</li>
+<li>[3] nFrames: Specify number of frames for smoother video capture</li>
+</ul>
+</div>
+<div class="section" id="explode-dir">
+<h3>EXPLODE_DIR</h3>
+<p>This command captures the exploded animation in a user-defined direction.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXPLODE_DIR</span><span class="p">,</span><span class="n">dirvec</span><span class="p">,</span><span class="n">Scale</span><span class="p">,</span><span class="n">SortBy</span><span class="p">(</span><span class="n">Top</span><span class="o">/</span><span class="n">Bot</span><span class="o">/</span><span class="n">Mid</span><span class="o">/</span><span class="n">Width</span><span class="p">),</span><span class="n">bReset</span><span class="p">,</span><span class="n">nFrames</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] dirvec: Specify the explosion direction. For example: Explosion in z-axis will be denoted as 0,0,1</p>
+</li>
+<li><p class="first">[2] Scale: Specify the explosion scale</p>
+</li>
+<li><p class="first">[3] SortBy: Specify the method used for sequencing parts during the animation</p>
+<blockquote>
+<div><ul class="simple">
+<li>Top: Parts are arranged from the top</li>
+<li>Bot: Parts are arranged from the bottom</li>
+<li>Mid: Parts are arranged from the middle of the assembly</li>
+<li>Size: Parts are arranged based on bounding box size (small parts maximum distance)</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/EXPLODE_DIR.PNG"><img alt="../../_images/EXPLODE_DIR.PNG" src="../../_images/EXPLODE_DIR.PNG" style="width: 200px;" /></a>
+</div></blockquote>
+</li>
+<li><p class="first">[4] bReset: Specify if model needs to be reset after explosion</p>
+</li>
+<li><p class="first">[5] nFrames: Specify number of frames for smoother video capture</p>
+</li>
+</ul>
+</div>
+<div class="section" id="cutsection-anim">
+<h3>CUTSECTION_ANIM</h3>
+<p>This command captures animation of cut section.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CUTSECTION_ANIM</span><span class="p">,</span> <span class="n">nFrame</span><span class="p">,</span> <span class="n">bReset</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">),</span> <span class="n">PlaneNormal</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="p">,</span><span class="n">dz</span><span class="p">),</span> <span class="n">NOD</span><span class="o">=</span><span class="n">nodeID</span><span class="o">/</span><span class="n">Position</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] nFrames: Specify number of frames for smoother video capture</li>
+<li>[2] bReset: Specify if cut section is to be reset</li>
+<li>[3] PlaneNormal: Specify the direction vector perpendicular to cut section plane</li>
+<li>[4] NOD/Position: Specify either Node Number or x,y,z position</li>
+</ul>
+</div>
+</div>
+<div class="section" id="capture-images">
+<h2>Capture Images</h2>
+<div class="section" id="caputre-wait">
+<h3>CAPUTRE_WAIT</h3>
+<p>This command adds specified number of frames from the current display (Animation will wait)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPUTRE_WAIT</span><span class="p">,</span><span class="n">nFrames</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] nFrames: Specify the user-defined number of frames</li>
+</ul>
+</div>
+<div class="section" id="capture-image">
+<h3>CAPTURE_IMAGE</h3>
+<p>This command captures the current view as image.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CAPTURE_IMAGE</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="viewpoint">
+<h2>ViewPoint</h2>
+<div class="section" id="select-vpath">
+<h3>SELECT_VPATH</h3>
+<p>This command selects the user-defined ViewPath and ViewPoint. Set the current viewpath.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT_VPATH</span><span class="p">,</span><span class="n">ViewPath</span> <span class="n">Name</span><span class="p">,</span><span class="n">VP</span> <span class="n">index</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] Viewpath Name: Specify the user-defined ViewPath Name</li>
+<li>[2] VP index: Specify the user-defined ViewPoint index</li>
+</ul>
+</div>
+</div>
+<div class="section" id="others">
+<h2>Others</h2>
+<div class="section" id="showcmds">
+<h3>SHOWCMDS</h3>
+<p>This command enables displaying the given commands.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHOWCMDS</span><span class="p">,</span><span class="n">bCmd</span><span class="o">=</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>[1] bCmd: Specify to show commands by True/False. Default is False</li>
+</ul>
+</div>
+<div class="section" id="start-caeanim">
+<h3>START_CAEANIM</h3>
+<p>This command defines parameters for CAE animation indicating to start the animation during camera/model movement animation. This command can be used to show CAE animation while moving the model (independent of Viewpoint Animation)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">START_CAEANIM</span><span class="p">,</span><span class="n">nCycles</span><span class="p">,</span><span class="n">Animtype</span><span class="p">(</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">N</span><span class="p">),</span><span class="n">nFrames</span><span class="p">,</span><span class="n">bDeform</span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">[1] nCycles: Specify the number of times the animation would run for</p>
+</li>
+<li><p class="first">[2] Specify the CAE Animation type:</p>
+<blockquote>
+<div><ul class="simple">
+<li>0 indicates Linear Animation</li>
+<li>1 indicates Transient Animation</li>
+<li>3 indicates animating contour color based on Legend Palette using transparency</li>
+<li>N use animation type from animation dialog</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">[3] nFrames: Specify the number of frames for video capture</p>
+</li>
+<li><p class="first">[4] bDeform: Specify if deformation is required in the animation or not</p>
+</li>
+</ul>
+</div>
+<div class="section" id="stop-caeanim">
+<h3>STOP_CAEANIM</h3>
+<p>This command stops the CAE Animation during the camera movement.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STOP_CAEANIM</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exit">
+<h3>EXIT</h3>
+<p>This command stops the execution of command statements.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXIT</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

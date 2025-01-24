@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deformation Scale Factor</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="CAE | Display" href="CAE_View_Pro.html" />
+    <link rel="prev" title="CAE Settings" href="CAE_ContourSettings_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Deformation Scale Factor</a><ul>
+<li><a class="reference internal" href="#deformation-scale-factor-panel">Deformation Scale Factor Panel</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="CAE_ContourSettings_Pro.html" title="Previous Chapter: CAE Settings"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; CAE Settings</span>
+    </a>
+  </li>
+  <li>
+    <a href="CAE_View_Pro.html" title="Next Chapter: CAE | Display"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">CAE | Display &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="deformation-scale-factor">
+<h1>Deformation Scale Factor</h1>
+<p>The Scale Factor option (within CAE Menu) enables the user to scale
+CAE deformation of the model so that the deformation is visible and
+easy to understand.</p>
+<p>Existence of deformation is not found when <strong>deformation value of a
+node</strong> is,</p>
+<blockquote>
+<div><ul class="simple">
+<li>Very large compared to other nodes. In this case the user may not be able to identify
+what collapsed the model</li>
+<li>Very small. In this case, the user may not be able to identify
+much difference in the deformation of the model.</li>
+</ul>
+</div></blockquote>
+<p>Scale factor option helps to understand the deformation in the above cases.</p>
+<div class="section" id="deformation-scale-factor-panel">
+<h2>Deformation Scale Factor Panel</h2>
+<blockquote>
+<div><p><img alt="image1" src="../_images/cae_DeformationScaleFactor_Panel.png" /></p>
+<p>The various fields and options available in the Deformation Scale Factor panel are explained below.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Uniform</strong></td>
+<td>By checking this option,the scale value entered by
+the user will be applied to all X, Y and Z
+directions.</td>
+</tr>
+<tr class="row-even"><td><strong>Normalize</strong></td>
+<td>With this option, a user can scale up/down in terms
+of model bounding percentage. By default,
+deformation is scaled to 10% of model bounding
+radius. The actual scale factor is updated
+according to the scale percentage.</td>
+</tr>
+<tr class="row-odd"><td><strong>All Models</strong></td>
+<td>Applies  Scale factor to all CAE models.</td>
+</tr>
+<tr class="row-even"><td><strong>Apply</strong></td>
+<td>The modified scale factor will be applied to
+deformation.</td>
+</tr>
+</tbody>
+</table>
+<p>Deformation is normalized (max - normalization) and mapped with model bounding sphere radius.</p>
+<p>By default normalized deformation is scaled to 10 percent of bounding sphere radius.</p>
+<p>To apply true scale, check <strong>Uniform</strong> option and set the scale factor as 1.</p>
+<p>Uniform means, constant scaling in X,Y and Z directions.</p>
+<p>if <strong>Uniform</strong> option is unchecked, the dialog shows its X, Y and Z factors as below. here scaling will vary in each direction.</p>
+<blockquote>
+<div><img alt="image2" src="../_images/cae_Scale_Factor_Uniform.png" /></div></blockquote>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If the model is one or two dimensional, check <strong>Uniform</strong> option for better visualization of deformation.</li>
+<li>If more than one model exists, any change in scale factor is applicable to the current model.</li>
+</ul>
+</div>
+<p><strong>Steps for scaling a model uniformly</strong></p>
+<ul>
+<li><p class="first">Click <strong>CAE | Scale Factor</strong> to open the Deformation Scale Factor
+dialog.</p>
+<p><img alt="image3" src="../_images/cae_CAE_Scale_Factor.png" /></p>
+</li>
+<li><p class="first">Check the <strong>Uniform</strong> option, which provides modified dialog as
+below.</p>
+<p><img alt="image4" src="../_images/cae_Scale_Factor_Unifrom_Normalize.png" /></p>
+</li>
+<li><p class="first">Enter a different scale value, say 2 in the edit box.</p>
+</li>
+<li><p class="first">Click <strong>Apply</strong> and observe the scaled deformation in the viewer.</p>
+<p><img alt="image5" src="../_images/cae_Scale_Factor_Example.png" /></p>
+</li>
+</ul>
+<p><strong>Steps for scaling a model in each axis</strong></p>
+<ul>
+<li><p class="first">Click <strong>CAE | Scale Factor</strong> to open the <strong>Deformation Scale
+Factor</strong> dialog.</p>
+</li>
+<li><p class="first">Enter different scale values for each axis in the corresponding edit
+boxes.</p>
+</li>
+<li><p class="first">Leave the Uniform and Normalize checkboxes unchecked</p>
+</li>
+<li><p class="first">Click <strong>Apply</strong> and observe the scaled deformation in the viewer as
+below.</p>
+<p><img alt="image6" src="../_images/cae_Scale_Factor_Example2.png" /></p>
+</li>
+</ul>
+<p><strong>Steps for scaling deformation for Mode case animation data</strong></p>
+<ul>
+<li><p class="first">Load a mode case CAX file.</p>
+</li>
+<li><p class="first">Click <strong>CAE | Animate</strong>.</p>
+</li>
+<li><p class="first">Click <strong>CAE | Scale Factor</strong></p>
+</li>
+<li><p class="first">In the Deformation Scale Factor panel, check the Normalize option,
+enter 10 percent and apply.</p>
+<p><img alt="image7" src="../_images/cae_Scale_Factor_Example3.png" /></p>
+</li>
+<li><p class="first">Change the value to 20 % and click apply.</p>
+<p><img alt="image8" src="../_images/cae_Scale_Factor_Example4.png" /></p>
+</li>
+<li><p class="first">Notice the change.</p>
+</li>
+<li><p class="first">Uncheck <strong>Normalize</strong> option.</p>
+<p><img alt="image9" src="../_images/cae_Scale_Factor_Uncheck_Normalize.png" /></p>
+</li>
+<li><p class="first">Usual scale factor option will be enabled. Enter 1 and click apply
+for true scale.</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

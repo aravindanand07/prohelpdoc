@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge CAX Files</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Import Viewpoints" href="BatchMode_Importviewpoints_fromexternalfile.html" />
+    <link rel="prev" title="Loading CAX files" href="BatchMode_Command%20Line%20Arguments.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Merge CAX Files</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="BatchMode_Command%20Line%20Arguments.html" title="Previous Chapter: Loading CAX files"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Loading CAX files</span>
+    </a>
+  </li>
+  <li>
+    <a href="BatchMode_Importviewpoints_fromexternalfile.html" title="Next Chapter: Import Viewpoints"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Import Viewpoints &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="merge-cax-files">
+<h1>Merge CAX Files</h1>
+<blockquote>
+<div><p>VCollab Pro users can merge two CAX files into a single CAX
+file in the batch mode as well.</p>
+<p>The input is an XML file which consists of all the information
+for merging.</p>
+<p>There are two XML files, one is basic format and the other is
+advanced.</p>
+<p>Syntax:</p>
+<blockquote>
+<div>Prompt :VCollabPro.exe file folder&gt; VCollabPro.exe -b
+&lt;input xml file path&gt;</div></blockquote>
+<p>Example:</p>
+<blockquote>
+<div>C:Program FilesVCollabVCollabPro64&gt; VCollabPro.exe -b
+&quot;C:testbatch.xml&quot;</div></blockquote>
+<p>Sample Batch File</p>
+<blockquote>
+<div><p>File Name: VCollabProBatch_MergeCAX.xml</p>
+<p>Location: &quot;..SamplesBatchMode Inputs&quot;</p>
+</div></blockquote>
+</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>&lt;!-- BatchVersion 1.0 --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- VCollab Pro : Allows batch mode execution using
+-b option from command line. --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Sample Usage : C:VCollabAppPath&gt;VCollabPro.exe
+-b this.xml --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Copyright (C) 2010 Visual Collaboration
+Technologies Inc. --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- This xml format is alpha and it can be improved
+or changed by VCollab at the time of release VCollab
+Pro --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Purpose : This sample explains, How to merge
+another cax file and generate new cax --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Here, 'sInputFile' and 'sInputMergeCaxFile' are
+input cax files and 'sOutputFile' is the merged file
+--&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line">&lt; VCollabBatch fVersion = &quot;0.1&quot;</div>
+<div class="line"><br /></div>
+<div class="line">sInputFile = &quot;..SamplesBatchMode Inputsairbag.cax&quot;</div>
+<div class="line">&gt;</div>
+<div class="line"><br /></div>
+<div class="line">&lt;Output sOutputFile =&quot;C:output.cax&quot; /&gt;</div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Note : Set either 'bCombinedPalette' or
+'bMultiPalette' as TRUE at once, only if needed --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Note iMergePosition value is 0-AsIs; 1-left;
+2-right; 3-top; 4-bottom; 5-Relative translate;
+6-Absolute position; Default is 0--&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line">&lt;MergeAsNewDataSet ENABLE = &quot;TRUE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">sInputMergeCaxFile = &quot;..SamplesBatchMode
+Inputsaudi.cax&quot;</div>
+<div class="line"><br /></div>
+<div class="line">bCombinedPalette = &quot;FALSE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">bMultiPalette = &quot;FALSE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">bShowDataSetLabels = &quot;TRUE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">bApplyCurentSettings =&quot;FALSE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">iMergePosition =&quot;1&quot;</div>
+<div class="line"><br /></div>
+<div class="line">ENABLE_TRANSLATION = &quot;FALSE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fTranslationX = &quot;3&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fTranslationY = &quot;0&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fTranslationZ = &quot;0&quot;</div>
+<div class="line"><br /></div>
+<div class="line">ENABLE_ROTATION = &quot;FALSE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fRotationX = &quot;0&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fRotationY = &quot;1&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fRotationZ = &quot;0&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fRotationAngle = &quot;0&quot;</div>
+<div class="line"><br /></div>
+<div class="line">ENABLE_SCALE = &quot;FALSE&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fScaleX = &quot;1&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fScaleY = &quot;1&quot;</div>
+<div class="line"><br /></div>
+<div class="line">fScaleZ = &quot;1&quot;</div>
+<div class="line"><br /></div>
+<div class="line">/&gt;</div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Merged file can be repositioned from its
+original coordinate system using ENABLE_TRANSLATION,
+ENABLE_ROTATION or ENABLE_SCALE --&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>&lt;!-- Note: Translation, Rotation and Scale will work
+only when iMergePosition=&quot;5&quot; or &quot;6&quot; otherwise they are
+ignored.--&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line">&lt;/VCollabBatch&gt;</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dynamic Arguments</strong></p>
+<blockquote>
+<div><p>Arguments can also be set dynamically in batch mode. This
+feature is useful for repeated operations without having to
+edit values in the input XML file.</p>
+<p>The XML file is thus used as a template and its values are
+set externally through command line arguments.</p>
+<p>E.g.</p>
+<p>C:Program FilesVCollabVCollabPro64&gt; VCollabPro.exe -b
+&quot;C:testbatch.xml&quot; &quot;..SamplesBatchMode Inputsairbag.cax&quot;
+&quot;..SamplesBatchMode Inputsaudi.cax&quot; &quot;C:output.cax&quot;</p>
+<p>In this example the names of two CAX files and the output
+file are provided dynamically through the command line.</p>
+<p>The arguments are denoted as &#64;arg#<strong>N</strong> where N is the
+index of the argument in the command line. Dynamic arguments
+can be used in any field and in any order, but &#64;arg#<strong>N</strong>
+has to match with the command line input index.</p>
+<p>In this example,</p>
+<p>&#64;arg#0 = VCollabPro.exe</p>
+<p>&#64;arg#1= -b</p>
+<p>&#64;arg#2 = C:/test/batch.xml</p>
+<p>&#64;arg#3= ..SamplesBatchMode Inputsairbag.cax which is
+assigned to sInputFile</p>
+<p>&#64;arg#4=..SamplesBatchMode Inputsaudi.cax which is
+assigned to sInputMergeCaxFile</p>
+<p>&#64;arg#5=C:output.cax which is assigned to sOutputFile</p>
+<p><strong>Modified XML</strong></p>
+<p>Fields that take values from command line arguments are
+highlighted.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</p>
+<p><em>&lt;!-- BatchVersion 1.0 --&gt;</em></p>
+<p><em>&lt;!-- VCollab Pro : Allows batch mode execution using
+-b option from command line. --&gt;</em></p>
+<p><em>&lt;!-- Sample Usage : C:VCollabAppPath&gt;VCollabPro.exe
+-b this.xml --&gt;</em></p>
+<p><em>&lt;!-- Copyright (C) 2010 Visual Collaboration
+Technologies Inc. --&gt;</em></p>
+<p><em>&lt;!-- This xml format is alpha and it can be improved
+or changed by VCollab at the time of release VCollab
+Pro --&gt;</em></p>
+<p><em>&lt;!-- Purpose : This sample explains, How to merge
+another cax file and generate new cax --&gt;</em></p>
+<p><em>&lt;!-- Here, 'sInputFile' and 'sInputMergeCaxFile' are
+input cax files and 'sOutputFile' is the merged file
+--&gt;</em></p>
+<p>&lt;VCollabBatch fVersion = &quot;0.1&quot;</p>
+<p>sInputFile = <strong>&quot;&#64;arg#3&quot;</strong> &gt;</p>
+<p>&lt;Output sOutputFile = <strong>&quot;&#64;arg#5&quot;</strong> /&gt;</p>
+<p><em>&lt;!-- Note : Set either 'bCombinedPalette' or
+'bMultiPalette' as TRUE at once, only if needed --&gt;</em></p>
+<p><em>&lt;!-- Note iMergePosition value is 0-AsIs; 1-left;
+2-right; 3-top; 4-bottom; 5-Relative translate;
+6-Absolute position; Default is 0--&gt;</em></p>
+<p>&lt;MergeAsNewDataSet ENABLE = &quot;TRUE&quot;</p>
+<p>sInputMergeCaxFile = <strong>&quot;&#64;arg#4&quot;</strong></p>
+<p>bCombinedPalette = &quot;FALSE&quot;</p>
+<p>bMultiPalette = &quot;FALSE&quot;</p>
+<p>bShowDataSetLabels = &quot;TRUE&quot;</p>
+<p>bApplyCurentSettings =&quot;FALSE&quot;</p>
+<p>iMergePosition = &quot;1&quot;</p>
+<p>ENABLE_TRANSLATION = &quot;FALSE&quot;</p>
+<p>fTranslationX = &quot;3&quot;</p>
+<p>fTranslationY = &quot;0&quot;</p>
+<p>fTranslationZ = &quot;0&quot;</p>
+<p>ENABLE_ROTATION = &quot;FALSE&quot;</p>
+<p>fRotationX = &quot;0&quot;</p>
+<p>fRotationY = &quot;1&quot;</p>
+<p>fRotationZ = &quot;0&quot;</p>
+<p>fRotationAngle = &quot;0&quot;</p>
+<p>ENABLE_SCALE = &quot;FALSE&quot;</p>
+<p>fScaleX = &quot;1&quot;</p>
+<p>fScaleY = &quot;1&quot;</p>
+<p>fScaleZ = &quot;1&quot;</p>
+<p>/&gt;</p>
+<p><em>&lt;!-- Merged file can be repositioned from its
+original coordinate system using ENABLE_TRANSLATION,
+ENABLE_ROTATION or ENABLE_SCALE --&gt;</em></p>
+<p><em>&lt;!--NOTE: Translation, Rotation &amp; Scale will work
+only when iMergePosition=&quot;5&quot; or &quot;6&quot; other wise they
+are ignored.--&gt;</em></p>
+<p class="last">&lt;/VCollabBatch&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Dynamic arguments can be used in any field and in any order, but &#64;arg#Number has to match with command line input index.</p>
+</div>
+</div></blockquote>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XYPlot</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Stereo Settings" href="Edit_Stereo_Settings_Pro.html" />
+    <link rel="prev" title="Label List" href="Edit_LabelList_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">XYPlot</a><ul>
+<li><a class="reference internal" href="#xyplot-types">XYPlot Types</a><ul>
+<li><a class="reference internal" href="#ids-path-plot">IDs Path Plot</a></li>
+<li><a class="reference internal" href="#transient-plot">Transient Plot</a></li>
+<li><a class="reference internal" href="#min-max-plot">Min Max Plot</a></li>
+<li><a class="reference internal" href="#force-deflection-plot">Force Deflection Plot</a></li>
+<li><a class="reference internal" href="#harmonic-plot">Harmonic Plot</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#xyplot-panel">XYPlot Panel</a><ul>
+<li><a class="reference internal" href="#plot-options-panel">Plot Options Panel</a></li>
+<li><a class="reference internal" href="#xyplot-data-file-format">XYPlot Data File Format</a></li>
+<li><a class="reference internal" href="#binout-plot">Binout Plot</a></li>
+<li><a class="reference internal" href="#history-data">History Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Edit_LabelList_Pro.html" title="Previous Chapter: Label List"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Label List</span>
+    </a>
+  </li>
+  <li>
+    <a href="Edit_Stereo_Settings_Pro.html" title="Next Chapter: Stereo Settings"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Stereo Settings &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="xyplot">
+<h1>XYPlot</h1>
+<p>The XYPlot panel is available in the left span of VCollab Pro. Users can
+create, export and import XY data and graphs. XYPlot can be accessed
+through the Edit Menu, or through the shortcut in the toolbar.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Edit | XYPlot… 2. Toolbar</li>
+</ol>
+<p><img alt="image1" src="../_images/XYPlot_Panel.png" /></p>
+</div></blockquote>
+<div class="section" id="xyplot-types">
+<h2>XYPlot Types</h2>
+<ol class="arabic simple">
+<li>IDs Path</li>
+<li>Transient</li>
+<li>Min Max</li>
+<li>Force Deflection</li>
+<li>Harmonic</li>
+</ol>
+<p>XYPlots are classified into <strong>Editable and Non-Editable</strong>. Imported and
+Merged Plots are always <strong>non-editable</strong>.</p>
+<div class="section" id="ids-path-plot">
+<h3>IDs Path Plot</h3>
+<blockquote>
+<div><p>In this plot,</p>
+<blockquote>
+<div><p>X axis : IDs Path or CAE Result</p>
+<p>Y axis: CAE Result</p>
+<p>Inputs : ID sets, Instances. A Node ID set or path is a sequential
+list of IDs.</p>
+</div></blockquote>
+<p>Users can define multiple paths or ID sets. One curve corresponds to one
+ID set per instance.</p>
+<p>They can fix the instance and vary the ID path to understand how each
+path varies against the sequence. Similarly, users can keep the ID path
+fixed and vary the selection of instances to understand how the
+sequential path varies between instances on time steps. Users also have
+the option to vary both ID path and selection of instances.</p>
+<p><img alt="image2" src="../_images/XYPlot_IDs_Path_Ex_01.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="transient-plot">
+<h3>Transient Plot</h3>
+<blockquote>
+<div><p>In this plot,</p>
+<blockquote>
+<div><p>X axis: Time/Frequency/Instance Number/ CAE Result.</p>
+<p>Y axis: CAE Result.</p>
+<p>Input: Node ID sets. Instances.</p>
+</div></blockquote>
+<p>Each curve refers to a nodal ID and how its CAE result varies over time
+or frequency or instances.</p>
+<p><img alt="image3" src="../_images/XYPlot_TransientPlot.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="min-max-plot">
+<h3>Min Max Plot</h3>
+<blockquote>
+<div><p>In this plot,</p>
+<blockquote>
+<div><p>X axis: Time/Frequency/Instance Number/ CAE Result.</p>
+<p>Y axis: CAE Result.</p>
+<p>Input: Instances.</p>
+</div></blockquote>
+<p>Min curve refers to the minimum of CAE results over the instances.</p>
+<p>Max curve refers to the maximum of CAE results over the instances.</p>
+<p>So the min/max curves will vary according to visible parts.</p>
+<blockquote>
+<div><img alt="image4" src="../_images/XYPloat_MinMaxPlot.png" /></div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="force-deflection-plot">
+<h3>Force Deflection Plot</h3>
+<blockquote>
+<div><p>In this plot,</p>
+<blockquote>
+<div><p>X axis: Maximum of displacement result.</p>
+<p>Y axis: Sum of reaction forces.</p>
+<p>Input: Node ID sets, Instances.</p>
+</div></blockquote>
+<p>A force deflection plot represents one Node ID set, sum of forces of
+Node ID set list and how it varies over the maximum displacement of Node
+ID set over instances. This type of plot will be listed only if the CAE
+model contains <strong>Displacement</strong> and <strong>Reaction Force</strong> results.</p>
+<p>This is a special case of transient plot. A set of IDs are considered as
+input to this plot. For each instance or time step, Reaction Force /
+Force Loads and Displacement values of these IDs are considered. The
+maximum displacement values for all instances provide the range for the
+X axis. Sum of Reaction Force values is considered for the Y axis. This
+plot contains a single curve.</p>
+<p>For example, let the number of instances be 4. Let the ID's selected be
+{ ID1, ID2, ID3}. The following table provides <strong>Reaction Force</strong> and
+<strong>Displacement</strong> values of these IDs over the instances.</p>
+<blockquote>
+<div><table border="1" class="docutils align-default">
+<colgroup>
+<col width="10%" />
+<col width="8%" />
+<col width="8%" />
+<col width="9%" />
+<col width="19%" />
+<col width="10%" />
+<col width="9%" />
+<col width="9%" />
+<col width="18%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><strong>ID1</strong></td>
+<td><strong>ID2</strong></td>
+<td><strong>ID3</strong></td>
+<td><strong>Sum(ID1+ID2+ID3)</strong></td>
+<td><strong>ID1</strong></td>
+<td><strong>ID2</strong></td>
+<td><strong>ID3</strong></td>
+<td><strong>Max(ID1,ID2,ID3)</strong></td>
+</tr>
+<tr class="row-even"><td><strong>T1</strong></td>
+<td>U11</td>
+<td>U12</td>
+<td>U13</td>
+<td>F1</td>
+<td>V11</td>
+<td>V12</td>
+<td>V13</td>
+<td>D1</td>
+</tr>
+<tr class="row-odd"><td><strong>T2</strong></td>
+<td>U21</td>
+<td>U22</td>
+<td>U23</td>
+<td>F2</td>
+<td>V21</td>
+<td>V22</td>
+<td>V23</td>
+<td>D2</td>
+</tr>
+<tr class="row-even"><td><strong>T3</strong></td>
+<td>U31</td>
+<td>U32</td>
+<td>U33</td>
+<td>F3</td>
+<td>V31</td>
+<td>V32</td>
+<td>V33</td>
+<td>D3</td>
+</tr>
+<tr class="row-odd"><td><strong>T4</strong></td>
+<td>U41</td>
+<td>U42</td>
+<td>U43</td>
+<td>F4</td>
+<td>V41</td>
+<td>V42</td>
+<td>V43</td>
+<td>D4</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>X Axis Range = Min/Max (D1,D2,D3,D4);</p>
+<p>Y Axis Range = Min/Max (F1,F2,F3,F4);</p>
+<p>In other words, the data points of the curve are as follows,</p>
+<p>{ (D1,F1), (D2,F2), (D3,F3), (D4,F4) }.</p>
+<p><img alt="image5" src="../_images/XYPloat_Force_Deflection_Plot.png" /></p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="harmonic-plot">
+<h3>Harmonic Plot</h3>
+<blockquote>
+<div><p>In this plot,</p>
+<blockquote>
+<div><p>X axis: Angle (0 to 360)</p>
+<p>Y axis: Complex Derived Result</p>
+<p>Input: Node ID sets, Instances.</p>
+</div></blockquote>
+<p>This plot is applicable only for complex Eigen results. Harmonic plot
+displays the variation of any complex results with respect to angle (=
+&#969;t). Using this plot, users can identify the angle for which a derived
+result is maximum.</p>
+<p><img alt="image6" src="../_images/XYPloat_Harmonic_Plot.png" /></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="xyplot-panel">
+<h2>XYPlot Panel</h2>
+<blockquote>
+<div><p><img alt="image7" src="../_images/XYPlot_Panel.png" /></p>
+<p>The various controls and fields available in the XYPlot panel are:</p>
+<blockquote>
+<div><table border="1" class="docutils align-default">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Plot Name</strong></td>
+<td>Enter plot name</td>
+</tr>
+<tr class="row-even"><td><strong>New</strong></td>
+<td>Creates an empty XYPlot template. The newly
+created plot will appear in the list box</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete</strong></td>
+<td>Deletes the selected plots</td>
+</tr>
+<tr class="row-even"><td><strong>Merge</strong></td>
+<td>Merges selected plots into a new XYPlot</td>
+</tr>
+<tr class="row-odd"><td><strong>Clear</strong></td>
+<td>Clears current graph data</td>
+</tr>
+<tr class="row-even"><td><strong>Export</strong></td>
+<td>Exports the graph table data into a comma
+separated file. (csv)</td>
+</tr>
+<tr class="row-odd"><td><strong>Import</strong></td>
+<td>Imports the comma separated file in the
+specified format</td>
+</tr>
+<tr class="row-even"><td><strong>Model</strong></td>
+<td>Allows the user to select a CAE model</td>
+</tr>
+<tr class="row-odd"><td><strong>Plot Type</strong></td>
+<td>Possible plot types for the selected CAE
+model will be listed. Users can select one
+of them</td>
+</tr>
+<tr class="row-even"><td><strong>Variants</strong></td>
+<td>Defines the X and Y axis variants.</td>
+</tr>
+<tr class="row-odd"><td><strong>Result</strong></td>
+<td>Users can select a possible result for X/Y
+axis</td>
+</tr>
+<tr class="row-even"><td><strong>Derived</strong></td>
+<td>Users can select a derived scalar type</td>
+</tr>
+<tr class="row-odd"><td><strong>Complex</strong></td>
+<td>Users can select complex components of
+results and enter angle in degrees. This
+option is applicable and enabled for complex
+eigen data result</td>
+</tr>
+<tr class="row-even"><td><strong>Add</strong></td>
+<td>Opens up a Node ID set dialog to define Node
+ID sets. Defined Node ID set names are
+appended to the XYPlot panel as well in the
+opened panel.</td>
+</tr>
+<tr class="row-odd"><td><strong>Nodesets</strong></td>
+<td>Allows user to select nodesets from CAE
+Nodeset Manager from a pop up dialog.
+User can select only if nodesets are
+available</td>
+</tr>
+<tr class="row-even"><td><strong>Select ID set</strong></td>
+<td>Users can select multiple Node ID sets</td>
+</tr>
+<tr class="row-odd"><td><strong>Select Instances</strong></td>
+<td>Users can select multiple instance names.</td>
+</tr>
+<tr class="row-even"><td><strong>Skip</strong></td>
+<td>Users can filter and select instances by
+skipping a specified number in case of huge
+instance list.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Steps to create an XYPlot</strong></p>
+<ol class="arabic">
+<li><p class="first">Open XYPlot from the left span or click <strong>Edit | XYPlot</strong></p>
+</li>
+<li><p class="first">Enter the XYPlot name in the text box.</p>
+<p><img alt="image8" src="../_images/XYPlot_NewPlotName.png" /></p>
+</li>
+<li><p class="first">Click <strong>New</strong>.</p>
+</li>
+<li><p class="first">Make sure that an empty XYPlot is displayed in the viewer and plot
+name is appended in the list box.</p>
+</li>
+<li><p class="first">Select a CAE model from the <strong>Model</strong> drop down list.</p>
+<p><img alt="image9" src="../_images/XYPloat_PloatType.jpg" /></p>
+</li>
+<li><p class="first">Select the <strong>plot type</strong> you wish to build.</p>
+</li>
+<li><p class="first">Select the variants for X and Y axes. An X variant may be a CAE
+result or result attribute.</p>
+<p>Y variant should be of CAE result.</p>
+</li>
+<li><p class="first">If the result is complex, please select complex component <strong>Real,
+Imaginary, Magnitude,</strong></p>
+<p><strong>Phase and Angle</strong>.</p>
+<p><img alt="image10" src="../_images/XYPloat_Variants.jpg" /></p>
+</li>
+<li><p class="first">Select the appropriate derived scalar for both axes.</p>
+</li>
+<li><p class="first">Click <strong>Add</strong> to define the ID sets.</p>
+<p><img alt="image11" src="../_images/XYPloat_Select_IDSet.png" /></p>
+</li>
+<li><p class="first">It opens up the <strong>ID Set</strong> dialog box.</p>
+<p><img alt="image12" src="../_images/XYPloat_IDSet_Dialogbox.png" /></p>
+<p>Users have the following options to provide Node ID set.</p>
+</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Enter</strong> the known Node IDs in the text box separated by commas,</li>
+<li><strong>Pick</strong> the Node IDs in the viewer,</li>
+<li>Provide a <strong>file</strong> which contains Node IDs</li>
+<li>Use <strong>Rect</strong> for window selection on the model</li>
+<li>Get CAE probed or <strong>hotspot</strong> labels.</li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="12">
+<li><p class="first">To pick the Node ID from the viewer, enable the <strong>Pick</strong> push button.</p>
+</li>
+<li><p class="first">Click Nodes in the viewer. Node ID points are highlighted with red color. Node IDs are appended to the text box in the dialog for each click.</p>
+<p><img alt="image13" src="../_images/XYPloat_IDList_Example.png" /></p>
+<p>All points are connected by a line to show the sequence or path.</p>
+<p><img alt="image14" src="../_images/XYPloat_IDList_Example1.jpg" /></p>
+</li>
+<li><p class="first">To select by window, click <strong>Rect</strong> which enables mouse mode for window selection. Click and drag to define the window on the model using
+the left mouse button.</p>
+<p><img alt="image15" src="../_images/XYPlot_Wnd_NodeSet_Viewer1.gif" /></p>
+<p>All node IDs within the window are highlighted as red spots.</p>
+<p><img alt="image16" src="../_images/XYPlot_Wnd_NodeSet_highlight1.gif" /></p>
+</li>
+<li><p class="first">Click <strong>Hotspots</strong> to bring all IDs for probed or hotspot labels that exist</p>
+</li>
+<li><p class="first">Enter an ID set name.</p>
+</li>
+<li><p class="first">Click <strong>Add</strong> to create the ID set</p>
+<p><img alt="image40" src="../_images/XYPlot_Select_IDSet_Add.png" /></p>
+</li>
+<li><p class="first">The newly created ID set is listed in the XYPlot panel.</p>
+</li>
+<li><p class="first">Select the ID sets required for your plot. ID set selection is not required for Min Max XYPlot.</p>
+</li>
+<li><p class="first">Select the Instances required for the plot. If the instance list is too large for selection, users can filter using the <strong>Skip</strong> option.</p>
+<p><img alt="image18" src="../_images/XYPlot_Select_Instances_skip0.jpg" /></p>
+</li>
+<li><p class="first"><strong>Skip</strong> option skips every nth instance between every consecutive selection. Where n is the number entered by the user in the <strong>Skip</strong>
+text.</p>
+<p><img alt="image19" src="../_images/XYPlot_Select_Instances_skip1.jpg" /></p>
+</li>
+<li><p class="first">Click <strong>Apply</strong> to construct the XY Plot with the above information and display it in the viewer.</p>
+</li>
+</ol>
+<div class="section" id="plot-options-panel">
+<h3>Plot Options Panel</h3>
+<p>The <strong>Plot Options</strong> button found in the XYPlot panel opens up the below
+panel</p>
+<blockquote>
+<div><img alt="image20" src="../_images/XYPlot_Plot_Options_Panel.png" /></div></blockquote>
+<p>The fields and controls available in the Plot Options panel is
+explained below</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Plot Title</strong></td>
+<td>Displays plot title which can be edited</td>
+</tr>
+<tr class="row-even"><td><strong>Axes Title</strong></td>
+<td>Displays axes title which can be edited</td>
+</tr>
+<tr class="row-odd"><td><strong>User Range</strong></td>
+<td>Allows user to enter min and max value</td>
+</tr>
+<tr class="row-even"><td><strong>Log Scale</strong></td>
+<td>Toggles between Logarithmic and Decimal Scale
+for the selected axis.</td>
+</tr>
+<tr class="row-odd"><td><strong>Major Unit</strong></td>
+<td>Major unit for axis tick mark</td>
+</tr>
+<tr class="row-even"><td><strong>Scientific</strong></td>
+<td>Toggles between Scientific and Decimal format</td>
+</tr>
+<tr class="row-odd"><td><strong>Precision</strong></td>
+<td>Allows users to change the precision value in
+the format.</td>
+</tr>
+<tr class="row-even"><td><strong>Grid</strong></td>
+<td>Displays axis grid</td>
+</tr>
+<tr class="row-odd"><td><strong>Show Min Label</strong></td>
+<td>Displays the minimum result data point in a
+label</td>
+</tr>
+<tr class="row-even"><td><strong>Show Max Label</strong></td>
+<td>Displays the maximum result data point in a
+label</td>
+</tr>
+<tr class="row-odd"><td><strong>Datum Lines</strong></td>
+<td><p class="first">Allows users to enter a value within the axis
+range to render a datum or reference line.</p>
+<p class="last">A color can be defined for each datum line.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Add</strong></td>
+<td>User defined datum value and color is
+validated and added to the list.</td>
+</tr>
+<tr class="row-odd"><td><strong>Del</strong></td>
+<td>Deletes the datum line selected in the list.</td>
+</tr>
+<tr class="row-even"><td><strong>Del All</strong></td>
+<td>Deletes all datum lines.</td>
+</tr>
+<tr class="row-odd"><td><strong>Min</strong></td>
+<td>Shows/Hides a curve with minimum of all y axis
+values against x axis invariant values.</td>
+</tr>
+<tr class="row-even"><td><strong>Max</strong></td>
+<td>Shows/Hides a curve with maximum of all y axis
+values against x axis invariant values.</td>
+</tr>
+<tr class="row-odd"><td><strong>Sum</strong></td>
+<td>Displays a curve with sums of all y axis
+values against x axis invariant values.</td>
+</tr>
+<tr class="row-even"><td><strong>Avg</strong></td>
+<td>Shows/Hides a curve with an average of all y
+axis values against x axis invariant values.</td>
+</tr>
+<tr class="row-odd"><td><strong>Main</strong></td>
+<td>Shows/Hides the actual curves</td>
+</tr>
+<tr class="row-even"><td><strong>Background</strong></td>
+<td>Allows users to select background color and
+set it.</td>
+</tr>
+<tr class="row-odd"><td><strong>Font Size</strong></td>
+<td>Allows users to change font size.</td>
+</tr>
+<tr class="row-even"><td><strong>Data Points</strong></td>
+<td>Show/ Hide data points</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to modify the XYPlot style</strong></p>
+<ul>
+<li><p class="first">Create a plot and construct with CAE data</p>
+</li>
+<li><p class="first">XYPlot can be modified with text formats</p>
+</li>
+<li><p class="first">Click <strong>Plot Options</strong> in the XYPlot panel Or Use &quot;Ctrl + Double
+Click&quot; to open up <strong>XYPlot Options</strong> dialog box.</p>
+<p><img alt="image21" src="../_images/XYPlot_Plot_Options_Example.png" /></p>
+</li>
+<li><p class="first">Change the plot titles.</p>
+<p><img alt="image22" src="../_images/XYPlot_Plot_Options_Example_ChangeTitle.png" /></p>
+</li>
+<li><p class="first">Change Y axis <strong>user range, major unit</strong> and <strong>precision values</strong>.</p>
+<p><img alt="image23" src="../_images/XYPlot_Plot_Options_Example_ChangeX.png" /></p>
+</li>
+<li><p class="first">Change X Axis range, <strong>major unit</strong> and <strong>precision</strong> values.</p>
+<p><img alt="image24" src="../_images/XYPlot_Plot_Options_Example_ChangeY.png" /></p>
+</li>
+<li><p class="first"><strong>Grids</strong> for each axis can be switched on/off.</p>
+</li>
+<li><p class="first">Click <strong>Sum, Max, Min</strong> and <strong>Average</strong> options and uncheck main.</p>
+<p><img alt="image25" src="../_images/XYPlot_Plot_Options_MinMax_curves.png" /></p>
+</li>
+<li><p class="first">All these special curves can be seen in stippled lines. Sum curve
+will be seen in dark brown, Max curve in Red, Min Curve in blue
+and Average curve in magenta.</p>
+</li>
+<li><p class="first">If there is a large variation between curves then <strong>log. scale</strong> can
+be used for corresponding axis.</p>
+</li>
+<li><p class="first"><strong>Scientific format</strong> can be used when tick mark texts are lengthy.</p>
+</li>
+<li><p class="first">Enable <strong>Background</strong> to set background color.</p>
+</li>
+</ul>
+<p><strong>Steps to add datum lines</strong></p>
+<ul>
+<li><p class="first">Select either X or Y axis.</p>
+</li>
+<li><p class="first">Enter a value, which is within the range.</p>
+</li>
+<li><p class="first">Select a color corresponding to datum value from the color window.</p>
+</li>
+<li><p class="first">Click <strong>Add</strong>.</p>
+</li>
+<li><p class="first">Datum line and color will be added and rendered imJPGImagestely and is
+added to datum list combo box</p>
+</li>
+<li><p class="first">Repeat the steps to add more datum lines.</p>
+</li>
+<li><p class="first">Select a datum line to be deleted by its value and click <strong>Del</strong></p>
+</li>
+<li><p class="first">Click <strong>Del All</strong> to delete all datum lines for the axis.</p>
+</li>
+<li><p class="first">Datum lines are drawn in stipple lines by default.</p>
+</li>
+<li><p class="first">VCollab stores all datum lines into viewpoint and CAX.
+Below is a sample plot with datum lines for each axis.</p>
+<p><img alt="image26" src="../_images/XYPlot_Plot_Options_Datum_lines.png" /></p>
+</li>
+</ul>
+<p><strong>Steps to select, move and resize the plot</strong></p>
+<ul>
+<li><p class="first">Click a plot name in the plot list of XYPlot panel Or Double click
+the plot in the viewer <img alt="image27" src="../_images/XYPlot_Plot_MoveandResizePlot.jpg" /></p>
+</li>
+<li><p class="first">The XYPlot will be highlighted and ready for moving resizing.</p>
+</li>
+<li><p class="first">Move mouse cursor over plot. Mouse cursor will change to <img alt="image28" src="../_images/XYPlot_Plot_MoveIcon.gif" />.
+Drag the mouse to move the plot.</p>
+</li>
+<li><p class="first">Move the mouse to the plot edges and notice that mouse cursor symbol
+is changing to <img alt="image29" src="../_images/XYPlot_Plot_Mouse_ResizeIcon.gif" />Click and drag the mouse with the resize
+symbol to resize the plot.</p>
+</li>
+<li><p class="first">Double click to select plot regions.</p>
+<p><img alt="image30" src="../_images/XYPlot_Region_Highlight1.jpg" /></p>
+</li>
+<li><p class="first">Selected region can be resized.</p>
+</li>
+</ul>
+<p><strong>Steps to merge plots</strong></p>
+<ul>
+<li><p class="first">Select XYPlots in the plot list panel.</p>
+<p><img alt="image31" src="../_images/XYPlot_Plot_MergePlot.jpg" /></p>
+</li>
+<li><p class="first">Click <strong>Merge</strong>.</p>
+</li>
+<li><p class="first">A new Non-Editable plot is created and appended in the list. All
+dialog controls will be disabled for the non-editable merged plot.</p>
+<p><img alt="image32" src="../_images/XYPlot_Merge_Name.png" /></p>
+<p>The same plot is displayed and highlighted in the viewer.</p>
+<p><img alt="image33" src="../_images/XYPlot_Plot_MergedViewer_Example.jpg" /></p>
+</li>
+</ul>
+<p><strong>Steps to export and import XYPlot data</strong></p>
+<ul>
+<li><p class="first">Select XYPlots from the plot list.</p>
+</li>
+<li><p class="first">Click <strong>Export</strong> which opens up file-save dialog.</p>
+</li>
+<li><p class="first">Enter a filename.</p>
+</li>
+<li><p class="first">Plot name is suffixed to the file name. Each plot is exported as one
+csv file.</p>
+<p>To load existing plot files,</p>
+</li>
+<li><p class="first">Click <strong>Import</strong> which opens the file browser dialog with file type
+.csv by default. VCollab supports csv files and LSDyna binout data
+files.</p>
+</li>
+<li><p class="first">The CSV file should be in a particular format as explained later in
+this module.</p>
+</li>
+<li><p class="first">Select all the XYPlot CSV files and click open.</p>
+</li>
+<li><p class="first">All plots are imported as <strong>Non-Editable</strong> plots as it does not
+contain CAE information.</p>
+</li>
+<li><p class="first">Change the File type in the file browser dialog as binout to import
+LSDyna binout data.</p>
+</li>
+</ul>
+<p><strong>Steps to edit XYPlot curve color</strong></p>
+<ul>
+<li><p class="first">Select the XYPlot.</p>
+<p><img alt="image34" src="../_images/XYPlot_CurveColor_Plot_Selection1.png" /></p>
+</li>
+<li><p class="first">Double click on the Plot Legend rectangle to highlight it.</p>
+<p><img alt="image35" src="../_images/XYPlot_CurveColor_Legend_Selection1.png" /></p>
+</li>
+<li><p class="first">Click on the color palette box to open Curve Edit dialog.</p>
+<p><img alt="image41" src="../_images/XYPlot_Curve_Edit.png" /></p>
+</li>
+<li><p class="first">Edit the curve name if required.</p>
+</li>
+<li><p class="first">Click the color window to edit curve color.</p>
+<p><img alt="image36" src="../_images/XYPlot_CurveColor_Edited1.png" /></p>
+</li>
+</ul>
+</div>
+<div class="section" id="xyplot-data-file-format">
+<h3>XYPlot Data File Format</h3>
+<p>This is a comma separated value (CSV) file and can be viewed in spread sheets.</p>
+<p><strong>Format 1 - VCOLLAB_XYPLOT_FILE_CSV_X_SINGLE</strong></p>
+<blockquote>
+<div><p>In this format, x axis values are same for all curves. First column refers to X axis and other columns refers to curve Y axis values.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="15%" />
+<col width="27%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Line 1</td>
+<td>File Type Header</td>
+<td>VCOLLAB_XYPLOT_FILE_CSV_X_SINGLE</td>
+</tr>
+<tr class="row-even"><td>Line 2</td>
+<td>Titles (Optional)</td>
+<td>#Titles,&lt;plot_title&gt;,&lt;x-axis_tile&gt;,
+&lt;y-axis_title&gt;</td>
+</tr>
+<tr class="row-odd"><td>Line 3</td>
+<td>Column Headers</td>
+<td>&lt;X axis Invariant&gt;,&lt;Curve1
+Name&gt;,&lt;Curve 2 Name&gt;, ...,</td>
+</tr>
+<tr class="row-even"><td>Line 4</td>
+<td>Value 1</td>
+<td>&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-odd"><td>Line 5</td>
+<td>Value 2</td>
+<td>&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-even"><td>Line ...</td>
+<td>Value ..</td>
+<td>&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-odd"><td>Line N</td>
+<td>Value N</td>
+<td>&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&lt;EOF&gt;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example :</strong></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">VCOLLAB_XYPLOT_FILE_CSV_X_SINGLE</p>
+<p>Time,Node1, Node2, Node3,</p>
+<p>0.0, 0.0, 0.5, 0.023,</p>
+<p>0.1, 2.0, 0.35,1.023,</p>
+<p>0.25,3.0,0.023,2.653,</p>
+<p>0.302, 4.0,0.02,2.023,</p>
+<p>0.43,13.0,0.5,1.023,</p>
+<p class="last">0.5,17.0,1.5, 2.023,</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Format 2 - VCOLLAB_XYPLOT_FILE_CSV_X_SINGLE_ATTRIBUTE</strong></p>
+<blockquote>
+<div><blockquote>
+<div>Here one more column is introdouced to track the data points based on its attribute values. This will be useful to compare two different curve positions for a given attribute. Attribute can be time, frequency, angle, etc.</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="13%" />
+<col width="24%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Line 1</td>
+<td>File Type Header</td>
+<td>VCOLLAB_XYPLOT_FILE_CSV_X_SINGLE_ATTRIBUTE</td>
+</tr>
+<tr class="row-even"><td>Line 2</td>
+<td>Titles (Optional)</td>
+<td>#Titles,&lt;plot_title&gt;,&lt;x-axis_tile&gt;,
+&lt;y-axis_title&gt;</td>
+</tr>
+<tr class="row-odd"><td>Line 3</td>
+<td>Column Headers</td>
+<td>&lt;Attribute_Name&gt;, &lt;X axis Invariant&gt;,
+&lt;Curve1 Name&gt;,&lt;Curve 2 Name&gt;, ...,</td>
+</tr>
+<tr class="row-even"><td>Line 4</td>
+<td>Value 1</td>
+<td>&lt;attrib_val&gt;,&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-odd"><td>Line 5</td>
+<td>Value 2</td>
+<td>&lt;attrib_val&gt;,&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-even"><td>Line ...</td>
+<td>Value ..</td>
+<td>&lt;attrib_val&gt;,&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-odd"><td>Line N</td>
+<td>Value N</td>
+<td>&lt;attrib_val&gt;,&lt;val&gt;,&lt;val&gt;,&lt;val&gt;,...,</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&lt;EOF&gt;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example :</strong></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">VCOLLAB_XYPLOT_FILE_CSV_X_SINGLE_ATTRIBUTE</div>
+<div class="line">Time, Displacement, Velocity1, Velocity2, Velocity3,</div>
+<div class="line">0.0, 0.0, 0.5, 0.023,0.12,</div>
+<div class="line">0.1, 2.0, 0.35,1.023,2.56,</div>
+<div class="line">0.25,3.0,0.023,2.653,3.27,</div>
+<div class="line">0.302, 4.0,0.02,2.023,4.7,</div>
+<div class="line">0.43,13.0,0.5,1.023,9.34,</div>
+<div class="line">0.5,17.0,1.5, 2.023,11,</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Format 3 - VCOLLAB_XYPLOT_FILE_CSV_X_MULTIPLE</strong></p>
+<p>This format contains multiple curves without any constant X axis invariant. As there is no common relation curve datapoints, each curve is written one after the other in two columns.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="13%" />
+<col width="24%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Line 1</td>
+<td>File Type Header</td>
+<td>VCOLLAB_XYPLOT_FILE_CSV_X_MULTIPLE</td>
+</tr>
+<tr class="row-even"><td>Line 2</td>
+<td>Titles (Optional)</td>
+<td>#Titles,&lt;plot_title&gt;,&lt;x-axis_tile&gt;,
+&lt;y-axis_title&gt;</td>
+</tr>
+<tr class="row-odd"><td>Line 3</td>
+<td>Column Headers</td>
+<td>&lt;X Axis_Name&gt;, &lt;Y Axis Name&gt;</td>
+</tr>
+<tr class="row-even"><td>Line 4</td>
+<td>Curve1 Name</td>
+<td>[Curve Name: curve1]</td>
+</tr>
+<tr class="row-odd"><td>Line 5</td>
+<td>Value 1</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td>Line 6</td>
+<td>Value 2</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>Line ...</td>
+<td>Value ..</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td>Line k</td>
+<td>Value k</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>Line k+1</td>
+<td>Empty Space</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>Curve1 Name</td>
+<td>[Curve Name: curve 2]</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>Value 1</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>Value 2</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>...</td>
+<td>Value ..</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td>Line N</td>
+<td>Value N</td>
+<td>&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td>&lt;EOF&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">VCOLLAB_XYPLOT_FILE_CSV_X_MULTIPLE,</div>
+<div class="line">Velocity,Displacement</div>
+<div class="line">[Curve Name:Min],</div>
+<div class="line">0,0</div>
+<div class="line">5.97E-06,0</div>
+<div class="line">2.81E-05,0.000371262</div>
+<div class="line">0.00137967,0.00325967</div>
+<div class="line">0.00841877,0.0122644</div>
+<div class="line">0.0215457,0.0405959</div>
+<div class="line"><br /></div>
+<div class="line">[Curve Name:Max],</div>
+<div class="line">0,0</div>
+<div class="line">0.084583,0.189293</div>
+<div class="line">0.324686,0.787124</div>
+<div class="line">0.823688,3.34673</div>
+<div class="line">6.10108,9.28285</div>
+<div class="line">54.4091,126.704</div>
+<div class="line">154.139,283.757</div>
+<div class="line">84.6285,436.429</div>
+<div class="line">82.1926,410.865</div>
+<div class="line">67.4474,417.654</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Format 4 -  VCOLLAB_XYPLOT_FILE_CSV_X_MULTIPLE_ATTRIBUTE</strong></p>
+<p>This format contains multiple curves without any constant X axis invariant. As there is no common relation curve datapoints, each curve is written one after the other in two columns.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="13%" />
+<col width="24%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Line 1</td>
+<td>File Type Header</td>
+<td>VCOLLAB_XYPLOT_FILE_CSV_X_MULTIPLE_ATTRIBUTE</td>
+</tr>
+<tr class="row-even"><td>Line 2</td>
+<td>Titles (Optional)</td>
+<td>#Titles,&lt;plot_title&gt;,&lt;x-axis_tile&gt;,
+&lt;y-axis_title&gt;</td>
+</tr>
+<tr class="row-odd"><td>Line 3</td>
+<td>Column Headers</td>
+<td>&lt;Attribute Name&gt;, &lt;X Axis_Name&gt;, &lt;Y Axis Name&gt;</td>
+</tr>
+<tr class="row-even"><td>Line 4</td>
+<td>Curve1 Name</td>
+<td>[Curve Name: curve1]</td>
+</tr>
+<tr class="row-odd"><td>Line 5</td>
+<td>Value 1</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td>Line 6</td>
+<td>Value 2</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>Line ...</td>
+<td>Value ..</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td>Line k</td>
+<td>Value k</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>Line k+1</td>
+<td>Empty Space</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>Curve2 Name</td>
+<td>[Curve Name: curve 2]</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>Value 1</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>Value 2</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>...</td>
+<td>Value ..</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-even"><td>Line N</td>
+<td>Value N</td>
+<td>&lt;atrib_val&gt;,&lt;val&gt;,&lt;val&gt;,</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td>&lt;EOF&gt;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Line 2 in all formats, is optional. User can use this format without line number 2.</p>
+<p>Example:</p>
+<table border="1" class="last docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">VCOLLAB_XYPLOT_FILE_CSV_X_MULTIPLE_ATTRIBUTE</div>
+<div class="line">Time,Velocity,Result</div>
+<div class="line">[Curve Name:N201]</div>
+<div class="line">0,0,0,</div>
+<div class="line">4.99443,5.97401e-06,0,</div>
+<div class="line">9.99323,2.80677e-05,0.000371262,</div>
+<div class="line">14.9916,0.00137967,0.00325967,</div>
+<div class="line">19.993,0.00841877,0.0122644,</div>
+<div class="line">24.9934,0.0215457,0.0405959,</div>
+<div class="line">29.9992,0.0280345,0.172643,</div>
+<div class="line">34.9985,0.043332,0.49279,</div>
+<div class="line"><br /></div>
+<div class="line">[Curve Name:N234]</div>
+<div class="line">0,0,0,</div>
+<div class="line">9.99323,0.324686,0.787124,</div>
+<div class="line">19.993,6.10108,9.28285,</div>
+<div class="line">29.9992,154.139,283.757,</div>
+<div class="line">34.9985,84.6285,436.429,</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="binout-plot">
+<h3>Binout Plot</h3>
+<p><img alt="image37" src="../_images/XYPlot_Binout_Plot.png" /></p>
+<p>The controls and fields available in the Binout plot panel and explained
+below.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Main Branches</strong></td>
+<td>Lists main branches in binout data</td>
+</tr>
+<tr class="row-even"><td><strong>Sub Branches</strong></td>
+<td>Lists sub branches or sub directories</td>
+</tr>
+<tr class="row-odd"><td><strong>Entity type</strong></td>
+<td>This option is enabled if there is a
+classification among entities</td>
+</tr>
+<tr class="row-even"><td><strong>Entities</strong></td>
+<td>Lists all entities available for selected main
+branch, sub branch and entity type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Components</strong></td>
+<td>Lists all result components available to the
+entities</td>
+</tr>
+<tr class="row-even"><td><strong>All</strong></td>
+<td>Selects all entities or components</td>
+</tr>
+<tr class="row-odd"><td><strong>Invert</strong></td>
+<td>Inverts the selection of entities or components</td>
+</tr>
+<tr class="row-even"><td><strong>None</strong></td>
+<td>Deselects all selection</td>
+</tr>
+<tr class="row-odd"><td><strong>Append</strong></td>
+<td>Appends data into current XYPlot</td>
+</tr>
+<tr class="row-even"><td><strong>Create</strong></td>
+<td>Clears current XYPlot data and appends binout
+data.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to Import LSDyna binout data into VCollab XYPlot</strong></p>
+<ul class="simple">
+<li>Click <strong>Import</strong> to open up file browser dialog.</li>
+<li>Select LSDyna Binout files (<em>binout</em>) in the file type drop down in
+the file browser dialog.</li>
+<li>Select a binout file, which will be validated against binout format.
+It gives an error if file format validation fails.</li>
+<li>A new user interface for <strong>Binout</strong> opens up.</li>
+<li>Select a <strong>main branch</strong>, which changes all other lists.</li>
+<li>Select a <strong>sub branch</strong> which changes list under sub branch.</li>
+<li><strong>Entity type</strong> will be enabled only if there is a group
+classification based on result component or entity levels (master,
+slave, etc). Select an entity type if it is enabled.</li>
+<li>Select multiple entities holding the Ctrl key</li>
+<li>Similarly, select multiple components.</li>
+<li>Click <strong>Create</strong> to create a new plot with these data.</li>
+<li>Error messages will be shown for missing minimum selection data.</li>
+<li>Click <strong>Append</strong> to append the data to current XYPlot.</li>
+</ul>
+</div>
+<div class="section" id="history-data">
+<h3>History Data</h3>
+<p>History files can be generated from VMoveCAE. History data is written in
+*.json format which can be imported into VCollab Pro XYPlot module.
+XYPlot opens up the history data interface when a JSON file is imported.</p>
+<p><strong>History Plot Panel</strong></p>
+<p><img alt="image38" src="../_images/XYPlot_History_Plot_Panel.png" /></p>
+<p>The controls and fields available in XYPlot panel are explained below</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Results</strong></td>
+<td>Lists history results.</td>
+</tr>
+<tr class="row-even"><td><strong>Reference Entities</strong></td>
+<td>This may be Global or Node IDs or Element
+IDs.</td>
+</tr>
+<tr class="row-odd"><td><strong>Scalar Quantities</strong></td>
+<td>Lists possible scalar results that can be
+derived, for current selected result.</td>
+</tr>
+<tr class="row-even"><td><strong>Create</strong></td>
+<td>Creates a new XYPlot for the selected
+attributes.</td>
+</tr>
+<tr class="row-odd"><td><strong>Cancel</strong></td>
+<td>Closes dialog.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to import history plot (.json) files</strong></p>
+<ul>
+<li><p class="first">Open XYPlot panel</p>
+</li>
+<li><p class="first">Click <strong>Import</strong> to open up the file browser dialog box.</p>
+<p><img alt="image39" src="../_images/XYPlot_Import.png" /></p>
+</li>
+<li><p class="first">Select file type as <strong>History data files (*.json)</strong></p>
+</li>
+<li><p class="first">Select the desired history data file and click <strong>Open</strong>.</p>
+</li>
+<li><p class="first">The <strong>History Plot</strong> panel opens.</p>
+</li>
+<li><p class="first">Select a <strong>result</strong> from the dropdown list.</p>
+</li>
+<li><p class="first">Select <strong>reference entities</strong> if available.</p>
+</li>
+<li><p class="first">Select the <strong>scalar components</strong> if available</p>
+</li>
+<li><p class="first">Click <strong>Append</strong> to append the history curve into the existing plot.</p>
+</li>
+<li><p class="first">Click <strong>Create</strong> to create a new XYPlot and append the selected
+curves.</p>
+</li>
+</ul>
+<p><strong>History file format (JSON)</strong></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Tables&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Step-1&quot;,</div>
+<div class="line">&quot;X Axis&quot;: {</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Frequency&quot;,</div>
+<div class="line">&quot;Values&quot;: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]</div>
+</div>
+<div class="line">},</div>
+<div class="line">&quot;Results&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 0.188, 0.000, 0.003, 0.022, 0.270, 0.000, 0.067, 0.001 0.006, 0.009, 0.000, 0.002, 0.057, 0.012, 0.003, 0.008 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 4.12, 0.03 0.02, 0.66, 0.16, 0.09, 0.06, 0.04, 0.00, 0.02, 0.01, 0.00, 0.00, 0.0, 0.00, 0.00 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 13.35, 1.27, 0.01, 2.02, 0.54, 0.00, 0.24, 0.03, 0.02, 0.46, 0.29, 0.00, 0.05, 0.00, 0.00, 0.01 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 55.07, 12.9, 15.8, 16.1, 16.8, 22.8, 29.6, 35.4, 48.6, 55.2, 58.9, 61.5, 74.8, 87.4, 81.2, 90.2 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 1e-8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 8e-8, -3e-8, 0, -6e-8, -2e-8, 1e-8, -2e-8, 0, -1e-8, 2e-8, 0, 1e-8, -1e-8, 0, 0, 0 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 1.3e-7, 0, 0, -8e-8, -2e-8, 0, 0, 1e-8, 2e-8, 0, 0, 0, 0, 0, 0, 0 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ -0.4, 0.01, 0.05, -0.1, 0.52, 0.02, 0.25, -0.0, 0.07, -0.0, -0.0, -0.0, -0.2, -0.1, -0.0, 0.09 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 2.04, 0.28, -0.1, 0.82, 0.42, -0.1, 0.26, -0.1, 0.08, -0.0, -0.2, -0.0, 0.00, -0.0, 0.02, -0.0 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 3.65, 1.12, 0.12, 1.42, 0.74, 0.08, 0.49, -0.1, 0.15, -0.6, -0.5, -0.0, 0.23, 0.00, -0.0, 0.03 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">},</div>
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Name&quot;: &quot;Unknown - Vibration mode&quot;,</div>
+<div class="line">&quot;Result Type&quot;: &quot;Scalar&quot;,</div>
+<div class="line">&quot;References&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;ID&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Type&quot;: &quot;Global&quot;,</div>
+<div class="line">&quot;Components&quot;: [</div>
+<div class="line-block">
+<div class="line">{</div>
+<div class="line-block">
+<div class="line">&quot;Component Type&quot;: &quot;&quot;,</div>
+<div class="line">&quot;Values&quot;: [ 11.8, 17.7, 20.0, 20.3, 20.3, 23.8, 27.3, 30.0, 34.0, 37.8, 38.2, 39.4, 43.2, 46.0, 47.2, 47.9 ]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+<div class="line">]</div>
+</div>
+<div class="line">}</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

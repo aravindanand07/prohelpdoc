@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Generation using viewpoint</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Image Generation using viewpoint</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="image-generation-using-viewpoint">
+<h1>Image Generation using viewpoint</h1>
+<p>This option helps user to generate image for viewpoints of a cax file. Input file is an xml file which consists of all the information to generate viewpoint as image. Below is given the syntax and a
+sample xml batch file.</p>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<div><p>Prompt :VCollabPro.exe file folder&gt; <em>VCollabPro.exe</em> -b &lt;<em>input xml file path</em>&gt;</p>
+<p>Example:</p>
+<p>C:Program FilesVCollabVCollabPro32&gt; VCollabPro.exe -b &quot;C:testbatch.xml&quot;</p>
+</div></blockquote>
+<p><strong>Sample Batch File</strong></p>
+<blockquote>
+<div><p>File Name: VCollabProBatch_ImageGen_ViewPtSel.xml
+Location: &quot;..SamplesBatchMode Inputs&quot;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;!-- BatchVersion 1.0 --&gt;
+&lt;!-- VCollab Pro : Allows batch mode execution using -b option
+     from command line. --&gt;
+&lt;!-- Sample Usage : C:\VCollabAppPath&gt;VCollabPro.exe -b this.xml --&gt;
+&lt;!-- Copyright (C) 2010 Visual Collaboration Technologies Inc. --&gt;
+&lt;!-- This xml format is alpha and it can be improved or changed by
+     VCollab at the time of release VCollab Pro --&gt;
+&lt;!-- Purpose : This sample explains, How to generate an image file for
+     a specific view point --&gt;
+&lt;VCollabBatch
+        fVersion= &quot;0.1&quot;
+        sInputFile= &quot;..\\Samples\\cax\\airbag_viewpoints.cax&quot; /&gt;
+&lt;!-- iImageWidth, iImageHeight : are width and height
+     of the image file in pixels. Minimum is 200x200.
+     Maximum is size of screen resuolution. --&gt;
+&lt;!-- sOutPutImageFile : Output image file path. Only jpg, bmp, png
+     and tiff are supported --&gt;
+
+&lt;ImageGenerator ENABLE =&quot;TRUE&quot;
+     iImageWidth = &quot;600&quot;
+     iImageHeight = &quot;400&quot;
+     sOutPutImageFile = &quot;C:\\output.jpg&quot; /&gt;
+&lt;!-- sViewPointName : is the view point that has to be exported as
+     image --&gt;
+
+&lt;!-- sViewPathName : is the viewpath where the above viewpoint belongs
+     in the list --&gt;
+&lt;SelectViewPoint ENABLE = &quot;TRUE&quot;
+     sViewPointName = &quot;Explode View&quot;
+     sViewPathName = &quot;Path01&quot; /&gt;
+
+&lt;!-- These all are optional blocks, Use only when
+     required Or Set ENABLE as &quot;FALSE&quot; if that block need to
+     be skipped --&gt;
+&lt;!-- &#39;sInputViewPointFile is the external file that has
+     viewpoints to be imported. It can be cax or .vpt*file --&gt;
+&lt;!-- To Skip viewpoint state Set bApplyViewPointState =
+     &quot;FALSE&quot; --&gt;
+
+&lt;ImportViewpoint ENABLE = &quot;FALSE&quot;
+     sInputViewPointFile = &quot;\\ ..\\Samples\\cax\\airbag_viewpoints.vpt&quot;
+     bApplyViewPointState = &quot;TRUE&quot; /&gt;
+&lt;/VCollabBatch&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Dynamic Arguments</strong></p>
+<blockquote>
+<div><p>This section explains how to set values for xml fields through command line argument.</p>
+<p>Means, To do a fixed set of repeated operation, it is not needed to edit values in xml file .</p>
+<p>This XML files can be used as template and its values will be set from external command line arguments.</p>
+<blockquote>
+<div><p>E.g.</p>
+<blockquote>
+<div><p>C:Program FilesVCollabVCollabPro32&gt; VCollabPro.exe -b</p>
+<blockquote>
+<div>&quot;C:testbatch.xml&quot; &quot;..Samplescaxairbag.cax&quot;
+&quot;..Samplescaxairbag_viewpoints.vpt&quot; &quot;C:output.jpg&quot;
+&quot;Path01&quot; &quot;Explode View&quot;</div></blockquote>
+<p>This examples sets values of xml fields in command arguments.</p>
+<p>To input the command line arguments, xml fields need to to set as,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">sInputFile = &quot;&#64;arg#3&quot;</div>
+<div class="line">sInputViewPointFile =&quot;&#64;arg#4&quot;</div>
+<div class="line">sOutPutImageFile = &quot;&#64;arg#5&quot;</div>
+<div class="line">sViewPathName = &quot;&#64;arg#6&quot;</div>
+<div class="line">sViewPointName = &quot;&#64;arg#7&quot;</div>
+</div>
+<p>Here, &#64;arg# is required prefix followed by a number.</p>
+<p>The number is the index of command line argument list.</p>
+<p>In this example,</p>
+<blockquote>
+<div><p>&#64;arg#0 =VCollabPro.exe</p>
+<p>&#64;arg#1 = -b</p>
+<p>&#64;arg#2 = C:/test/batch.xml</p>
+<p>&#64;arg#3 = ..SamplesBatchMode Inputsairbag.cax</p>
+<p>&#64;arg#4 = ..Samplescaxairbag_viewpoints.vpt</p>
+<p>&#64;arg#5 = C:output.jpg</p>
+<p>&#64;arg#6 = Path01</p>
+<p>&#64;arg#7 = Explode View</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Modified xml</strong></p>
+<blockquote>
+<div><p>Fields that takes values from command line arguments are highlighted.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;!-- BatchVersion 1.0 --&gt;
+&lt;!-- VCollab Pro : Allows batch mode execution using -b
+     option from command line. --&gt;
+&lt;!-- Sample Usage : C:\VCollabAppPath&gt;VCollabPro.exe -b
+     this.xml --&gt;
+&lt;!-- Copyright (C) 2010 Visual Collaboration Technologies
+     Inc. --&gt;
+&lt;!-- This xml format is alpha and it can be improved or
+     changed by VCollab at the time of release VCollab Pro --&gt;
+&lt;!-- Purpose : This sample explains, How to generate an
+     image file for a specific view point --&gt;
+&lt;VCollabBatch
+     fVersion = &quot;0.1&quot;
+     sInputFile = **@arg#3**  /&gt;
+&lt;!-- iImageWidth, iImageHeight : are width and height
+     of the image file in pixels. Minimum is 200x200.
+     Maximum is size of screen resuolution. --&gt;
+&lt;!-- sOutPutImageFile : Output image file path. Only
+     jpg, bmp, png and tiff are supported --&gt;
+&lt;ImageGenerator ENABLE =&quot;TRUE&quot;
+     iImageWidth = &quot;600&quot;
+     iImageHeight = &quot;400&quot;
+     sOutPutImageFile = **@arg#5** /&gt;
+&lt;!-- sViewPointName : is the view point that has to be
+     exported as image --&gt;
+&lt;!-- sViewPathName : is the viewpath where the above
+     viewpoint belongs in the list --&gt;
+&lt;SelectViewPoint ENABLE = &quot;TRUE&quot;
+     sViewPointName = **@arg#7**
+     sViewPathName = **@arg#6** /&gt;
+&lt;!-- These all are optional blocks, Use only when
+     required Or Set ENABLE as &quot;FALSE&quot; if that block need to
+     be skipped --&gt;
+&lt;!-- &#39;sInputViewPointFile is the external file that has
+     viewpoints to be imported. It can be cax or .vpt*file --&gt;
+&lt;!-- To Skip viewpoint state Set bApplyViewPointState =
+     &quot;FALSE&quot; --&gt;
+&lt;ImportViewpoint ENABLE = &quot;FALSE&quot;
+     sInputViewPointFile = **@arg#4**
+     bApplyViewPointState = &quot;TRUE&quot; /&gt;
+&lt;/VCollabBatch&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p>Note: Dynamic arguments can be used in any field and in any order, but &#64;arg#<em>Number</em> has to match with command line input index.</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

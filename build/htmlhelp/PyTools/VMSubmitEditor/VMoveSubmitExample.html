@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Command File</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="Batch Mode" href="../../VCollab%20Pro/BatchMode_Pro.html" />
+    <link rel="prev" title="GUI to Create CAX using VMoveCAESubmit" href="VMoveSubmitHelp.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../VCollab%20Pro/index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Example Command File</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="VMoveSubmitHelp.html" title="Previous Chapter: GUI to Create CAX using VMoveCAESubmit"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; GUI to Create...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../VCollab%20Pro/BatchMode_Pro.html" title="Next Chapter: Batch Mode"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Batch Mode &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="example-command-file">
+<h1>Example Command File</h1>
+<p>Here is a sample command parameters file (it can be downloaded <a class="reference download internal" download="" href="../../_downloads/5e3211f22039e76e1e6ea842f8a86f05/vmcae_input_sample"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#############################################################################</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#                     VMoveCAESubmit Input file                             #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#############################################################################</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1"># The translation inputs are categorized into different sections.           #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1"># Section lines start with &quot;* &quot;                                             #</span>
+<span class="c1"># Data lines start with &quot;- &quot;.                                               #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#############################################################################</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1"># FILES Section                                                             #</span>
+<span class="c1"># -------------                                                             #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   This section specifies all the files that needs to be read into         #</span>
+<span class="c1">#   VMoveCAE. This is a mandatory section.                                  #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   Usage Example:                                                          #</span>
+<span class="c1">#   -------------                                                           #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#     * FILES, FOLDER=&quot;/home/vcollab/models&quot;                                #</span>
+<span class="c1">#     - &quot;viewer_tutorial.odb&quot;, TYPE=ODB                                     #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    File names are specified in the data lines. File names can be          #</span>
+<span class="c1">#    enclosed in quotes if they contain spaces or any special characters.   #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#  Section Options:                                                         #</span>
+<span class="c1">#  ---------------                                                          #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    FOLDER: Base folder. When a base folder is specified, all the relative #</span>
+<span class="c1">#            paths are considered to be relative to the base folder.        #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#  Data Options:                                                            #</span>
+<span class="c1">#  -------------                                                            #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    TYPE: File type. Supported values are:                                 #</span>
+<span class="c1">#          - ABAQUS_ODB                                                     #</span>
+<span class="c1">#          - ABAQUS_INP                                                     #</span>
+<span class="c1">#          - FEMFAT_UFF                                                     #</span>
+<span class="c1">#          - NCODE                                                          #</span>
+<span class="c1">#          If not specified, VMoveCAE tries to auto-detect the file type.   #</span>
+<span class="c1">#    CONTENT: Tells VMoveCAE what to read from specific file. If not        #</span>
+<span class="c1">#             specified, VMoveCAE handles it automaticaly.                  #</span>
+<span class="c1">#             Supported values are:                                         #</span>
+<span class="c1">#             - MODEL                                                       #</span>
+<span class="c1">#             - ENTITY_SETS                                                 #</span>
+<span class="c1">#             - RESULTS                                                     #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#############################################################################</span>
+
+<span class="o">*</span> <span class="n">FILES</span><span class="p">,</span> <span class="n">FOLDER</span><span class="o">=</span><span class="s2">&quot;/home/vcollab/models&quot;</span>
+
+<span class="o">-</span> <span class="n">viewer_tutorial</span><span class="o">.</span><span class="n">inp</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">ABAQUS_INP</span><span class="p">,</span> <span class="n">CONTENT</span><span class="o">=</span><span class="n">ENTITY_SETS</span>
+<span class="o">-</span> <span class="n">viewer_tutorial</span><span class="o">.</span><span class="n">odb</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">ABAQUS_ODB</span><span class="p">,</span> <span class="n">CONTENT</span><span class="o">=</span><span class="s2">&quot;MODEL, RESULTS&quot;</span>
+<span class="o">-</span> <span class="n">viewer_tutorial</span><span class="o">.</span><span class="n">cax</span><span class="p">,</span> <span class="n">TYPE</span><span class="o">=</span><span class="n">VCOLLAB</span>
+
+<span class="c1">#############################################################################</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1"># PARTS Section                                                             #</span>
+<span class="c1"># -------------                                                             #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   This section tells VMoveCAE how to group elements into parts, what      #</span>
+<span class="c1">#   parts to translate and what parts to filter. This is an optional        #</span>
+<span class="c1">#   section. If not specified, VMoveCAE uses default part grouping          #</span>
+<span class="c1">#   element sets for Abaqus models) and exports all parts into the          #</span>
+<span class="c1">#   CAX file.                                                               #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   Usage Example:                                                          #</span>
+<span class="c1">#   -------------                                                           #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#     * PARTS, GROUPING=element-set                                         #</span>
+<span class="c1">#     - STD*, FILTER                                                        #</span>
+<span class="c1">#     - HB*                                                                 #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    Part names are specified in the data lines. Part names can be          #</span>
+<span class="c1">#    enclosed in quotes if they contain spaces or any special characters.   #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#  Section Options:                                                         #</span>
+<span class="c1">#  ---------------                                                          #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    GROUPING: Part grouping to be used. Supported values:                  #</span>
+<span class="c1">#              - property-id                                                #</span>
+<span class="c1">#              - material-id                                                #</span>
+<span class="c1">#              - element-set                                                #</span>
+<span class="c1">#              - element-and-face-sets                                      #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#  Data Options:                                                            #</span>
+<span class="c1">#  -------------                                                            #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    FILTER: Filters the part from Cax output.                              #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#############################################################################</span>
+
+<span class="o">*</span> <span class="n">PARTS</span><span class="p">,</span> <span class="n">GROUPING</span><span class="o">=</span><span class="n">element</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">face</span><span class="o">-</span><span class="n">sets</span>
+
+<span class="o">-</span> <span class="n">STD</span><span class="o">*</span><span class="p">,</span> <span class="n">FILTER</span>
+<span class="o">-</span> <span class="n">_Whole</span><span class="o">*</span><span class="p">,</span> <span class="n">FILTER</span>
+<span class="o">-</span> <span class="o">*</span><span class="n">TETRA_MESH</span><span class="o">*</span><span class="p">,</span> <span class="n">FILTER</span>
+<span class="o">-</span> <span class="s2">&quot;_ALL ELEMENTS&quot;</span><span class="p">,</span> <span class="n">FILTER</span>
+<span class="o">-</span> <span class="o">*</span><span class="n">WarnElem</span><span class="o">*</span><span class="p">,</span> <span class="n">FILTER</span>
+
+<span class="c1">#- Part*</span>
+
+
+<span class="c1">#############################################################################</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1"># RESULTS Section                                                           #</span>
+<span class="c1"># ---------------                                                           #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   This section tells VMoveCAE what results to translate and what results  #</span>
+<span class="c1">#   to filter. This is an optional section. If not specified, VMoveCAE      #</span>
+<span class="c1">#   exports all results into the CAX file.                                  #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   Usage Example:                                                          #</span>
+<span class="c1">#   -------------                                                           #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#     * RESULTS                                                             #</span>
+<span class="c1">#     - Displacement, SOURCE=U                                              #</span>
+<span class="c1">#     - NT                                                                  #</span>
+<span class="c1">#     - Stress, SOURCE=S, THRESHOLD=75                                      #</span>
+<span class="c1">#     - Elemental Stress, SOURCE=S, POSITION=E                              #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    Result names are specified in the data lines. Result names can be      #</span>
+<span class="c1">#    enclosed in quotes if they contain spaces or any special characters.   #</span>
+<span class="c1">#    Alternately, users can specify the source result name in the native    #</span>
+<span class="c1">#    CAE solver instead of using VCollab result name.                       #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#  Data Options:                                                            #</span>
+<span class="c1">#  -------------                                                            #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    FILTER: Filters the result from Cax output.                            #</span>
+<span class="c1">#    SOURCE: Name of the variable as specified by CAE solver                #</span>
+<span class="c1">#    POSITION: Whether the Cax file should provide nodal (N) or             #</span>
+<span class="c1">#              elemental (E) values.                                        #</span>
+<span class="c1">#    DERIVED: Name of the derived component that needs to be extracted      #</span>
+<span class="c1">#    THRESHOLD: Percentage of averaging threshold to be used (similar to    #</span>
+<span class="c1">#               Abaqus viewer)                                              #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#############################################################################</span>
+
+<span class="o">*</span> <span class="n">RESULTS</span>
+<span class="c1">#- U</span>
+<span class="c1">#- S, DERIVED=VON_MISES, THRESHOLD=75</span>
+<span class="c1">#- S, DERIVED=MAX_PRINCIPAL, THRESHOLD=75</span>
+<span class="c1">#- S, DERIVED=MIN_PRINCIPAL</span>
+<span class="c1">#- S, DERIVED=XX, POSITION=E</span>
+<span class="c1">#- E</span>
+<span class="c1">#- *cont*pres*</span>
+<span class="c1"># - PEEQ</span>
+
+<span class="c1">#############################################################################</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1"># STEPS Section                                                             #</span>
+<span class="c1"># -------------                                                             #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   This section tells VMoveCAE what instances to translate and what        #</span>
+<span class="c1">#   instances to filter. This is an optional section. If not specified,     #</span>
+<span class="c1">#   VMoveCAE exports all instances into the CAX file.                       #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#   Usage Example:                                                          #</span>
+<span class="c1">#   -------------                                                           #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#     * STEPS                                                               #</span>
+<span class="c1">#     - STEP=1:100:10, INCREMENT=-1                                         #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    Step numbers are specified in the data lines. A range can be be        #</span>
+<span class="c1">#    specified using &quot;:&quot; as a separator. &quot;-1&quot; can be used to refer to the   #</span>
+<span class="c1">#    last step. &quot;ALL&quot; refers to all the available steps.                    #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#  Data Options:                                                            #</span>
+<span class="c1">#  -------------                                                            #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#    STEP: Step numbers are specified in the data lines. A range can be be  #</span>
+<span class="c1">#          specified using &quot;:&quot; as a separator. &quot;-1&quot; can be used to refer to #</span>
+<span class="c1">#          the last step. &quot;ALL&quot; refers to all the available steps.          #</span>
+<span class="c1">#    INCREMENT: Increment number of the step to translate. A range can be   #</span>
+<span class="c1">#               be specified using &quot;:&quot; as a separator. &quot;-1&quot; can be used to  #</span>
+<span class="c1">#               refer to the last increment.                                #</span>
+<span class="c1">#    TIME: Time of the step/frame that needs to be translated.              #</span>
+<span class="c1">#    FREQUENCY: Frequency of the step/frame that needs to be translated.    #</span>
+<span class="c1">#                                                                           #</span>
+<span class="c1">#############################################################################</span>
+
+<span class="c1">#* STEPS</span>
+<span class="c1">#- STEP=2, INCREMENT=4:10</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

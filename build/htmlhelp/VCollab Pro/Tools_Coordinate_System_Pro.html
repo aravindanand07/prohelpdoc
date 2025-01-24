@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt;</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Align Models" href="AlignModels.html" />
+    <link rel="prev" title="Compare Mesh" href="Tools_ComapareMesh.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="simple">
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Tools_ComapareMesh.html" title="Previous Chapter: Compare Mesh"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Compare Mesh</span>
+    </a>
+  </li>
+  <li>
+    <a href="AlignModels.html" title="Next Chapter: Align Models"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Align Models &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <p>User Coordinate System</p>
+<p>VCollab Pro provides different types of interfaces for users to define
+their own coordinate system to visualize CAE results .</p>
+<p><strong>Coordinate System Manager Panel</strong></p>
+<p>Click <strong>Tools|User Coordinate System</strong></p>
+<p><img alt="image1" src="../_images/tools_User_Coordinate_ManagerPanel.png" /></p>
+<p>The various fields and controls available on the Coordinate System
+Manager Panel are explained below:</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Name</strong></th>
+<th class="head">New Coordinate system name.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Type</strong></td>
+<td>Coordinate system type. i.e.,
+Rectangular/Cylindrical/Spherical.</td>
+</tr>
+<tr class="row-odd"><td><strong>Definition</strong></td>
+<td>Allows users to select an interface method to
+define coordinate system.</td>
+</tr>
+<tr class="row-even"><td><strong>Origin</strong></td>
+<td>Allows users to pick vertex in model or enter new
+origin coordinates separated by commas.</td>
+</tr>
+<tr class="row-odd"><td><strong>X Axis</strong></td>
+<td>Defines X axis vector.</td>
+</tr>
+<tr class="row-even"><td><strong>XY Plane</strong></td>
+<td>Defines Y axis vector.</td>
+</tr>
+<tr class="row-odd"><td><strong>Create</strong></td>
+<td>Creates new coordinate system and adds to the list
+box.</td>
+</tr>
+<tr class="row-even"><td><strong>Delete</strong></td>
+<td>Deletes selected coordinate systems by names.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Types of Coordinate Systems</strong></p>
+<p>VCollab Pro supports following coordinate system types,</p>
+<p><strong>1.Rectangular</strong></p>
+<p>A cartesian coordinate system represented as (X, Y, Z) .</p>
+<blockquote>
+<div><img alt="image2" src="../_images/tools_User_Coordinate_system_Rectangular.png" /></div></blockquote>
+<p><strong>2.Cylindrical</strong></p>
+<p>A Polar coordinate system represented as <strong>(r, ??, Z)</strong> where,</p>
+<p><strong>r</strong> is the radial distance from the coordinate to Z axis.</p>
+<p><strong>??</strong> is the angle of deviation from the X axis to projection of OP into
+XY plane (OQ).</p>
+<p><strong>Z</strong> is the same as in the Cartesian coordinate system.</p>
+<blockquote>
+<div><img alt="image3" src="../_images/tools_User_Coordinate_system_Cylindrical.png" /></div></blockquote>
+<p><strong>3. Spherical</strong></p>
+<p>A Polar coordinate system represented as <strong>(r,?? ,??)</strong> where,</p>
+<p><strong>r</strong> is the distance from origin to the coordinate.</p>
+<p><strong>??</strong> is the angle of deviation from the X axis to projection of OP into
+XY plane (OQ).</p>
+<p><strong>??</strong> is the angle of deviation from Z axis to the coordinate positional
+vector OP.</p>
+<blockquote>
+<div><img alt="image4" src="../_images/tools_User_Coordinate_system_Spherical.png" /></div></blockquote>
+<p><strong>Definition of Coordinate System</strong></p>
+<blockquote>
+<div><p>Independent of types, any new coordinate system requires a new origin
+and orientation relative to the global or current coordinate system.</p>
+<p>VCollab Pro provides different ways for users to define a new
+coordinate system. Origin is a common input for all methods. Users
+can pick a vertex in the model to define as new origin.</p>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>X Axis and XY Plane</strong>
+User has to provide 3 points. Pick option can be used to
+select vertices from the model.</p>
+<div class="line-block">
+<div class="line">Origin : First Point (P1)</div>
+<div class="line">X axis : Second point - Origin (P2-P1)</div>
+<div class="line">Z axis : Cross product of (P3-P1) and (P2-P1)</div>
+<div class="line">Y axis : Cross product of Z and X axes.</div>
+</div>
+</li>
+</ul>
+<p><img alt="image5" src="../_images/tools_User_Coordinate_system_XAxisandXYPlane.png" /></p>
+<ul>
+<li><p class="first"><strong>X Axis and the Y Axis</strong>
+Pick option is enabled only for origin.</p>
+<div class="line-block">
+<div class="line">Origin : Picked or Entered point.</div>
+<div class="line">X Axis : Entered by user.</div>
+<div class="line">Y Axis : Entered by user.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>Arbitrary Axis and Angle</strong>
+Pick option is enabled only for origin.</div>
+</div>
+<div class="line-block">
+<div class="line">Orientation of new coordinate system is defined by the axis of
+rotation and angle in degrees.</div>
+<div class="line">Origin : Picked or Entered point.</div>
+<div class="line">X Axis : Derived from Orientation.</div>
+<div class="line">Y Axis : Derived from Orientation.</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line"><strong>3 Points Circular</strong>
+User has to pick or enter three non collinear
+points(P1,P2,P3). Points are considered in the periphery of a
+circle.</div>
+</div>
+<div class="line-block">
+<div class="line">Origin : Center of circle.</div>
+<div class="line">X Axis : Origin to P1.</div>
+<div class="line">Z Axis : Normal of plane formed by circle.</div>
+<div class="line">Y axis : Derived from X and Z axes.</div>
+</div>
+</li>
+</ul>
+<p><img alt="image6" src="../_images/tools_User_Coordinate_system._3PointsCircular.png" /></p>
+<p><strong>Steps to create a new user defined coordinate system (UCS)</strong></p>
+<ul class="simple">
+<li>Enter a new Coordinate system <strong>name</strong>.</li>
+<li>Select coordinate <strong>type</strong></li>
+<li>Select a <strong>method</strong> to define a new coordinate system.</li>
+<li>Enter or <strong>Pick</strong> coordinates to define origin, X and Y axes.</li>
+<li>Click <strong>Create</strong> to create a new UCS.</li>
+<li>The newly created UCS will be listed in the list box with check
+boxes.</li>
+<li>Users can turn ON/OFF UCS visibility in the viewer using
+corresponding checkboxes.</li>
+<li>Users can select multiple coordinate systems and delete them.</li>
+</ul>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merging</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Save As" href="File_SaveAs.html" />
+    <link rel="prev" title="Loading CAX File" href="File_Open_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Merging</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="File_Open_Pro.html" title="Previous Chapter: Loading CAX File"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Loading CAX File</span>
+    </a>
+  </li>
+  <li>
+    <a href="File_SaveAs.html" title="Next Chapter: Save As"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Save As &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="merging">
+<h1>Merging</h1>
+<p>The <strong>Merge</strong> option enables the user to merge another CAX model in the existing scene.
+Using the <strong>Merge</strong> option, users can:</p>
+<ul class="simple">
+<li>Merge any CAD / CAE data and compare the geometry or the CAE information</li>
+<li>View CAE information for one model at a time</li>
+<li>Select and apply corresponding CAE information for each model using the Result List panel.</li>
+<li>Have a better view (if both the models’ dimension range is same)</li>
+<li>Use transparency or Hide/Show option if any model is hidden behind or inside the other model.</li>
+</ul>
+<p>By default, CAE Legend is displayed for the latest merged model. Users can select and apply CAE Information to any other existing model.</p>
+<p><strong>Steps for merging a CAX model into the existing scene</strong></p>
+<ul>
+<li><p class="first">Go to <em>File|Open</em> and load an input CAX file as the initial model. This example uses the 'Airbag.CAX'
+model from the sample folder.</p>
+<blockquote>
+<div><p><img alt="image1" src="../_images/Merge_Models_Fileopen.png" /></p>
+</div></blockquote>
+</li>
+<li><p class="first">Click <em>File | Merge</em> to select and open  'Airbag.CAX' model from the samples folder.</p>
+</li>
+<li><p class="first">The selected model can be seen merged in the scene as shown below.</p>
+<blockquote>
+<div><p><img alt="image2" src="../_images/Merge_Models_FileMerged.png" /></p>
+</div></blockquote>
+</li>
+</ul>
+<p>File types supported in <strong>Merge</strong></p>
+<ul class="simple">
+<li>CAX files<ul>
+<li>extension <em>(</em>.cax)*</li>
+</ul>
+</li>
+<li>vpt files<ul>
+<li>vpt file contains viewpoints and its states only</li>
+<li>extension <em>(</em>.vpt)*</li>
+</ul>
+</li>
+<li>hotspot files<ul>
+<li>hotspot file contains list of IDs only.</li>
+<li>extension <em>(</em>.hotspot)*</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If any geometry is hidden or coincides with another geometry, use the below options:<ul>
+<li><em>Transform</em> option in Product Explorer context menu.</li>
+<li><em>Transparency</em> or <em>Wire Frame</em> in Edit | Display mode.</li>
+</ul>
+</li>
+<li>Users can set and customize some properties for merging a file. Click merge settings to know more.</li>
+</ul>
+</div>
+<p><strong>How to Merge Hotspot files?</strong></p>
+<blockquote>
+<div><p>A hotspot file contains IDs and Results in a tabular format. It is mandatory for hotspot files to have an ID field. It can have more result fields in addition.</p>
+<p>Typical format of hotspot file:</p>
+<blockquote>
+<div><table border="1" class="docutils align-default">
+<colgroup>
+<col width="10%" />
+<col width="35%" />
+<col width="33%" />
+<col width="22%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>ID</td>
+<td>&quot;Reaction Force&quot;</td>
+<td>&quot;Displacement&quot;</td>
+<td>&quot;Stress&quot;</td>
+</tr>
+<tr class="row-even"><td>217</td>
+<td>23</td>
+<td>0 .6</td>
+<td>41672</td>
+</tr>
+<tr class="row-odd"><td>123</td>
+<td>29</td>
+<td>1.2</td>
+<td>34567</td>
+</tr>
+<tr class="row-even"><td>51</td>
+<td>54</td>
+<td>0.7</td>
+<td>43252</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>If the hotspot file has result fields, VCollab Pro opens up Merge Hotspot dialog to select required results.</p>
+<p>The steps for Merging hotspot files are explained below</p>
+<ul>
+<li><p class="first">Click <em>File | Merge</em></p>
+</li>
+<li><p class="first">The file browser dialog box opens up. Select a hotspot file (<a href="#id1"><span class="problematic" id="id2">*</span></a>.hotspot). If it contains result fields in addition to the ID field, it opens up a Merge Hotspot dialog box.</p>
+<blockquote>
+<div><p><img alt="image3" src="../_images/Merge_Models_MergeHstspot.png" /></p>
+</div></blockquote>
+</li>
+<li><p class="first">Filter the results by moving unwanted results to the right side using the arrow buttons and Click OK. Hotspot IDs are displayed as labels with result information.</p>
+<blockquote>
+<div><p><img alt="image4" src="../_images/Merge_Models_HotspotID.png" /></p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>Steps to select and set current CAE Model</strong></p>
+<ul>
+<li><p class="first">Click <strong>CAE | Result List</strong></p>
+</li>
+<li><p class="first">Select <strong>Airbag_1</strong> as below.</p>
+<blockquote>
+<div><p><img alt="image5" src="../_images/Merge_Models_CAE_Result.png" /></p>
+</div></blockquote>
+</li>
+<li><p class="first">The CAE information corresponding to the current model is applied.</p>
+<blockquote>
+<div><p><img alt="image6" src="../_images/Merge_Models_CAE_Information.png" /></p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

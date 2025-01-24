@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Settings</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Probe" href="CAE_Probe_Pro.html" />
+    <link rel="prev" title="CAE | Animate" href="CAE_Animate_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Animation Settings</a><ul>
+<li><a class="reference internal" href="#animation-settings-panel">Animation Settings Panel</a><ul>
+<li><a class="reference internal" href="#types-of-animations">Types of Animations</a></li>
+<li><a class="reference internal" href="#cae-animation-options">CAE Animation Options</a></li>
+<li><a class="reference internal" href="#animation-type-and-static-fringe-description">Animation Type and Static Fringe Description</a></li>
+<li><a class="reference internal" href="#multi-model-cae-animation-and-its-attributes">Multi Model CAE Animation and its Attributes</a></li>
+<li><a class="reference internal" href="#animation-settings-and-merged-models">Animation Settings and Merged Models</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#animation-relative-to-reference-entity">Animation Relative to Reference Entity</a></li>
+<li><a class="reference internal" href="#interpolate-option-in-transient-animation">Interpolate option in Transient Animation</a></li>
+<li><a class="reference internal" href="#rigid-body-animation">Rigid Body Animation</a><ul>
+<li><a class="reference internal" href="#track-part">Track Part</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#legend-animation">Legend Animation</a><ul>
+<li><a class="reference internal" href="#legend-animation-panel">Legend Animation Panel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="CAE_Animate_Pro.html" title="Previous Chapter: CAE | Animate"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; CAE | Animate</span>
+    </a>
+  </li>
+  <li>
+    <a href="CAE_Probe_Pro.html" title="Next Chapter: Probe"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Probe &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="animation-settings">
+<h1>Animation Settings</h1>
+<p>VCollab Pro users can define and set animation properties using
+<strong>Animation settings</strong> found under CAE menu.</p>
+<div class="section" id="animation-settings-panel">
+<h2>Animation Settings Panel</h2>
+<ul>
+<li><p class="first">Click <strong>CAE | Animation Settings</strong> or click <strong>Settings</strong> button in the
+CAE <strong>Animate</strong> panel</p>
+<p><img alt="image1" src="../_images/cae_Animation_Settings_Panel.png" /></p>
+<p>The various fields and controls available under Animation settings are
+explained below.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Animation Type*</strong></td>
+<td>Choose an animation type.</td>
+</tr>
+<tr class="row-even"><td><strong>No. Of Frames</strong></td>
+<td>Specify the number of frames per second.
+Number of frames cannot be modified in
+transient animation when the Interpolate
+option is turned Off.</td>
+</tr>
+<tr class="row-odd"><td><strong>Swing</strong></td>
+<td>Apply Swing motion to Animation.</td>
+</tr>
+<tr class="row-even"><td><strong>Static Fringe</strong></td>
+<td>Apply Static Fringe to transient animation.</td>
+</tr>
+<tr class="row-odd"><td><strong>Reverse Play</strong></td>
+<td>Play animation in backward motion.</td>
+</tr>
+<tr class="row-even"><td><strong>Instances</strong></td>
+<td>Select the instances.</td>
+</tr>
+<tr class="row-odd"><td><strong>Animate</strong></td>
+<td>Opens the Animation Dialog and starts
+animation.</td>
+</tr>
+<tr class="row-even"><td><strong>Apply</strong></td>
+<td>Apply the settings to animation.</td>
+</tr>
+<tr class="row-odd"><td><strong>Interpolate</strong></td>
+<td>Allows to interpolate time and animate.
+This option is enabled for transient
+animation type. It is unchecked by default.
+Users can edit the number of frames only
+when the <strong>Interpolate</strong> option is checked.
+Interpolate does not work for moving-mesh
+models</td>
+</tr>
+<tr class="row-even"><td><strong>Static Color Plot</strong></td>
+<td>Animate without changing the model contour.</td>
+</tr>
+<tr class="row-odd"><td><strong>Skip By</strong></td>
+<td>Skip the number of frames/instances while
+selecting instances.</td>
+</tr>
+<tr class="row-even"><td><strong>RAM/HDD</strong></td>
+<td>RAM/HDD is used to optimize memory using
+either RAM or Hard Disk.</td>
+</tr>
+<tr class="row-odd"><td><strong>Pivot...</strong></td>
+<td>Users can pick a node or triangle (plane)
+and simulate deformation relative to this
+pivot point or plane.</td>
+</tr>
+<tr class="row-even"><td><strong>Capture Animation</strong></td>
+<td>Capture one cycle of animation and export
+into a movie file.</td>
+</tr>
+<tr class="row-odd"><td><strong>Scale Factor</strong></td>
+<td>Link to deformation scale factor settings.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<div class="section" id="types-of-animations">
+<h3>Types of Animations</h3>
+<ul class="simple">
+<li><strong>Linear Animation</strong>: Number of frames provided by the user are
+interpolated linearly between original mesh to deformed mesh.</li>
+<li><strong>Transient Animation</strong>: This is to animate the model with different time steps or frequency or instances.
+Each frame refers to one time step or load case or mode case or frequency. <strong>Rigid body</strong> animation is a special case in transient animation.
+Interfaces for Rigid body animation will be visible for the relevant data.</li>
+<li><strong>Eigenvector Animation:</strong> Animating eigenvector results (complex eigen as well as mode case data).</li>
+<li><strong>Legend Animation:</strong> Animating contour color based on legend palette using transparency.</li>
+</ul>
+<p><strong>Transient Animation Context Menu</strong></p>
+<p>After selecting the Transient animation type, right click in the panel
+to open the context menu as shown below.</p>
+<p><img alt="image2" src="../_images/cae_Animation_Settings_AnimationContextMenu.png" /></p>
+<p>The various options available for Transient animation are explained
+below.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Prepare Animation</strong></th>
+<th class="head">Prepares geometry and textures for
+required instances. It may take more
+time but animation will be faster.</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Clear Preparation</strong></td>
+<td>Clears animation data and prepares with
+current CAE data again.</td>
+</tr>
+<tr class="row-odd"><td><strong>Load All Instances</strong></td>
+<td>Loads all instances from CAX file to RAM
+for faster animation.</td>
+</tr>
+<tr class="row-even"><td><strong>Unload All Instances</strong></td>
+<td>Unloads all instances results from RAM
+if not required.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cae-animation-options">
+<h3>CAE Animation Options</h3>
+<blockquote>
+<div><p>CAE Animation is computing and simulating CAE data with a finite number
+of frames.</p>
+<p>For example, Let CAE data have 4 frames for animation. In animation this
+data will display frames 1, 2, 3, 4 starting frame 1 and ending with
+frame 4.</p>
+<p><em>Swing Motion :</em> Animation starts and ends with the initial frame.
+Frames will thus be displayed in the order of 1,2,3 , 4 ,3,2,1 .</p>
+<p><em>Reverse Play :</em> Reverses the animation order and displays the frames
+in the order of 4,3,2,1</p>
+<p><em>Capture Animation:</em> Saves one complete cycle of animation into either
+into a movie or a set of image formats as specified by the user.</p>
+<p><em>Scale Factor :</em> Opens the CAE Deformation Scale factor settings
+dialog where the user can change scale factor for better visualization.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="11%" />
+<col width="9%" />
+<col width="14%" />
+<col width="14%" />
+<col width="9%" />
+<col width="11%" />
+<col width="14%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Type of
+Animation</td>
+<td>Swing</td>
+<td>Static
+Fringe</td>
+<td>Reverse
+Play</td>
+<td>Interpolate</td>
+<td>Static Color
+Plot</td>
+<td>RAM/HDD</td>
+<td>Skip by</td>
+<td>Pivot</td>
+</tr>
+<tr class="row-even"><td>Linear</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+<td>N</td>
+<td>N</td>
+<td>N</td>
+<td>N</td>
+<td>Y</td>
+</tr>
+<tr class="row-odd"><td>Transient</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr class="row-even"><td>EigenVector</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Y: Yes</strong> - Option is applicable and enabled.</p>
+<p class="last"><strong>N: No</strong> - Option is not applicable and disabled</p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="animation-type-and-static-fringe-description">
+<h3>Animation Type and Static Fringe Description</h3>
+<blockquote>
+<div><table border="1" class="docutils align-default">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Animation
+Type</strong></th>
+<th class="head">&#160;</th>
+<th class="head"><strong>Static
+Fringe ON</strong></th>
+<th class="head"><strong>Static
+Fringe OFF</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Linear</strong></td>
+<td>Legend</td>
+<td>Fixed</td>
+<td>Fixed</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Contour</td>
+<td><p class="first">Fixed</p>
+<p class="last">(Current
+Result color
+for all
+frames)</p>
+</td>
+<td><p class="first">Varying</p>
+<p class="last">(0 to Nodal
+Value)</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Transient</strong></td>
+<td>Legend</td>
+<td><p class="first">Fixed</p>
+<p class="last">(Min/Max
+across all
+frames)</p>
+</td>
+<td><p class="first">Varying</p>
+<p class="last">(Min/Max
+Current frame)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Contour</td>
+<td>Varying</td>
+<td>Varying</td>
+</tr>
+<tr class="row-even"><td><p class="first"><strong>EigenVector</strong></p>
+<blockquote class="last">
+<div><strong>(Simple
+Modal)</strong></div></blockquote>
+</td>
+<td>Legend</td>
+<td>Fixed</td>
+<td><p class="first">Fixed</p>
+<p class="last">(Envelope of
+all angle
+frames)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Contour</td>
+<td><p class="first">Fixed</p>
+<p class="last">(Current
+result color
+for all
+frames)</p>
+</td>
+<td><p class="first">Varying</p>
+<p class="last">(Based on
+frame angle (0
+to 360))</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first"><strong>EigenVector</strong></p>
+<blockquote class="last">
+<div><strong>(Complex
+Modal)</strong></div></blockquote>
+</td>
+<td>Legend</td>
+<td><p class="first">Fixed</p>
+<p class="last">(min/max
+across all
+frames)</p>
+</td>
+<td><p class="first">Fixed</p>
+<p class="last">(min/max
+across all
+frames)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>Contour</td>
+<td><p class="first">Fixed</p>
+<p class="last">(max value
+across all
+frames)</p>
+</td>
+<td><p class="first">Varying</p>
+<p class="last">(Based on
+frame angle (0
+to 360))</p>
+</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><p class="first">Note:</p>
+<p>If the current
+contour result
+is
+non-complex,
+static fringe
+will be
+disabled.</p>
+<ul class="last simple">
+<li><dl class="first docutils">
+<dt>Legend -</dt><dd>Fixed
+(based
+on
+current
+results)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Contour -</dt><dd>Fixed
+(based
+on
+current
+results)</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Deformation-</dt><dd>Based
+on frame
+angle
+and
+current</dd>
+</dl>
+</li>
+</ul>
+</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="multi-model-cae-animation-and-its-attributes">
+<h3>Multi Model CAE Animation and its Attributes</h3>
+<blockquote>
+<div>Animation settings for each CAE model is influenced by CAE Legend
+palette type.</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="22%" />
+<col width="39%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Legend Palette type</strong></td>
+<td><strong>Frames Display</strong></td>
+<td><strong>Frames Selection</strong></td>
+</tr>
+<tr class="row-even"><td><strong>Multiple</strong></td>
+<td>Lists all instances /frames of the current model.</td>
+<td>Selected frames are applied to current model only</td>
+</tr>
+<tr class="row-odd"><td><strong>Combined</strong></td>
+<td>Lists common instances/frames across models.</td>
+<td>Selected frames will be applied to all models</td>
+</tr>
+<tr class="row-even"><td><strong>Multiple: Common Legend</strong></td>
+<td>Lists all instances / frames of the current model.</td>
+<td>Selected frames are applied to current model only</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="animation-settings-and-merged-models">
+<h3>Animation Settings and Merged Models</h3>
+<blockquote>
+<div><table border="1" class="docutils align-default">
+<colgroup>
+<col width="24%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="24%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Property</strong></td>
+<td><strong>Animation
+type</strong></td>
+<td><strong>Combined</strong></td>
+<td><strong>Multiple</strong></td>
+<td><strong>Multiple:
+Common Legend</strong></td>
+</tr>
+<tr class="row-even"><td><strong>Animation
+Type</strong></td>
+<td>&#160;</td>
+<td>Same type
+is applied
+across all
+models</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>Reverse
+Play</strong></td>
+<td>All types</td>
+<td>Applied
+across all
+models</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>Swing</strong></td>
+<td>Linear
+/Transient</td>
+<td>Applied
+across all
+models</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>Static
+Fringe</strong></td>
+<td>All types</td>
+<td>Applied
+across all
+models</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>RAM/HDD</strong></td>
+<td>Transient</td>
+<td>Applied
+across all
+models</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>Interpolate</strong></td>
+<td>Transient</td>
+<td>Applied
+across all
+models</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>Static
+Color
+Plot</strong></td>
+<td>Transient</td>
+<td>Applied to
+the current
+model only.
+Users can
+set this
+flag to
+each
+individual
+model using
+the result
+list
+dialog.</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>Pivot</strong></td>
+<td>Linear
+/Transient</td>
+<td>Applied to
+the current
+model only.
+Users can
+set this
+flag to
+each
+individual
+model using
+the result
+list
+dialog.</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>Deformation
+Scale Factor</strong></td>
+<td>All types</td>
+<td>Applied to
+current
+model</td>
+<td>All models</td>
+<td>Applied to
+current
+model only</td>
+</tr>
+<tr class="row-odd"><td><strong>Instance /
+Frame
+Selection</strong></td>
+<td>Linear
+/Eigen</td>
+<td>Lists all
+frames of
+the current
+model.
+Single
+selection
+for each
+model can
+be done.
+Default
+selection
+is the
+frame which
+is selected
+in the
+is selected
+dialog.</td>
+<td>Lists
+common
+insta
+nces/frames
+of all
+models and
+apply the
+selection
+to all
+models. If
+there is no
+common
+frame, the
+first frame
+of each
+model is
+applied and
+animated.</td>
+<td>Lists all
+frames of
+the current
+model.
+Single
+selection
+for each
+model can
+be done.
+Default
+selection
+is the
+frame which
+is selected
+in the
+result list
+dialog.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Transient</td>
+<td>Lists all
+frames of
+current
+mode
+l.Selection
+should be
+done for
+each model
+and
+applied.
+All frames
+are
+selected by
+default for
+each model.</td>
+<td>Lists
+common
+insta
+nces/frames
+of all
+models and
+apply the
+selection
+to all
+models. If
+there is no
+common
+frame, the
+animation
+type will
+be changed
+to 'Linear'
+au
+tomatically
+and starts
+animation.</td>
+<td>Lists all
+frames of
+current
+mode
+l.Selection
+should be
+done for
+each model
+and
+applied.
+All frames
+are
+selected by
+default for
+each model.</td>
+</tr>
+<tr class="row-odd"><td><strong>Number of
+Frames</strong></td>
+<td>Linear
+/Eigen</td>
+<td>Same number
+of frames
+are used
+across all
+models.</td>
+<td>Same number
+of frames
+are used
+across all
+models.</td>
+<td>Same number
+of frames
+are used
+across all
+models.</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td>Transient</td>
+<td>Same number
+of frames
+are used
+across all
+models.
+Maximum
+time range
+is
+considered
+across all
+models.</td>
+<td>Same number
+of frames
+is used
+across all
+models</td>
+<td>Same number
+of frames
+are used
+across all
+models.
+Maximum
+time range
+is
+considered
+across all
+models.</td>
+</tr>
+<tr class="row-odd"><td><strong>Frame
+Rate</strong></td>
+<td>All types</td>
+<td>Same frame
+rate for
+all models.</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p><strong>Steps to activate Linear Animation</strong></p>
+<ul class="simple">
+<li>Click <strong>CAE | Animation Settings</strong>.</li>
+<li>Select <strong>Animation Type</strong> as Linear.</li>
+<li>Enter a number of frames.</li>
+<li>Click <strong>Harmonic</strong> and <strong>Swing</strong> motions if necessary.</li>
+<li>Click <strong>Apply</strong> and <strong>Animate</strong>.</li>
+</ul>
+<p><strong>Steps to activate Transient Animation</strong></p>
+<ul class="simple">
+<li>Click <strong>CAE | Animation Settings</strong>.</li>
+<li>Select <strong>Animation Type</strong> as Transient. All instances are selected by
+default.</li>
+<li>Select <strong>Number of instances</strong> if necessary.</li>
+<li>Select <strong>Swing</strong> motion if necessary.</li>
+<li>Select <strong>Static Fringe</strong> if necessary.</li>
+<li>Click <strong>Apply</strong> and <strong>Animate</strong>.</li>
+</ul>
+<p><strong>Steps to activate Mode Case animation or Eigen Vector Animation</strong></p>
+<ul class="simple">
+<li>Click <strong>CAE | Animation Settings</strong></li>
+<li>For mode case and complex eigen data, default animation will be Eigen
+Vector animation.</li>
+<li>If not, select the EigenVector option.</li>
+<li>Click <strong>Apply</strong> and <strong>Animate</strong>.</li>
+</ul>
+<p><strong>Improve performance during transient animation</strong></p>
+<p>Select frame data source option (RAM/HDD) based on the CAX data size to
+improve the animation speed.</p>
+<p><img alt="image3" src="../_images/cae_Animation_Settings_WithInstances.png" /></p>
+<p><strong>Steps to animate CAE results</strong></p>
+<ul class="simple">
+<li>Click <strong>CAE | Animation Settings</strong></li>
+<li>Select <strong>Animation Type</strong> as Results. All results are selected by
+default.</li>
+<li>Select the results required for animation.</li>
+<li>Select <strong>Swing</strong> motion if needed.</li>
+<li>Click <strong>Apply</strong> and <strong>Animate</strong>.</li>
+</ul>
+<p><strong>Steps to capture CAE Animation into a movie</strong></p>
+<ul class="simple">
+<li>Click <strong>CAE | Animation Settings</strong></li>
+<li>Click <strong>Capture Animation</strong> to open up the <strong>Capture CAE Animation</strong>
+dialog box.</li>
+</ul>
+<p><img alt="image4" src="../_images/cae_Animation_Settings_CaptureAnimation.png" /></p>
+<ul class="simple">
+<li>Click file browser button next to the Output File field</li>
+<li>Select any <strong>Save as type</strong> from the list of .mp4, .flv, .wmv, .gif,
+.avi, .jpg, .bmp, .tif, and .png.</li>
+<li>Click <strong>Capture.</strong></li>
+<li>Wait for a confirmation message.</li>
+</ul>
+<p><img alt="image5" src="../_images/cae_Animation_Settings_messageBox.png" /></p>
+<ul class="simple">
+<li>Click <strong>OK</strong> to complete the process.</li>
+</ul>
+<p>Note: If output file type is of image, all frames will be saved as image
+files.</p>
+<p><strong>Advantage of 'Skip By' option</strong></p>
+<p>If the CAE animation cycle contains a large number of frames, the time
+taken for a cycle will be very long. Skip By helps users to reduce the
+cycle time, and yet view a better and complete simulation by skipping
+odd frames or two or more frames.</p>
+<p>Consider the following image, which contains 201 frames. The animation
+cycle will take more than one minute, if the time interval between
+frames is 0.5 seconds. By skipping alternative frames. The number of
+frames can be reduced to 101.</p>
+<p><img alt="image6" src="../_images/cae_Animation_Settings_HOD.png" /></p>
+<p><img alt="image7" src="../_images/cae_Animation_Settings_Skip_By.png" /></p>
+<p>It can further be reduced to 67 frames by skipping two frames as shown
+below.</p>
+<p><img alt="image8" src="../_images/cae_Animation_Settings_SkipBy2.png" /></p>
+</div>
+</div>
+<div class="section" id="animation-relative-to-reference-entity">
+<h2>Animation Relative to Reference Entity</h2>
+<blockquote>
+<div><p>VCollab Pro provides pivot simulation relative to Node and Plane.</p>
+<p><strong>Pivot Node</strong> arrests translation for picked nodes and simulates
+relative to the pivot node.</p>
+<p><strong>Pivot Plane</strong> arrests translation of pivot node and rotation of picked
+triangle (polygon) and simulates.</p>
+<ul>
+<li><p class="first">Open CAE Animation Settings dialog box</p>
+</li>
+<li><p class="first">Click <strong>Pivot...</strong>. to open <strong>Pivot Settings</strong> dialog box</p>
+<p><img alt="image9" src="../_images/cae_Animation_Settings_PivotSetting.png" /></p>
+</li>
+<li><p class="first">Select <strong>Node</strong> or <strong>Plane</strong> in the Pivot combo box.</p>
+<p><img alt="image10" src="../_images/cae_Animation_Settings_PivotSettings.png" /></p>
+</li>
+<li><p class="first">Click <strong>'Pick'</strong> to select the node in the model<strong>.</strong> To select the
+node, click a node on the model.</p>
+<p><img alt="image11" src="../_images/cae_Animation_Settings_Pick.png" /></p>
+</li>
+<li><p class="first">Node number is displayed in the ID text. Picked ID will be considered
+as Pivot point.</p>
+</li>
+<li><p class="first">If the pivot option is <strong>Node</strong>, then the nearest node will be
+highlighted.</p>
+</li>
+<li><p class="first">If the pivot option is <strong>Plane</strong>, then the picked triangle will be
+highlighted.</p>
+</li>
+<li><p class="first">The deformation at the pivot point is fixed.</p>
+</li>
+<li><p class="first">Now animate the model and notice how the simulation changes relative
+to pivot point.</p>
+</li>
+</ul>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Pivot Node</strong></th>
+<th class="head"><strong>Pivot Plane</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Picked Node deformation is fixed</td>
+<td>Picked Node deformation is fixed</td>
+</tr>
+<tr class="row-odd"><td>No rotation is arrested.</td>
+<td><p class="first">Picked triangle rotation is
+arrested.</p>
+<p class="last">Pivot edge (Line joining pivot
+node and next node in triangle)
+rotation is arrested.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p>Below Image shows where the pivot plane is picked.</p>
+<p><img alt="image12" src="../_images/cae_Animation_Settings_PivotExample.png" /></p>
+<p>Animation with and without pivot data is shown below</p>
+<p><strong>Animation without Pivot</strong></p>
+<p><img alt="image13" src="../_images/Animation_without_pivot.gif" /></p>
+<p><strong>Animation with Pivot Node</strong></p>
+<p><img alt="image14" src="../_images/Animation_with_pivot_node.gif" /></p>
+<p><strong>Animation with Pivot Plane</strong></p>
+<p><img alt="image15" src="../_images/Animation_with_pivot_plane.gif" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="interpolate-option-in-transient-animation">
+<h2>Interpolate option in Transient Animation</h2>
+<p><strong>Interpolate</strong> option is enabled only for transient animation type. It
+is turned OFF by default.</p>
+<p>When turned Off, transient animation simulates actual time step frames
+in a loop and users cannot modify the number of frames. For example, the
+airbag.cax model has 18 instances of displacement result. VCollab
+simulates these 18 instance frames consecutively in a loop.</p>
+<p>When the Interpolate option is turned ON, VCollab allows users to edit
+the number of VCollab interpolates available and selected frames time
+data to find a new set of frames.</p>
+<p>Interpolate helps users to customize the simulation for smoothness and
+better time step simulation.</p>
+<p>The following graph depicts Transient animation with interpolation.</p>
+<p><img alt="image16" src="../_images/cae_Animation_Settings_Transient_Animation.png" /></p>
+</div>
+<div class="section" id="rigid-body-animation">
+<h2>Rigid Body Animation</h2>
+<p>This is a special case of transient animation type. If loaded cax contains rigid body transformations, then relavant interfaces will appear.
+User have 3 options to animate,
+- <strong>Rigid &amp; Flex</strong> Rigid body transformation with Flexi deformation result.
+- <strong>Rigid only</strong> Applies rigid body transformation only.
+- <strong>Flex only</strong> Applies flex deformation results only.</p>
+<div class="section" id="track-part">
+<h3>Track Part</h3>
+<p>This feature allows the user to pick a part and follow it through the animation.
+- Click Track button
+- It pops up Track Part dialog
+- Enter the part name or click <em>Pick</em> button.
+- Click on the required part in the viewer.
+- Click OK
+- Click Apply and Animate.</p>
+</div>
+</div>
+<div class="section" id="legend-animation">
+<h2>Legend Animation</h2>
+<p>Legend Animation is, simulating contour colors with tranparency or from base color frame by frame. For example, in case of flow lines applying colors step by step gives us better understanding on how the fluid flows. VCollab provides different options to visualize this animation. First frame contains model with base color.</p>
+<div class="section" id="legend-animation-panel">
+<h3>Legend Animation Panel</h3>
+<p><img alt="image17" src="../_images/Legend_Animation_Panel.png" /></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Base Color</td>
+<td>Model will be in base color in the first frame. There are three options. Color Plot with transparent, No Result and No Result with transparent.</td>
+</tr>
+<tr class="row-even"><td>Use Legend Color Size</td>
+<td>each frame one color from legend will be fille. Number of animation frames will be equal to number colors in legend.</td>
+</tr>
+<tr class="row-odd"><td>Single Band</td>
+<td>One color will be visible in one frame of animation. Other zones will be in base color.</td>
+</tr>
+<tr class="row-even"><td>Reverse Flow</td>
+<td>Reverses the animation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Different possible combinations of Legend Animation options.</strong></p>
+<p><strong>Use Legend Color Size</strong></p>
+<ol class="arabic">
+<li><p class="first">Color Plot Transparent</p>
+<p><img alt="image18" src="../_images/LegendAnim_CPT.gif" /></p>
+</li>
+<li><p class="first">No Result</p>
+<p><img alt="image19" src="../_images/LegendAnim_NoR.gif" /></p>
+</li>
+<li><p class="first">No Result Transparent</p>
+<p><img alt="image20" src="../_images/LegendAnim_NoRT.gif" /></p>
+</li>
+</ol>
+<p><strong>Single Band</strong></p>
+<ol class="arabic">
+<li><p class="first">Color Plot Transparent</p>
+<p><img alt="image21" src="../_images/LegendAnim_SB_CPT.gif" /></p>
+</li>
+<li><p class="first">No Result</p>
+<p><img alt="image22" src="../_images/LegendAnim_SB_NoR.gif" /></p>
+</li>
+<li><p class="first">No Result Transparent</p>
+<p><img alt="image23" src="../_images/LegendAnim_SB_NoRT.gif" /></p>
+</li>
+</ol>
+<p><strong>Reverse Flow</strong></p>
+<ol class="arabic">
+<li><p class="first">Color Plot Transparent</p>
+<p><img alt="image24" src="../_images/LegendAnim_Rev_CPT.gif" /></p>
+</li>
+<li><p class="first">No Result</p>
+<p><img alt="image25" src="../_images/LegendAnim_Rev_NoR.gif" /></p>
+</li>
+<li><p class="first">No Result Transparent</p>
+<p><img alt="image26" src="../_images/LegendAnim_Rev_NoRT.gif" /></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

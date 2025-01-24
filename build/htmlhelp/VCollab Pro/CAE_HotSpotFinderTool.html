@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotspot Finder</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my-styles.css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Hotspots Extrema" href="CAE_Hotspots_Extrema.html" />
+    <link rel="prev" title="Probe Settings" href="CAE_Probe_Settings_Pro.html" />
+
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../VCollabPro.html">
+          VCollabPro</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../VCollabPro.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">VCollabPro</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Hotspot Finder</a><ul>
+<li><a class="reference internal" href="#hotspot-finder-tool">Hotspot Finder Tool</a></li>
+<li><a class="reference internal" href="#hotspot-range-cluster">Hotspot Range Cluster</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="CAE_Probe_Settings_Pro.html" title="Previous Chapter: Probe Settings"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Probe Settings</span>
+    </a>
+  </li>
+  <li>
+    <a href="CAE_Hotspots_Extrema.html" title="Next Chapter: Hotspots Extrema"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Hotspots Extrema &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="hotspot-finder">
+<h1>Hotspot Finder</h1>
+<p>The Hotspot finder tool helps to find the hotspots in a model. A hotspot
+can be a node, an element or an area in the computational domain with
+extreme values (maximum or minimum) of a result. Local minima, local
+maxima or nodes/elements/areas with high gradients can also be
+considered as hotspots in certain situations. As the definition of
+hotspots can be situational, various mechanisms to identify hotspots are
+provided in VCollab Pro. Users can choose the right mechanism based on
+their understanding of the problem to identify the hotspots.</p>
+<div class="section" id="hotspot-finder-tool">
+<h2>Hotspot Finder Tool</h2>
+<ul>
+<li><p class="first">Click <strong>CAE | CAE Settings | Hotspot Finder</strong> or Click <strong>Hotspot
+Settings...</strong> under the icon <img alt="image1" src="../_images/HotspotFinder.jpg" /> as shown below.</p>
+<p><img alt="image2" src="../_images/cae_Hotspot_Finder_Panel.png" /></p>
+</li>
+<li><p class="first">The Hotspot Finder tab opens up as shown below. Select the region in
+which to <strong>Find</strong> from the drop down list</p>
+<p><img alt="image3" src="../_images/cae_Hotspot_Finder_CAE_Settings.png" /></p>
+</li>
+</ul>
+<p>The various options and fields that are available under Hotspot finder
+are explained below.</p>
+<ol class="arabic simple">
+<li><strong>Find:</strong> Users can choose from any one option from the drop down
+list</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Local Extrema :</strong> Under this option, VCollab Pro identifies the
+local maximum or minimum in a node/element within the specified
+zone radius .</li>
+<li><strong>Global Extrema:</strong> Under this option, VCollab Pro identifies the
+nodes or elements with global maximum or minimum values as the
+hotspots.</li>
+<li><strong>Range Cluster</strong> Finds hotspots in a given cluster defined based on the range. Clusters if min and max are not given,
+legend's first interval values will be taken as the cluster range.</li>
+</ul>
+<p>To know more about Local and Global Extrema, click <a class="reference external" href="CAE_Hotspots_Extrema.html" target="_blank">here</a>.</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p class="first"><strong>Hotspot Range</strong> (Min &amp; Max): When a range is specified, VCollab Pro
+filters the nodes whose result values lie outside this range. They
+are not considered hot spots. Hot spots are searched among nodes
+whose values satisfy the range limits.</p>
+</li>
+<li><p class="first"><strong>Hotspot Count</strong> (Top and Bottom): This option specifies the number
+of hotspots that need to be generated. Hotspots top and bottom
+labels are differentiated by label border colors, which are red
+and blue respectively. Users can change the default colors if
+needed.</p>
+</li>
+<li><p class="first"><strong>All Top:</strong> If the top value is 100 (as an example) and there are
+multiple IDs with the same value, then hotspot finder considers
+and displays only one of these IDs if All Top is unchecked. If
+this option is checked, hotspot finder displays all IDs with the
+same top values.</p>
+</li>
+<li><p class="first"><strong>All Bottom:</strong> This option is similar to the All Top option, except
+that it considers bottom values.</p>
+</li>
+<li><p class="first"><strong>Mark MinMax:</strong> This option highlights the labels of maximum of top
+labels and minimum of bottom labels. Maximum and Minimum labels
+are highlighted with text colors of Red and Blue respectively.</p>
+</li>
+<li><p class="first"><strong>Zone Radius:</strong> The Zone radius option helps to avoid locating hot
+spots next to each other. Once a hot spot is found, VCollab skips
+all the nodes within the specified radius while searching for the
+next hotspot.</p>
+</li>
+<li><p class="first"><strong>Visible Surface:</strong> Displays the visible labels in the current view.</p>
+</li>
+<li><p class="first"><strong>Probe Label Settings:</strong> Allows users to select probe type and
+template and other result attributes.</p>
+<p><img alt="image4" src="../_images/cae_Hotspot_Finder_ProbeSettings.png" /></p>
+</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Probe Type:</strong></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>CurrentResult - Derived : current scalar value</li>
+<li>CurrentResult - Full : Displays all components for vector and
+tensor results.</li>
+<li>All Results - Table : Displays user selected scalar result values.</li>
+<li>All Instances - Table : Displays all instance values in a table.</li>
+<li>All Instances - XYPlot :Displays all instance values as a XYPlot
+graph.</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>Template type:</strong> This option displays values in a predefined
+template (format). Header options are meaningful for template 1
+when at least one dataset is merged with an existing one.</p>
+</li>
+<li><p class="first"><strong>Model:</strong> Selects the model for which results are listed for
+selection.</p>
+</li>
+<li><p class="first"><strong>All Results:</strong> Displays a list of all available results for the
+selected model. To select a result (for probe labels), click on it
+and then press &gt;&gt; button. The selected result will get added to
+the Select Results list.</p>
+</li>
+<li><p class="first"><strong>Selected Results:</strong> Displays a list of all the selected results. To
+deselect a result, click on it and then press &lt;&lt; button. The
+result will be removed from this list and appear under the <strong>All
+Results</strong> list. To rearrange the results order in the labels, drag
+the result and drop where you want to place.</p>
+</li>
+<li><p class="first"><strong>Row Header:</strong> To display either dataset name or result/instance
+name in the first column of the label, check the row header box.
+Each row header shows the result/instance that corresponds to the
+CAE result data</p>
+</li>
+<li><p class="first"><strong>Column Header:</strong> To display either dataset name or result/instance
+name in the top of the labels, check the column header box. Each
+column denotes CAE result data and row denotes the corresponding
+result/instance name.</p>
+<p><img alt="image5" src="../_images/cae_Hotspot_Finder_ColumnHeader.png" /></p>
+</li>
+<li><p class="first"><strong>Part Header:</strong> Adds annotated part name into the label.</p>
+</li>
+<li><p class="first"><strong>Header legend:</strong> Displays acronym of the results as a separate label.</p>
+</li>
+<li><p class="first"><strong>Abbreviation</strong> <strong>Legend:</strong> Displays the legend or abbreviation and
+its acronym in a table separately. It displays a table for short
+letters for results used in the labels. It can be moved like other
+labels.</p>
+</li>
+<li><p class="first"><strong>ID</strong> : Displays nodal or element ID in the label.</p>
+</li>
+<li><p class="first"><strong>Rank:</strong> Displays rank number based on the hotspot value and number
+of hotspots found.</p>
+</li>
+<li><p class="first"><strong>Rank Ascending Order:</strong> Specifies ranking process to be ascending
+or descending.</p>
+</li>
+<li><p class="first"><strong>Label Settings:</strong> Allows users to format the text and background of
+the label.</p>
+</li>
+<li><p class="first"><strong>Result Options:</strong> Allows users to select and highlight labels based
+on the result values.</p>
+</li>
+<li><p class="first"><strong>Apply</strong> or <strong>OK:</strong> Apply the modifications.</p>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li><strong>Compare Options :</strong> This option is visible only when at least one
+dataset is merged with existing one. It is used to compare
+results of merged models. Users can select the models to be
+compared with the base model (current model). By default it
+generates hotspots/min max labels for the current model.</li>
+</ol>
+<blockquote>
+<div><blockquote>
+<div><p><img alt="image6" src="../_images/cae_Hotspot_Finder_CompareOptions.png" /></p>
+<p>The various fields and options available under the Compare options panel
+are explained below.</p>
+</div></blockquote>
+<ul class="simple">
+<li><strong>Compare merged models:</strong> Check this option to compare the models.
+Once this is checked all other comparison options are enabled.</li>
+<li><strong>Selection of Models for comparison:</strong> The current CAE model is
+listed as the base model. Other models are listed and users can
+select required models to be compared with.</li>
+<li><strong>Compare Results by:</strong> Specify the criteria to compare the results.</li>
+</ul>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li><strong>Same Result Name</strong> - Compares selected results with other models
+with same result names.</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="24%" />
+<col width="20%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Base Model</strong></th>
+<th class="head"><strong>Model 2</strong></th>
+<th class="head"><strong>Same Result</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first">Result 1</p>
+<p>Result 3</p>
+<p class="last">Result 5</p>
+</td>
+<td><p class="first">Result 3</p>
+<div class="last line-block">
+<div class="line">Result 2</div>
+<div class="line">Result 4</div>
+<div class="line">Result 7</div>
+</div>
+</td>
+<td><p class="first">Result 3 is common in both models.</p>
+<p class="last">So Result 3 will be compared and
+displayed by this type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul class="simple">
+<li><strong>Selected Results Order -</strong> Compares results of selected models by
+as per the order of the results.</li>
+</ul>
+<blockquote>
+<div><table border="1" class="docutils align-default">
+<colgroup>
+<col width="31%" />
+<col width="24%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Base Model</strong></th>
+<th class="head"><strong>Model 2</strong></th>
+<th class="head"><strong>Result order</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Result 1</td>
+<td>Result 3</td>
+<td>Result 1 =&gt; Result 3</td>
+</tr>
+<tr class="row-odd"><td>Result 3</td>
+<td>Result 2</td>
+<td>Result 3 =&gt; Result 2</td>
+</tr>
+<tr class="row-even"><td>Result 5</td>
+<td><p class="first">Result 4</p>
+<p class="last">Result 7</p>
+</td>
+<td>Result 5 =&gt; Result 4</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>Results Display Name -</strong> Compares results by same display names
+(case sensitive). Ignores the result names for comparison. In the
+following table display names are specified in braces.</p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Base Model</strong></th>
+<th class="head"><strong>Model 2</strong></th>
+<th class="head"><strong>Same Display
+Name</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first">Result 1 (<strong>Result
+4</strong>)</p>
+<p>Result 3 (<strong>Result
+3</strong>)</p>
+<p class="last">Result 5 (<strong>Result
+5</strong>)</p>
+</td>
+<td><p class="first">Result 3 (<strong>Result
+2</strong>)</p>
+<p>Result 2 (<strong>Result
+4</strong>)</p>
+<p>Result 4 (<strong>Result
+6</strong>)</p>
+<p class="last">Result 7 (<strong>Result
+5</strong>)</p>
+</td>
+<td><p class="first">Result 1 (<strong>Result
+4</strong>) =&gt; Result 2
+(<strong>Result 4</strong>)</p>
+<p>Result 3 (<strong>Result
+3</strong>) =&gt; No Result</p>
+<p class="last">Result 5 (<strong>Result
+5</strong>) =&gt; Result 7
+(<strong>Result 5</strong>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first"><strong>Comparison Field:</strong> The following methods are available to users to
+compare results.</p>
+<p><strong>*Radius</strong> refers to the default radius and not the user defined
+Zone radius</p>
+</li>
+<li><p class="first"><strong>Position : Nearest -</strong> Compare one hotspot node with a node from
+another model based on position</p>
+<ul class="simple">
+<li>Get nearest node from the other model with distance &lt; *Radius</li>
+<li>Select this nearest node for comparison.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Position : Min/Max -</strong> Compare one hotspot node with a node from
+another model based on position</p>
+<ul class="simple">
+<li>Get all nodes in the other model with distance &lt; *Radius</li>
+<li>From this set of nodes select one node for comparison</li>
+<li>For top hotspot select the node with Max value</li>
+<li>For bottom hotspot select the node with Min value</li>
+</ul>
+</li>
+<li><p class="first"><strong>ID:</strong> Compare the hot spot node with a node from the other model
+having the same id.</p>
+</li>
+<li><p class="first"><strong>ID : Distance -</strong> Compare the hot spot node with a node from the
+other model having the same id</p>
+<ul class="simple">
+<li>AND distance &lt; *Radius</li>
+</ul>
+</li>
+<li><p class="first"><strong>Hotspot: Min/Max-</strong> Compare the hotspot node with a hot spot node
+from the other model by:</p>
+<ul class="simple">
+<li>Get all hotspot nodes in the other model with distance &lt; *Radius.</li>
+<li>From this set of hotspots select one hot spot for comparison</li>
+<li>For Top hot spot select the hotspot with Max value</li>
+<li>For Bottom hotspot select the hotspot with Min value.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Hotspot: Nearest</strong></p>
+<p>Compare the hotspot node with a hotspot node from another
+model.</p>
+<ul class="simple">
+<li>Get all hotspot nodes in the other model with distance &lt; *Radius.</li>
+<li>From this set of hotspots select the nearest hotspot (of same
+type) for comparison.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Hotspot: Min/Max UseRange</strong></p>
+<blockquote>
+<div><p>Compare the hotspot node with a hot spot node from another
+model</p>
+</div></blockquote>
+<ul class="simple">
+<li>Get all hotspot nodes in another model with distance &lt; Zone radius
+(user defined).</li>
+<li>From this set of hotspots select one hot spot for comparison.</li>
+<li>For Top hotspot select top hotspot with Max value.</li>
+<li>For Bottom hotspot select bottom hot spot with Min value.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Hotspot: Nearest UseRange</strong></p>
+<blockquote>
+<div><p>Compare the hotspot node with another hotspot node from the
+other model</p>
+</div></blockquote>
+<ul class="simple">
+<li>Get all hotspot nodes in another model with distance &lt; Zone radius
+(user defined).</li>
+<li>From this set of hotspots select nearest hotspot (of same type)
+for comparison</li>
+</ul>
+</li>
+<li><p class="first"><strong>Position: Min</strong></p>
+<ul class="simple">
+<li>Compares one hotspot Node with a Node from another model based on position.</li>
+<li>Gets all Nodes in other models with distance &lt; radius.</li>
+<li>From this set of Nodes select one Node for comparison.</li>
+<li>Selects Node with Min value.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Position: Max</strong></p>
+<ul class="simple">
+<li>Compares one hotspot Node with a Node from another model based on position.</li>
+<li>Gets all Nodes in other models with distance &lt; radius.</li>
+<li>From this set of Nodes select one Node for comparison.</li>
+<li>Selects Node with Max value.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Compare With</strong></p>
+<ul class="simple">
+<li>Same Part - Compare using the comparison options specified above
+in the same part of the other model.</li>
+<li>Visible Parts - Compare using the compare options specified above
+in all visible parts of the other model.</li>
+<li>All Parts - Compare using the compare options specified above in
+all parts.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Within Distance -</strong> Allows users to specify the distance value and
+hotspots are computed within this range.</p>
+</li>
+<li><p class="first"><strong>Hotspots In All Models</strong>: Finds hotspots for each model. Then it
+appends results from merged models as rows or columns based on the
+template selected.</p>
+</li>
+<li><p class="first"><strong>Show All Connections:</strong> Shows all the connecting lines between the
+label and its attached positions.</p>
+</li>
+</ul>
+<ol class="arabic simple" start="11">
+<li><strong>Mask :</strong> This option in the Hotspot finder panel, allows users to
+mask a set of nodes and elements from the process. Users can mask
+the nodesets from the hotspot finding process using <a class="reference external" href="CAE_NodeSet_Manager_Pro.html" target="_blank">Node Set
+manager</a>.</li>
+</ol>
+<p><strong>Note:</strong> Masking is not supported for Elemental Result.</p>
+<ol class="arabic simple" start="12">
+<li><strong>Add View Points:</strong> When enabled, this option generates viewpoints
+according to viewpoint options specified. Viewpoints Options
+button is enabled only when this option is checked.</li>
+<li><strong>Export:</strong> This option helps users to export the viewpoints into
+either VPT file or Microsoft PPT file. While adding the view
+path, users will be prompted for a file name and file type.</li>
+<li><strong>Viewpoints Options:</strong> This option helps users to select either
+part wise viewpoints or multi view points for a single scene.</li>
+</ol>
+<blockquote>
+<div><img alt="image7" src="../_images/cae_Hotspot_Finder_ViewpointsOptions.png" /></div></blockquote>
+<p>The various fields that are seen in the Viewpoint Options panel are
+explained below</p>
+<ul>
+<li><p class="first"><strong>Each Parts</strong>: Enabling this option creates a viewpoint for every
+part. If top hotspot count is specified as ten, and if the model
+consists of 5 parts, then the generated view path consists of 5
+viewpoints (one per each part) with each viewpoint consisting of
+ten hot spots in the corresponding part. There will not be any
+change in view and orientations. In every viewpoint, one part is
+visible and others are hidden.</p>
+</li>
+<li><p class="first"><strong>Visible:</strong> When enabled, this option filters the parts based on its
+visibility and lists the parts in the list.</p>
+</li>
+<li><p class="first"><strong>All Std. Views:</strong> This option will include 6 standard view points
+(X, Y, Z,-X,-Y and -Z) for each part or current scene based on
+<strong>Each Part</strong> option. The viewpoints can be filtered by checking
+or unchecking the corresponding boxes. options. Users can check or
+uncheck the entire column or row as well in one shot.</p>
+</li>
+<li><p class="first"><strong>Add View</strong>: Add view option adds current camera view or user’s view
+as an option with standard views in the GUI. Users can check or
+uncheck if necessary. To update current view, click on the
+<img alt="image8" src="../_images/cae_Hotspot_Finder_AddNew.png" />icon. It will set the current camera position as the
+viewpoint.</p>
+</li>
+<li><p class="first"><strong>Regions:</strong> The model area can be split into a number of regions and
+each region that is displayed focuses on that region’s hotspots.
+(2,4) means to split the model area into 2 regions horizontally
+and 4 regions vertically, so the total regions are 2x4=8. <img alt="image9" src="../_images/cae_Hotspot_Finder_Regions.png" /></p>
+</li>
+<li><p class="first"><strong>Hotspots per page:</strong> Users can specify the number of hotspots per
+page in the viewpoints. If there are 45 hotspots in the model and
+20 are the Hotspots per page specified, then 3 viewpoints will be
+generated. First and second viewpoints will have 20 hotspots in
+each and the remaining 5 hotspots will be shown in the third
+viewpoint.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By default the number of hotspots per page is 20 (max allowed).
+Users can change this as per requirement.</p>
+</div>
+</li>
+<li><p class="first"><strong>Auto Views</strong> : When selected, this option helps to orient the
+viewpoint such that the user can view all the hotspots clearly.</p>
+<p>The number of auto views specifies how many auto viewpoints should be
+generated to make all the hotspots visible to the user.</p>
+</li>
+</ul>
+<ol class="arabic simple" start="15">
+<li><strong>Find Hotspots:</strong> This option in the Hotspot finder panel generates
+hotspots for a model according to the options specified.</li>
+</ol>
+<p><strong>Steps to find hotspots after hotspot settings</strong></p>
+<ul>
+<li><p class="first">Click <strong>CAE | Hotspot Finder</strong> or click the icon<img alt="image10" src="../_images/HotspotFinder.jpg" /> , which
+enables mouse mode for hotspot finder.</p>
+</li>
+<li><p class="first">Select a region to find hotspots either by rectangular window or by
+polygon selection.</p>
+</li>
+<li><p class="first">If <strong>Polygon Selection</strong> is off, then selection is done using a
+rectangular window by default.</p>
+<p><img alt="image11" src="../_images/cae_Hotspot_Finder_Panel.png" /></p>
+<p>E.g. : Rectangular window selection</p>
+<p><img alt="image12" src="../_images/cae_Hotspot_Finder_RectangularWindowSelection.png" /></p>
+<p>E.g.: Polygon Selection</p>
+<p><img alt="image13" src="../_images/cae_Hotspot_Finder_PolygonSelection.png" /></p>
+</li>
+<li><p class="first">Once the region is selected, hotspot CAE values are displayed as
+labels as follows.</p>
+<p><img alt="image14" src="../_images/cae_Hotspot_Finder_Example.png" /></p>
+</li>
+</ul>
+</div>
+<div class="section" id="hotspot-range-cluster">
+<h2>Hotspot Range Cluster</h2>
+<p>Cluster based on range.</p>
+<blockquote>
+<div><p>Example:
+Consider the following airbag model,</p>
+<p><img alt="image15" src="../_images/hotspot_settings_range_cluster_min.png" />  <img alt="image16" src="../_images/hotspot_range_cluster_top.png" /></p>
+<p>For Top hotspot, range is defined by Filter Min value, ( 0.024 ). To visualize the cluster defined by  (&gt; 0.024) , enter the same value in  Legend  as in the image above.
+User can see two red clusters. This algorithm finds maximum value for each cluster and shows the labels.</p>
+<p><img alt="image17" src="../_images/hotspot_settings_range_cluster_max.png" />  <img alt="image18" src="../_images/hotspot_range_cluster_bottom.png" /></p>
+<p>Similarly for Bottom hotspot, range is defined by Filter Max value ( 0.014 ). To visualize the cluster defined by (&lt; 0.014),
+enter the same value in Legend  as in the image   above. User can see three blue clusters. This algorithm finds minimum value for each cluster and shows the labels.</p>
+</div></blockquote>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2025, Visual Collaboration Technologies Inc..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
