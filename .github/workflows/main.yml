@@ -75,9 +75,12 @@ jobs:
              cd build
              dir htmlhelp
              
-      - name: run hhd
+      - name: install hhw
         run: |
               choco install html-help-workshop -y
+              "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\build\htmlhelp\VCollabPro.hhp"
+             
+              
 
 
 
