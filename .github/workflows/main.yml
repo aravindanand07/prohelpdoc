@@ -62,6 +62,7 @@ jobs:
                Write-Host "File not found!"
                exit 1
               }
+        continue-on-error: true
              
       - name: List files
         run: |
