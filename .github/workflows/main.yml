@@ -21,7 +21,7 @@ jobs:
 
       - name: Create directory
         run: |
-             mkdir HelpDocument
+             mkdir Help
                     
       - uses: actions/setup-python@v2
         with:
@@ -67,8 +67,27 @@ jobs:
       - name: List files
         run: |
              cd build
-             dir htmlhelp      
+             dir htmlhelp
 
+      - name: Copy the chm file
+        run: |
+             xcopy D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.chm D:\a\prohelpdoc\prohelpdoc\help /E /I
+
+      - name: List files
+        run: |
+             cd help
+             dir       
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+             server: ${{ secrets.FTP_SERVER }}
+             username: ${{ secrets.FTP_USERNAME }}
+             password: ${{ secrets.FTP_PASSWORD }}
+             protocol: ftps
+             port: 2133
+             local-dir: ./help/
+             server-dir: ./test/Help_Doc/
 
      
      # - name: Verify file exists and convert
