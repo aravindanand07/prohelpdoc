@@ -56,13 +56,12 @@ jobs:
         run: |
              cd build\htmlhelp
              dir
-             if (Test-Path "VCollabPro.hhp") {
-             & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "VCollabPro.hhp"
-             } else {
-             Write-Host "File not found!"
-             exit 1
-             }
-             shell: pwsh
+             if (Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
+               & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+               } else {
+               Write-Host "File not found!"
+               exit 1
+              }
              
       - name: List files
         run: |
