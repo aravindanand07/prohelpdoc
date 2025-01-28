@@ -65,12 +65,8 @@ jobs:
       #  continue-on-error: true
       - name: Compile CHM Help File
         run: |
-             if (Test-Path "D:\a\prohelpdoc\prohelpdoc\HTML Help Workshop\hhc.exe" -and Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
              & "D:\a\prohelpdoc\prohelpdoc\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
-             } else {
-             Write-Host "hhc.exe or VCollabPro.hhp not found!"
-             exit 1
-             }
+
              
       - name: List files
         run: |
