@@ -52,17 +52,21 @@ jobs:
         run: |
               choco install html-help-workshop -y
 
+      #- name: Compile CHM Help File
+      #  run: |
+      #       cd build\htmlhelp
+      #       dir
+      #       if (Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
+      #         & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
+      #         } else {
+      #         Write-Host "File not found!"
+      #         exit 1
+      #        }
+      #  continue-on-error: true
       - name: Compile CHM Help File
         run: |
-             cd build\htmlhelp
-             dir
-             if (Test-Path "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp") {
-               & "C:\Program Files (x86)\HTML Help Workshop\hhc.exe" "D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp"
-               } else {
-               Write-Host "File not found!"
-               exit 1
-              }
-        continue-on-error: true
+             cd "HTML Help Workshop"
+             hhc.exe D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp
              
       - name: List files
         run: |
@@ -78,16 +82,16 @@ jobs:
              cd help
              dir       
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.2
-        with:
-             server: ${{ secrets.FTP_SERVER }}
-             username: ${{ secrets.FTP_USERNAME }}
-             password: ${{ secrets.FTP_PASSWORD }}
-             protocol: ftps
-             port: 2133
-             local-dir: ./help/
-             server-dir: ./test/Help_Doc/
+      #- name: 📂 Sync files
+      #  uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      #  with:
+      #       server: ${{ secrets.FTP_SERVER }}
+      #       username: ${{ secrets.FTP_USERNAME }}
+      #       password: ${{ secrets.FTP_PASSWORD }}
+      #       protocol: ftps
+      #       port: 2133
+      #       local-dir: ./help/
+      #       server-dir: ./test/Help_Doc/
 
      
      # - name: Verify file exists and convert
