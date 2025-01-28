@@ -65,8 +65,7 @@ jobs:
       #  continue-on-error: true
       - name: Compile CHM Help File
         run: |
-             cd "HTML Help Workshop"
-             hhc.exe D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp
+             "D:\a\prohelpdoc\prohelpdoc\HTML Help Workshop\hhc.exe" D:\a\prohelpdoc\prohelpdoc\build\htmlhelp\VCollabPro.hhp
              
       - name: List files
         run: |
